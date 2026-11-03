@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-oracle-bg: #0c0e18;
+  --color-oracle-card: #16192b;
+  --color-oracle-border: rgba(99, 102, 241, 0.22);
+  --color-oracle-primary: #818cf8;
+  --color-oracle-secondary: #38bdf8;
+  --color-oracle-gold: #fcd34d;
+  --color-oracle-goldDark: #b45309;
+  --color-oracle-muted: #94a3b8;
+
+  --font-title: 'Cinzel', serif;
+  --font-sans: 'Inter', sans-serif;
+}

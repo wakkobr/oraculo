@@ -1,16 +1,21 @@
 ---
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <header class="text-center mb-10 pb-6 border-b border-oracle-border">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-500/30 text-indigo-300 text-xs font-semibold tracking-wider uppercase mb-3">
+      <span>✦</span> Beyond Obvious <span>✦</span>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-amber-200 via-indigo-200 to-sky-200 font-title tracking-wide mb-2">
+  		O Oráculo
+	</h1>
+    <p class="text-oracle-muted text-sm md:text-base tracking-wide max-w-md mx-auto">
+      Respostas imediatas para o destino da mesa
+    </p>
+  </header>
+
+  <div class="text-center py-12 text-slate-400">
+    <p>O santuário está pronto. Aguardando as tabelas arcanas...</p>
+  </div>
+</Layout>
