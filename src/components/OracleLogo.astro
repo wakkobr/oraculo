@@ -1,0 +1,109 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = "w-12 h-12" } = Astro.props;
+---
+
+<div class={`relative flex items-center justify-center shrink-0 ${className}`}>
+  <!-- Aura de brilho dourado sutil no fundo -->
+  <div class="absolute inset-0 bg-[#d4af37]/20 rounded-xl blur-md pointer-events-none"></div>
+
+  <!-- Moldura SVG Arcano Imponente -->
+  <svg 
+    viewBox="0 0 48 48" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg" 
+    class="w-full h-full relative z-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+  >
+    <defs>
+      <!-- Gradiente Metálico Ouro Nobre -->
+      <linearGradient id="oracleGold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#faecc5" />
+        <stop offset="35%" stop-color="#d4af37" />
+        <stop offset="70%" stop-color="#aa8222" />
+        <stop offset="100%" stop-color="#e2c974" />
+      </linearGradient>
+
+      <!-- Fundo Interno Fumê Profundo -->
+      <radialGradient id="oracleDarkBg" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#151a36" />
+        <stop offset="100%" stop-color="#0a0d1d" />
+      </radialGradient>
+    </defs>
+
+    <!-- Moldura Externa com Cantos Chanfrados -->
+    <rect 
+      x="3" 
+      y="3" 
+      width="42" 
+      height="42" 
+      rx="9" 
+      fill="url(#oracleDarkBg)" 
+      stroke="url(#oracleGold)" 
+      stroke-width="1.6" 
+    />
+
+    <!-- Filete Interno Geométrico -->
+    <rect 
+      x="6.5" 
+      y="6.5" 
+      width="35" 
+      height="35" 
+      rx="6" 
+      stroke="#d4af37" 
+      stroke-opacity="0.25" 
+      stroke-width="1" 
+      stroke-dasharray="3 3"
+    />
+
+    <!-- Losangos de Canto / Pontos Cardeais Arcanos -->
+    <polygon points="24,8 25.5,10 24,12 22.5,10" fill="url(#oracleGold)" />
+    <polygon points="24,36 25.5,38 24,40 22.5,38" fill="url(#oracleGold)" />
+    <polygon points="8,24 10,25.5 12,24 10,22.5" fill="url(#oracleGold)" />
+    <polygon points="36,24 38,25.5 40,24 38,22.5" fill="url(#oracleGold)" />
+
+    <!-- Estrutura do D20 / Octaedro Esotérico de Fundo -->
+    <polygon 
+      points="24,13 34,18 34,30 24,35 14,30 14,18" 
+      stroke="url(#oracleGold)" 
+      stroke-width="1.2" 
+      stroke-linejoin="round"
+      stroke-opacity="0.5"
+      fill="#0c1024"
+      fill-opacity="0.7"
+    />
+
+    <!-- O Olho do Oráculo (Aquele que tudo vê no destino da mesa) -->
+    <!-- Contorno Externo do Olho -->
+    <path 
+      d="M16 24C18.5 19.5 29.5 19.5 32 24C29.5 28.5 18.5 28.5 16 24Z" 
+      stroke="url(#oracleGold)" 
+      stroke-width="1.5" 
+      stroke-linejoin="round"
+    />
+
+    <!-- Íris Circular Sagrada -->
+    <circle 
+      cx="24" 
+      cy="24" 
+      r="4" 
+      stroke="url(#oracleGold)" 
+      stroke-width="1.2" 
+      fill="#090c1a"
+    />
+
+    <!-- Pupila / Fenda Mística com Ponto Central -->
+    <circle 
+      cx="24" 
+      cy="24" 
+      r="1.8" 
+      fill="url(#oracleGold)" 
+    />
+
+    <!-- Faíscas Verticais de Clarividência -->
+    <line x1="24" y1="14" x2="24" y2="17" stroke="url(#oracleGold)" stroke-width="1.2" stroke-linecap="round" />
+    <line x1="24" y1="31" x2="24" y2="34" stroke="url(#oracleGold)" stroke-width="1.2" stroke-linecap="round" />
+  </svg>
+</div>

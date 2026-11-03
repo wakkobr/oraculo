@@ -1,21 +1,19 @@
 ---
+import OracleLogo from './OracleLogo.astro';
 ---
+
 <!-- Top Navbar -->
-<header class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-8 border-b border-[#1e243d]">
-  <div class="flex items-center gap-3.5">
-    <!-- Brasão / Símbolo Arcano -->
-    <div class="w-11 h-11 rounded-lg bg-[#0e1222] border border-oracle-gold/40 flex items-center justify-center shadow-[0_0_15px_-3px_rgba(212,175,55,0.2)]">
-      <svg class="w-6 h-6 text-oracle-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-        <polyline points="2 17 12 22 22 17"></polyline>
-        <polyline points="2 12 12 17 22 12"></polyline>
-      </svg>
-    </div>
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 mb-8 border-b border-[#1e243d]">
+  <div class="flex items-center gap-4">
+    <!-- Novo Logo Arcano do Oráculo -->
+    <OracleLogo class="w-13 h-13" />
 
     <div>
-      <h1 class="text-2xl font-bold tracking-wider text-oracle-gold-light font-['Cinzel']">
-        O Oráculo
-      </h1>
+      <div class="flex items-center gap-2">
+        <h1 class="text-2xl md:text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#faecc5] via-[#d4af37] to-[#e2c974] font-['Cinzel'] drop-shadow-[0_2px_10px_rgba(212,175,55,0.25)]">
+          O ORÁCULO
+        </h1>
+      </div>
       <p class="text-xs text-slate-400 font-light tracking-wide mt-0.5">
         Respostas imediatas para o destino da mesa
       </p>
@@ -26,7 +24,7 @@
   <div class="relative w-full md:w-80">
     <input 
       type="text" 
-      placeholder="Filtrar geradores (ex: taverna, npc)..." 
+      placeholder="Filtrar geradores (ex: taverna, npc, livro)..." 
       class="w-full px-3.5 py-2 pl-9 bg-[#0b0e1d] border border-[#232948] rounded-md text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-oracle-gold/50 transition-colors"
     />
     <svg class="w-4 h-4 text-slate-500 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
