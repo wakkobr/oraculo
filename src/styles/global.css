@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-oracle-bg: #0c0e18;
-  --color-oracle-card: #16192b;
+  --color-oracle-bg: #070913;
+  --color-oracle-card: #0d1124;
   --color-oracle-border: rgba(99, 102, 241, 0.22);
   --color-oracle-primary: #818cf8;
   --color-oracle-secondary: #38bdf8;
-  --color-oracle-gold: #fcd34d;
-  --color-oracle-goldDark: #b45309;
+  --color-oracle-gold: #d4af37;
+  --color-oracle-gold-light: #f3e5ab;
+  --color-oracle-gold-dark: #997819;
   --color-oracle-muted: #94a3b8;
 
   --font-title: 'Cinzel', serif;

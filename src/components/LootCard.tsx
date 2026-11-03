@@ -37,7 +37,7 @@ export default function LootCard() {
         {/* Topo do Card */}
         <div className="flex items-center justify-between pb-3.5 mb-3 border-b border-[#1c2242]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-[#2a1d13] border border-[#6b451e] flex items-center justify-center text-amber-400 text-lg">
+            <div className="w-9 h-9 rounded-lg bg-[#2a1d13] border border-[#6b451e] flex items-center justify-center text-[#d4af37] text-lg">
               💎
             </div>
             <div>
@@ -49,7 +49,7 @@ export default function LootCard() {
           <button 
             onClick={roll} 
             title="Sortear novamente"
-            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-amber-400/50 flex items-center justify-center text-slate-300 hover:text-amber-300 transition-colors"
+            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-[#d4af37]/50 flex items-center justify-center text-slate-300 hover:text-[#f3e5ab] transition-colors"
           >
             ↻
           </button>
@@ -61,7 +61,7 @@ export default function LootCard() {
           <select 
             value={tier} 
             onChange={(e) => setTier(e.target.value as any)}
-            className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-400/40"
+            className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-[#d4af37]/40"
           >
             <option value="cr0_4">🎲 ND 0 a 4 (Iniciante / Salteadores)</option>
             <option value="cr5_10">🎲 ND 5 a 10 (Heroico / Monstros Célebres)</option>
@@ -72,11 +72,11 @@ export default function LootCard() {
         <div className="mb-3">
           <div className="flex items-center justify-between mb-1">
             <span className="text-[10px] font-mono tracking-widest uppercase text-slate-400">Saque Sorteado:</span>
-            <button onClick={copy} title="Copiar saque" className="text-slate-500 hover:text-amber-300 text-xs transition-colors">
+            <button onClick={copy} title="Copiar saque" className="text-slate-500 hover:text-[#f3e5ab] text-xs transition-colors">
               📋
             </button>
           </div>
-          <h4 className="text-lg font-bold text-amber-200 font-['Cinzel'] tracking-wide">
+          <h4 className="text-lg font-bold text-[#f3e5ab] font-['Cinzel'] tracking-wide">
             {tier === 'cr0_4' ? 'COFRE DE BANDIDOS' : 'BAÚ DO COVIL'}
           </h4>
         </div>
@@ -99,7 +99,7 @@ export default function LootCard() {
         </button>
         <button 
           onClick={roll}
-          className="w-full py-2 px-3 rounded-md bg-linear-to-r from-amber-300 to-amber-400 hover:from-amber-200 hover:to-amber-300 text-slate-950 text-xs font-bold font-['Cinzel'] tracking-wider shadow-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1"
+          className="w-full py-2 px-3 rounded-md bg-linear-to-r from-[#c59b27] via-[#d4af37] to-[#b3861b] hover:brightness-110 text-[#0c0e18] text-xs font-bold font-['Cinzel'] tracking-wider shadow-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1"
         >
           <span>🎲</span> Saquear Baú
         </button>

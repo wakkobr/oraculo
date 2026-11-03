@@ -1,11 +1,11 @@
 ---
 ---
 <!-- Top Navbar -->
-<header class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-6 border-b border-[#1e243d]">
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 mb-8 border-b border-[#1e243d]">
   <div class="flex items-center gap-3.5">
-    <!-- Brasão / Símbolo Arcano à esquerda -->
-    <div class="w-11 h-11 rounded-lg bg-[#0e1222] border border-amber-400/40 flex items-center justify-center shadow-[0_0_15px_-3px_rgba(251,191,36,0.2)]">
-      <svg class="w-6 h-6 text-amber-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Brasão / Símbolo Arcano -->
+    <div class="w-11 h-11 rounded-lg bg-[#0e1222] border border-[#d4af37]/40 flex items-center justify-center shadow-[0_0_15px_-3px_rgba(212,175,55,0.2)]">
+      <svg class="w-6 h-6 text-[#d4af37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
         <polyline points="2 17 12 22 22 17"></polyline>
         <polyline points="2 12 12 17 22 12"></polyline>
@@ -13,16 +13,11 @@
     </div>
 
     <div>
-      <div class="flex items-center gap-2.5">
-        <h1 class="text-2xl font-bold tracking-wider text-amber-200 font-['Cinzel']">
-          O Oráculo
-        </h1>
-        <span class="px-2 py-0.5 text-[10px] font-mono tracking-widest uppercase bg-[#141b34] text-indigo-300 border border-indigo-500/30 rounded">
-          v1.0 ALFA
-        </span>
-      </div>
+      <h1 class="text-2xl font-bold tracking-wider text-[#f3e5ab] font-['Cinzel']">
+        O Oráculo
+      </h1>
       <p class="text-xs text-slate-400 font-light tracking-wide mt-0.5">
-        Grimório de Ferramentas Rápidas & Tabelas Aleatórias para Mestres de RPG
+        Respostas imediatas para o destino da mesa
       </p>
     </div>
   </div>
@@ -32,7 +27,7 @@
     <input 
       type="text" 
       placeholder="Filtrar geradores (ex: taverna, npc)..." 
-      class="w-full px-3.5 py-2 pl-9 bg-[#0b0e1d] border border-[#232948] rounded-md text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-amber-400/50 transition-colors"
+      class="w-full px-3.5 py-2 pl-9 bg-[#0b0e1d] border border-[#232948] rounded-md text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-[#d4af37]/50 transition-colors"
     />
     <svg class="w-4 h-4 text-slate-500 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <circle cx="11" cy="11" r="8" stroke-width="2"></circle>
@@ -41,24 +36,10 @@
   </div>
 </header>
 
-<!-- Faixa Temática Informativa -->
-<div class="mb-8 p-3.5 rounded-lg bg-[#0c1024]/90 border border-[#2a2f52] shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
-  <div class="flex items-center gap-3">
-    <span class="text-amber-300 text-lg">🌙</span>
-    <div>
-      <span class="font-semibold text-amber-300 uppercase tracking-wider font-['Cinzel']">Tema Ativo: C: Místico LunaeHaven</span>
-      <p class="text-slate-400 text-[11px] mt-0.5">O conceito autoral: noites estelares profundas, molduras em ouro nobre pálido e arcanismo refinado com máxima legibilidade.</p>
-    </div>
-  </div>
-  <div class="px-3 py-1 rounded bg-[#090c1a] border border-[#242b50] text-slate-300 font-mono text-[11px] self-start md:self-center whitespace-nowrap">
-    Layout: <strong class="text-indigo-300">Grid Modular de Ação Rápida</strong>
-  </div>
-</div>
-
 <!-- Cabeçalho de Seção -->
-<div class="flex items-center justify-between mb-4">
-  <h2 class="text-lg font-bold text-amber-200 font-['Cinzel'] flex items-center gap-2">
-    <span>⚔</span> GERADORES DE AÇÃO IMEDIATA
+<div class="flex items-center justify-between mb-5">
+  <h2 class="text-lg font-bold text-[#f3e5ab] font-['Cinzel'] flex items-center gap-2">
+    <span class="text-[#d4af37]">⚔</span> GERADORES DE AÇÃO IMEDIATA
   </h2>
   <span class="text-xs text-slate-500">Clique em 'Rolar' ou no botão circular para regerar</span>
 </div>
