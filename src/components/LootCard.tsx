@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import loots from '../data/loots.json';
+import { addHistoryEntry } from '../utils/history';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -14,11 +15,12 @@ export default function LootCard() {
 
   const roll = () => {
     const pool = loots[tier];
-    setData({
-      moedas: pick(pool.moedas),
-      gemas: pick(pool.gemas),
-      bugiganga: pick(pool.bugigangas)
-    });
+    const moedas = pick(pool.moedas);
+    const gemas = pick(pool.gemas);
+    const bugiganga = pick(pool.bugigangas);
+
+    setData({ moedas, gemas, bugiganga });
+    addHistoryEntry('TESOURO', `${moedas} | ${gemas}`);
   };
 
   const copy = () => {
@@ -29,15 +31,14 @@ export default function LootCard() {
   };
 
   return (
-    <div className="bg-[#0d1124] border border-[#252b4e] rounded-xl p-5 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)] relative">
+    <div className="bg-oracle-card border border-[#252b4e] rounded-xl p-5 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)] relative">
       <span className="absolute top-2.5 left-2.5 text-[10px] text-indigo-400/40">✦</span>
       <span className="absolute top-2.5 right-2.5 text-[10px] text-indigo-400/40">✦</span>
 
       <div>
-        {/* Topo do Card */}
         <div className="flex items-center justify-between pb-3.5 mb-3 border-b border-[#1c2242]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-[#2a1d13] border border-[#6b451e] flex items-center justify-center text-[#d4af37] text-lg">
+            <div className="w-9 h-9 rounded-lg bg-[#2a1d13] border border-[#6b451e] flex items-center justify-center text-[#d4b26f] text-lg">
               💎
             </div>
             <div>
@@ -49,39 +50,36 @@ export default function LootCard() {
           <button 
             onClick={roll} 
             title="Sortear novamente"
-            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-[#d4af37]/50 flex items-center justify-center text-slate-300 hover:text-[#f3e5ab] transition-colors"
+            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-[#d4b26f]/50 flex items-center justify-center text-slate-300 hover:text-[#d4b26f] transition-colors"
           >
             ↻
           </button>
         </div>
 
-        {/* Dropdown de Faixa de Desafio */}
         <div className="mb-4">
           <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Faixa de Desafio:</label>
           <select 
             value={tier} 
             onChange={(e) => setTier(e.target.value as any)}
-            className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-[#d4af37]/40"
+            className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-[#d4b26f]/40"
           >
             <option value="cr0_4">🎲 ND 0 a 4 (Iniciante / Salteadores)</option>
             <option value="cr5_10">🎲 ND 5 a 10 (Heroico / Monstros Célebres)</option>
           </select>
         </div>
 
-        {/* Bloco de Resultado Sorteado */}
         <div className="mb-3">
           <div className="flex items-center justify-between mb-1">
             <span className="text-[10px] font-mono tracking-widest uppercase text-slate-400">Saque Sorteado:</span>
-            <button onClick={copy} title="Copiar saque" className="text-slate-500 hover:text-[#f3e5ab] text-xs transition-colors">
+            <button onClick={copy} title="Copiar saque" className="text-slate-500 hover:text-[#d4b26f] text-xs transition-colors">
               📋
             </button>
           </div>
-          <h4 className="text-lg font-bold text-[#f3e5ab] font-['Cinzel'] tracking-wide">
+          <h4 className="text-lg font-bold text-[#f2dfb3] font-['Cinzel'] tracking-wide">
             {tier === 'cr0_4' ? 'COFRE DE BANDIDOS' : 'BAÚ DO COVIL'}
           </h4>
         </div>
 
-        {/* Detalhes do Saque */}
         <div className="space-y-2 text-xs text-slate-300 mb-6 leading-relaxed">
           <p><strong className="text-slate-100 font-semibold">Moedas:</strong> {data.moedas}</p>
           <p><strong className="text-slate-100 font-semibold">Gemas:</strong> {data.gemas}</p>
@@ -89,7 +87,6 @@ export default function LootCard() {
         </div>
       </div>
 
-      {/* Ações inferiores */}
       <div className="grid grid-cols-2 gap-2.5 pt-2">
         <button 
           onClick={copy}
@@ -99,7 +96,7 @@ export default function LootCard() {
         </button>
         <button 
           onClick={roll}
-          className="w-full py-2 px-3 rounded-md bg-linear-to-r from-[#c59b27] via-[#d4af37] to-[#b3861b] hover:brightness-110 text-[#0c0e18] text-xs font-bold font-['Cinzel'] tracking-wider shadow-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1"
+          className="w-full py-2 px-3 rounded-md bg-[linear-gradient(135deg,#d4b26f_0%,#b8934a_100%)] hover:brightness-110 text-[#0c0e18] text-xs font-bold font-['Cinzel'] tracking-wider shadow-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1"
         >
           <span>🎲</span> Saquear Baú
         </button>

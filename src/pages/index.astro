@@ -4,19 +4,27 @@ import Header from '../components/Header.astro';
 import TavernCard from '../components/TavernCard';
 import NpcCard from '../components/NpcCard';
 import LootCard from '../components/LootCard';
+import UpcomingModules from '../components/UpcomingModules.astro';
+import SessionLog from '../components/SessionLog';
 ---
 
 <Layout>
   <Header />
 
-  <!-- Grid de Cards Idêntico ao Mockup -->
+  <!-- Grid dos 3 Geradores Principais -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <TavernCard client:load />
     <NpcCard client:load />
     <LootCard client:load />
   </div>
 
+  <!-- Próximos Módulos & Tabelas Expansíveis -->
+  <UpcomingModules />
+
+  <!-- Registro da Sessão (Últimos Sorteios) -->
+  <SessionLog client:load />
+
   <footer class="mt-14 text-center text-xs text-slate-500 border-t border-[#1a1f38] pt-6 font-mono">
-    O Oráculo &bull; beyond-obvious.net &bull; Pronto para expansões arcanas
+    O Oráculo &bull; beyond-obvious.net &bull; Respostas imediatas para o destino da mesa
   </footer>
 </Layout>

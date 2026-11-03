@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import npcs from '../data/npcs.json';
+import { addHistoryEntry } from '../utils/history';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -22,12 +23,17 @@ export default function NpcCard() {
     const rLabel = race === 'anao' ? 'Anão' : race === 'elfo' ? 'Elfo' : race === 'tiefling' ? 'Tiefling' : 'Humano';
     const gLabel = gender === 'masc' ? 'Masc' : 'Fem';
 
+    const nomeCompleto = `${primeiro} ${sobrenome}`.toUpperCase();
+    const sub = `(${rLabel}, ${gLabel})`;
+
     setData({
-      nome: `${primeiro} ${sobrenome}`.toUpperCase(),
-      sub: `(${rLabel}, ${gLabel})`,
+      nome: nomeCompleto,
+      sub,
       personalidade: pick(npcs.tracos),
       segredo: pick(npcs.segredos)
     });
+
+    addHistoryEntry('NPC', `${nomeCompleto} ${sub}`);
   };
 
   const copy = () => {
@@ -38,12 +44,11 @@ export default function NpcCard() {
   };
 
   return (
-    <div className="bg-[#0d1124] border border-[#252b4e] rounded-xl p-5 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)] relative">
+    <div className="bg-oracle-card border border-[#252b4e] rounded-xl p-5 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)] relative">
       <span className="absolute top-2.5 left-2.5 text-[10px] text-indigo-400/40">✦</span>
       <span className="absolute top-2.5 right-2.5 text-[10px] text-indigo-400/40">✦</span>
 
       <div>
-        {/* Topo do Card */}
         <div className="flex items-center justify-between pb-3.5 mb-3 border-b border-[#1c2242]">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg bg-[#22173a] border border-[#4d2f80] flex items-center justify-center text-purple-300 text-lg">
@@ -58,20 +63,19 @@ export default function NpcCard() {
           <button 
             onClick={roll} 
             title="Sortear novamente"
-            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-[#d4af37]/50 flex items-center justify-center text-slate-300 hover:text-[#f3e5ab] transition-colors"
+            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-[#d4b26f]/50 flex items-center justify-center text-slate-300 hover:text-[#d4b26f] transition-colors"
           >
             ↻
           </button>
         </div>
 
-        {/* Filtros Dropdown */}
         <div className="grid grid-cols-2 gap-2 mb-4">
           <div>
             <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Raça:</label>
             <select 
               value={race} 
               onChange={(e) => setRace(e.target.value as any)}
-              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-[#d4af37]/40"
+              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-[#d4b26f]/40"
             >
               <option value="humano">🎲 Humano</option>
               <option value="elfo">🎲 Elfo</option>
@@ -85,7 +89,7 @@ export default function NpcCard() {
             <select 
               value={gender} 
               onChange={(e) => setGender(e.target.value as any)}
-              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-[#d4af37]/40"
+              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-[#d4b26f]/40"
             >
               <option value="masc">🎲 Masculino</option>
               <option value="fem">🎲 Feminino</option>
@@ -93,30 +97,27 @@ export default function NpcCard() {
           </div>
         </div>
 
-        {/* Bloco de Resultado Sorteado */}
         <div className="mb-3">
           <div className="flex items-center justify-between mb-1">
             <span className="text-[10px] font-mono tracking-widest uppercase text-slate-400">NPC Sorteado:</span>
-            <button onClick={copy} title="Copiar nome" className="text-slate-500 hover:text-[#f3e5ab] text-xs transition-colors">
+            <button onClick={copy} title="Copiar nome" className="text-slate-500 hover:text-[#d4b26f] text-xs transition-colors">
               📋
             </button>
           </div>
           <div className="flex items-baseline gap-2 flex-wrap">
-            <h4 className="text-lg font-bold text-[#f3e5ab] font-['Cinzel'] tracking-wide">
+            <h4 className="text-lg font-bold text-[#f2dfb3] font-['Cinzel'] tracking-wide">
               {data.nome}
             </h4>
             <span className="text-xs text-slate-400 font-mono">{data.sub}</span>
           </div>
         </div>
 
-        {/* Detalhes do NPC */}
         <div className="space-y-2 text-xs text-slate-300 mb-6 leading-relaxed">
           <p><strong className="text-slate-100 font-semibold">Personalidade:</strong> {data.personalidade}</p>
           <p><strong className="text-slate-100 font-semibold">Segredo / Gancho:</strong> {data.segredo}</p>
         </div>
       </div>
 
-      {/* Ações inferiores */}
       <div className="grid grid-cols-2 gap-2.5 pt-2">
         <button 
           onClick={copy}
@@ -126,7 +127,7 @@ export default function NpcCard() {
         </button>
         <button 
           onClick={roll}
-          className="w-full py-2 px-3 rounded-md bg-linear-to-r from-[#c59b27] via-[#d4af37] to-[#b3861b] hover:brightness-110 text-[#0c0e18] text-xs font-bold font-['Cinzel'] tracking-wider shadow-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1"
+          className="w-full py-2 px-3 rounded-md bg-[linear-gradient(135deg,#d4b26f_0%,#b8934a_100%)] hover:brightness-110 text-[#0c0e18] text-xs font-bold font-['Cinzel'] tracking-wider shadow-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1"
         >
           <span>🎲</span> Rolar NPC
         </button>
