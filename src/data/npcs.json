@@ -1,0 +1,37 @@
+{
+  "nomes": {
+    "humano": {
+      "masc": ["Kaelen", "Boran", "Valen", "Darek", "Jorah", "Aldous", "Garreth"],
+      "fem": ["Elysia", "Morrigan", "Lyanna", "Thalia", "Mirella", "Rowena", "Gwen"],
+      "sobrenome": ["Pedranegra", "Corvonegro", "Valente", "Cinzaforde", "Rios", "Barroco", "Pico-alto"]
+    },
+    "elfo": {
+      "masc": ["Aeris", "Faenor", "Sylas", "Thalion", "Elion", "Caelynn", "Finarfin"],
+      "fem": ["Lyra", "Althaea", "Caerwyn", "Sariel", "Naivara", "Keyleth", "Luthien"],
+      "sobrenome": ["Brisaestelar", "Folhaprata", "Sombraverde", "Cantoalvo", "Noiteluz", "Raiodourado"]
+    },
+    "anao": {
+      "masc": ["Torin", "Bruenor", "Krag", "Balin", "Dain", "Rurik", "Balfur"],
+      "fem": ["Helja", "Vistra", "Duergarda", "Mardred", "Kathra", "Torbera", "Eldeth"],
+      "sobrenome": ["Barbaferro", "Escudoforte", "Martelo-pesado", "Fornalha", "Minafunda", "Cravodourado"]
+    },
+    "tiefling": {
+      "masc": ["Malakor", "Akmenos", "Barakas", "Damakos", "Ekemon", "Kairon", "Skamos"],
+      "fem": ["Lilith", "Anakis", "Criella", "Kallista", "Lerissa", "Makaria", "Rieta"],
+      "sobrenome": ["Sussurro", "Cólera", "Desespero", "Cinzas", "Chama-viva", "Segredo"]
+    }
+  },
+  "tracos": [
+    "Fala num tom quase inaudível e evita qualquer contacto visual.",
+    "Extremamente gesticulador; ri alto de quase tudo o que ouve.",
+    "Cheira a incenso e ervas secas; carrega um talismã antigo nos dedos.",
+    "Avalia com atenção as armas e o ouro de quem fala consigo.",
+    "Morde o lábio inferior quando é confrontado com uma pergunta incômoda."
+  ],
+  "segredos": [
+    "Deve uma soma considerável a um sindicato de contrabandistas local.",
+    "Possui um mapa incompleto de uma tumba que julga ser da sua família.",
+    "É um espião infiltrado a recolher boatos para a nobreza local.",
+    "Fugiu recentemente de um culto obscuro e teme ser reconhecido."
+  ]
+}

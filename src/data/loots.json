@@ -1,0 +1,12 @@
+{
+  "cr0_4": {
+    "moedas": ["4d6 peças de cobre e 2d6 peças de prata", "3d6 peças de prata e 1d6 peças de ouro", "4d6 peças de ouro"],
+    "gemas": ["Azorita polida (10 po)", "Ágata musgosa (10 po)", "Quartzo olho-de-gato (10 po)", "Turquesa pálida (10 po)"],
+    "bugigangas": ["Dente de goblin engastado a prata", "Frasco de rapé esculpido em osso antigo", "Bússola de latão com o vidro estalado", "Pequena chave de ferro sem fechadura visível"]
+  },
+  "cr5_10": {
+    "moedas": ["4d6 × 100 peças de prata e 1d6 × 100 peças de ouro", "2d6 × 100 peças de ouro e 1d6 peças de platina"],
+    "gemas": ["Âmbar límpido com uma folha no interior (100 po)", "Pérola branca lustrosa (100 po)", "Granada vermelha facetada (100 po)"],
+    "bugigangas": ["Adaga cerimonial ornada com safira no pomo", "Caixa de música de prata afinada num tom melancólico", "Anel de sinete pertencente a uma linhagem extinta"]
+  }
+}

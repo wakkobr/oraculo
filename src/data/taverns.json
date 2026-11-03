@@ -1,0 +1,15 @@
+{
+  "prefixos": ["O Dragão", "A Donzela", "O Javali", "A Serpente", "O Elfo", "O Corvo", "O Barril", "O Grifo", "O Cão", "A Hidra", "O Suricato"],
+  "sufixos": ["Bêbado", "Caolho", "Dourado", "Sussurrante", "Voador", "Ancestral", "Sangrento", "Sonhador", "Manco", "Faminto", "Sorridente"],
+  "climas": [
+    "Barulhenta, cheirando a cerveja azeda, tabaco barato e carne assada no espeto.",
+    "Silenciosa e sombria; olhares desconfiados cruzam a sala a cada passo.",
+    "Acolhedora e festiva, com lareira crepitante e um menestrel bem afinado.",
+    "Caótica e decadente, com dados a rolar e brigas iminentes em cada canto escuro."
+  ],
+  "especialidades": [
+    "Ensopado espesso de javali com raízes amargas e cerveja preta.",
+    "Torta quente de enguia com cerveja amanteigada e pão rústico.",
+    "Hidromel perfumado da floresta servido com queijo de cabra maturado."
+  ]
+}
