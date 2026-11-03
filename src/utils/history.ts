@@ -1,11 +1,11 @@
 export interface HistoryItem {
   id: string;
-  tipo: 'TAVERNA' | 'NPC' | 'TESOURO' | 'LIVRO';
+  tipo: 'TAVERNA' | 'NPC' | 'TESOURO' | 'LIVRO' | 'COGUMELO';
   texto: string;
   hora: string;
 }
 
-export const addHistoryEntry = (tipo: 'TAVERNA' | 'NPC' | 'TESOURO' | 'LIVRO', texto: string) => {
+export const addHistoryEntry = (tipo: 'TAVERNA' | 'NPC' | 'TESOURO' | 'LIVRO' | 'COGUMELO', texto: string) => {
   const agora = new Date();
   const hora = agora.toTimeString().split(' ')[0];
   const item: HistoryItem = {

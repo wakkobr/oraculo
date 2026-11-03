@@ -70,12 +70,14 @@ export default function SessionLog() {
                 <span
                   className={`text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-wider shrink-0 ${
                     item.tipo === 'TAVERNA'
-                    ? 'bg-[#181d38] text-indigo-300 border border-indigo-500/30'
-                    : item.tipo === 'NPC'
-                    ? 'bg-[#22173a] text-purple-300 border border-purple-500/30'
-                    : item.tipo === 'LIVRO'
-                    ? 'bg-[#14232a] text-teal-300 border border-[#214b5c]'
-                    : 'bg-[#2a1d13] text-[#d4b26f] border border-[#6b451e]/40'
+  ? 'bg-[#181d38] text-indigo-300 border border-indigo-500/30'
+  : item.tipo === 'NPC'
+  ? 'bg-[#22173a] text-purple-300 border border-purple-500/30'
+  : item.tipo === 'LIVRO'
+  ? 'bg-[#14232a] text-teal-300 border border-[#214b5c]'
+  : item.tipo === 'COGUMELO'
+  ? 'bg-[#11241a] text-emerald-300 border border-[#1b5e3a]'
+  : 'bg-[#2a1d13] text-[#d4b26f] border border-[#6b451e]/40'
                   }`}
                 >
                   {item.tipo}
