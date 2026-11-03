@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import TavernCard from '../components/TavernCard';
 import NpcCard from '../components/NpcCard';
 import LootCard from '../components/LootCard';
+import BookCard from '../components/BookCard';
 import UpcomingModules from '../components/UpcomingModules.astro';
 import SessionLog from '../components/SessionLog';
 ---
@@ -11,11 +12,12 @@ import SessionLog from '../components/SessionLog';
 <Layout>
   <Header />
 
-  <!-- Grid dos 3 Geradores Principais -->
+  <!-- Grid dos Geradores Ativos -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <TavernCard client:load />
     <NpcCard client:load />
     <LootCard client:load />
+    <BookCard client:load />
   </div>
 
   <!-- Próximos Módulos & Tabelas Expansíveis -->
