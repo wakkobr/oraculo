@@ -3,11 +3,11 @@ import mushrooms from '../data/mushrooms.json';
 import { addHistoryEntry } from '../utils/history';
 
 export default function MushroomCard() {
-  const [data, setData] = useState({
-    id: 72,
-    nome: "Oracle's Consult (Consulta do Oráculo)",
-    descricao: "Permite rolar 1d20 no consumo e guardar o valor para substituir qualquer rolagem futura nas próximas 24 horas."
-  });
+const [data, setData] = useState({
+  id: 72,
+  nome: "Consulta do Oráculo",
+  descricao: "Permite rolar 1d20 no consumo e guardar o valor para substituir qualquer rolagem futura nas próximas 24 horas."
+});
   const [copied, setCopied] = useState(false);
 
   const roll = () => {
