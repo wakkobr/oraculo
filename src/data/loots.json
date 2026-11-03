@@ -1,12 +1,22 @@
 {
-  "cr0_4": {
-    "moedas": ["4d6 peças de cobre e 2d6 peças de prata", "3d6 peças de prata e 1d6 peças de ouro", "4d6 peças de ouro"],
-    "gemas": ["Azorita polida (10 po)", "Ágata musgosa (10 po)", "Quartzo olho-de-gato (10 po)", "Turquesa pálida (10 po)"],
-    "bugigangas": ["Dente de goblin engastado a prata", "Frasco de rapé esculpido em osso antigo", "Bússola de latão com o vidro estalado", "Pequena chave de ferro sem fechadura visível"]
+  "gemas": {
+    "10gp": ["Azorita azul-escura", "Ágata listrada", "Quartzo olho-de-gato", "Hematita cinza-ferro", "Lápis-lazúli com pirita", "Malaquita verde-clara", "Obsidiana vítrea preta", "Turquesa azulada"],
+    "50gp": ["Pedra-da-lua pálida", "Jaspe vermelho-sangue", "Crisoprásio verde-maçã", "Citrino amarelo-claro", "Quartzo fumê", "Zircônio translúcido"],
+    "100gp": ["Âmbar límpido com inclusões", "Ametista violeta facetada", "Granada vermelha profunda", "Pérola branca imaculada", "Espinélio rubro", "Turmalina verde-oliva"],
+    "500gp": ["Alexandrita que muda de cor", "Água-marinha azul-pálida", "Pérola negra brilhante", "Topázio dourado polido", "Peridoto brilhante"],
+    "1000gp": ["Opala de fogo cintilante", "Safira azul-real", "Esmeralda verde-vívida", "Rubi vermelho-fogo", "Diamante cristalino (1.000 PO)"],
+    "5000gp": ["Diamante negro lendário", "Jacinto reluzente", "Safira estelar vívida", "Rubi imperial de corte perfeito"]
   },
-  "cr5_10": {
-    "moedas": ["4d6 × 100 peças de prata e 1d6 × 100 peças de ouro", "2d6 × 100 peças de ouro e 1d6 peças de platina"],
-    "gemas": ["Âmbar límpido com uma folha no interior (100 po)", "Pérola branca lustrosa (100 po)", "Granada vermelha facetada (100 po)"],
-    "bugigangas": ["Adaga cerimonial ornada com safira no pomo", "Caixa de música de prata afinada num tom melancólico", "Anel de sinete pertencente a uma linhagem extinta"]
+  "objetos_arte": {
+    "25gp": ["Jarro de prata polido", "Estatueta de osso esculpida de um corvo", "Bracelete de ouro trabalhado com filigrana", "Pano de veludo com bordado em fios de prata"],
+    "250gp": ["Anel de ouro com sinete de sinete nobre", "Taça de marfim entalhada com cenas de caça", "Manto cerimonial de seda adornado com pequenas pérolas", "Adaga cerimonial de lâmina ondulada de prata"],
+    "750gp": ["Cálice de ouro maciço com pequenas esmeraldas", "Pente de marfim incrustado com pedras-da-lua", "Caixa de música de prata afinada e decorada", "Ídolo de bronze antigo de uma divindade esquecida"],
+    "2500gp": ["Coroa de platina com três safiras", "Máscara de ouro pura funerária", "Tapeçaria de seda élfica intacta retratando uma batalha", "Sextante de ouro e latão de um navegador lendário"],
+    "7500gp": ["Anel de platina com um diamante lapidado colossal", "Cetro real dourado encimado por um orbe de rubi", "Cálice cerimonial incrustado com diamantes e esmeraldas"]
+  },
+  "itens_magicos": {
+    "comum_incomum": ["Poção de Cura Maior", "Pergaminho de Magia (2º Nível)", "Bolsa de Carga (Bag of Holding)", "Arma +1", "Varinha de Mísseis Mágicos", "Botas de Levitação", "Manto de Proteção"],
+    "raro": ["Poção de Cura Suprema", "Arma +2", "Escudo +2", "Anel de Resistência Elemental", "Capa do Morcego", "Botas de Velocidade", "Varinha de Bolas de Fogo"],
+    "muito_raro_lendario": ["Arma +3", "Tomo da Compreensão", "Manual do Bom Exercício", "Cinto de Força do Gigante do Fogo", "Capa da Invisibilidade", "Espada Vorpal"]
   }
 }

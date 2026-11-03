@@ -3,28 +3,110 @@ import loots from '../data/loots.json';
 import { addHistoryEntry } from '../utils/history';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
+const rollDice = (count: number, sides: number) => {
+  let total = 0;
+  for (let i = 0; i < count; i++) {
+    total += Math.floor(Math.random() * sides) + 1;
+  }
+  return total;
+};
+
+type LootType = 'individual' | 'hoard';
+type CRTier = 'cr0_4' | 'cr5_10' | 'cr11_16' | 'cr17';
 
 export default function LootCard() {
-  const [tier, setTier] = useState<'cr0_4' | 'cr5_10'>('cr0_4');
+  const [lootType, setLootType] = useState<LootType>('individual');
+  const [cr, setCr] = useState<CRTier>('cr0_4');
   const [data, setData] = useState({
-    moedas: '4d6 peças de ouro',
-    gemas: 'Ágata musgosa (10 po)',
-    bugiganga: 'Dente de goblin engastado a prata'
+    titulo: 'SAQUE INDIVIDUAL (ND 0-4)',
+    moedas: '14 PC, 8 PP, 2 PO',
+    valiosos: 'Pequena bugiganga de cobre',
+    magico: 'Nenhum item mágico'
   });
   const [copied, setCopied] = useState(false);
 
   const roll = () => {
-    const pool = loots[tier];
-    const moedas = pick(pool.moedas);
-    const gemas = pick(pool.gemas);
-    const bugiganga = pick(pool.bugigangas);
+    let moedasStr = '';
+    let valiososStr = 'Nenhum item de valor';
+    let magicoStr = 'Nenhum item mágico';
+    let tituloStr = '';
 
-    setData({ moedas, gemas, bugiganga });
-    addHistoryEntry('TESOURO', `${moedas} | ${gemas}`);
+    if (lootType === 'individual') {
+      if (cr === 'cr0_4') {
+        tituloStr = 'SAQUE INDIVIDUAL (ND 0–4)';
+        const cp = rollDice(3, 6);
+        const sp = rollDice(1, 6);
+        const gp = rollDice(1, 6);
+        moedasStr = `${cp * 10} PC, ${sp * 5} PP, ${gp} PO`;
+        valiososStr = pick(loots.gemas['10gp']);
+      } else if (cr === 'cr5_10') {
+        tituloStr = 'SAQUE INDIVIDUAL (ND 5–10)';
+        const sp = rollDice(4, 6) * 10;
+        const gp = rollDice(2, 6) * 10;
+        const pp = rollDice(1, 6);
+        moedasStr = `${sp} PP, ${gp} PO, ${pp} PL`;
+        valiososStr = pick(loots.gemas['50gp']);
+      } else if (cr === 'cr11_16') {
+        tituloStr = 'SAQUE INDIVIDUAL (ND 11–16)';
+        const gp = rollDice(4, 6) * 100;
+        const pp = rollDice(1, 6) * 10;
+        moedasStr = `${gp} PO, ${pp} PL`;
+        valiososStr = `${pick(loots.gemas['100gp'])} & ${pick(loots.objetos_arte['250gp'])}`;
+      } else {
+        tituloStr = 'SAQUE INDIVIDUAL (ND 17+)';
+        const gp = rollDice(8, 6) * 100;
+        const pp = rollDice(3, 6) * 100;
+        moedasStr = `${gp} PO, ${pp} PL`;
+        valiososStr = `${pick(loots.gemas['500gp'])} & ${pick(loots.objetos_arte['750gp'])}`;
+      }
+    } else {
+      // Tesouro Acumulado / Covil (Hoard)
+      if (cr === 'cr0_4') {
+        tituloStr = 'BAÚ DE COVIL (ND 0–4)';
+        const cp = rollDice(6, 6) * 100;
+        const sp = rollDice(3, 6) * 100;
+        const gp = rollDice(2, 6) * 10;
+        moedasStr = `${cp} PC, ${sp} PP, ${gp} PO`;
+        valiososStr = `2x Gemas: ${pick(loots.gemas['10gp'])}, ${pick(loots.gemas['50gp'])}`;
+        magicoStr = pick(loots.itens_magicos.comum_incomum);
+      } else if (cr === 'cr5_10') {
+        tituloStr = 'COVIL HEROICO (ND 5–10)';
+        const sp = rollDice(4, 6) * 100;
+        const gp = rollDice(6, 6) * 100;
+        const pp = rollDice(2, 6) * 10;
+        moedasStr = `${sp} PP, ${gp} PO, ${pp} PL`;
+        valiososStr = `Arte: ${pick(loots.objetos_arte['250gp'])} e Gema: ${pick(loots.gemas['100gp'])}`;
+        magicoStr = `${pick(loots.itens_magicos.comum_incomum)} e ${pick(loots.itens_magicos.raro)}`;
+      } else if (cr === 'cr11_16') {
+        tituloStr = 'TESOURO LENDÁRIO (ND 11–16)';
+        const gp = rollDice(12, 6) * 100;
+        const pp = rollDice(8, 6) * 100;
+        moedasStr = `${gp} PO, ${pp} PL`;
+        valiososStr = `Arte: ${pick(loots.objetos_arte['750gp'])} e Gema: ${pick(loots.gemas['1000gp'])}`;
+        magicoStr = `Item Raro: ${pick(loots.itens_magicos.raro)} / Muito Raro: ${pick(loots.itens_magicos.muito_raro_lendario)}`;
+      } else {
+        tituloStr = 'COVIL ANCESTRAL (ND 17+)';
+        const gp = rollDice(12, 6) * 1000;
+        const pp = rollDice(8, 6) * 1000;
+        moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp.toLocaleString('pt-BR')} PL`;
+        valiososStr = `Relíquia: ${pick(loots.objetos_arte['7500gp'])} & 2x ${pick(loots.gemas['5000gp'])}`;
+        magicoStr = `Lendário: ${pick(loots.itens_magicos.muito_raro_lendario)}`;
+      }
+    }
+
+    const resultado = {
+      titulo: tituloStr,
+      moedas: moedasStr,
+      valiosos: valiososStr,
+      magico: magicoStr
+    };
+
+    setData(resultado);
+    addHistoryEntry('TESOURO', `${tituloStr} | ${moedasStr} | ${valiososStr}`);
   };
 
   const copy = () => {
-    const text = `Tesouro (${tier === 'cr0_4' ? 'ND 0-4' : 'ND 5-10'}):\nMoedas: ${data.moedas}\nGemas: ${data.gemas}\nBugiganga: ${data.bugiganga}`;
+    const text = `${data.titulo}\nMoedas: ${data.moedas}\nObjetos/Gemas: ${data.valiosos}\nItens Mágicos: ${data.magico}`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 1800);
@@ -36,57 +118,77 @@ export default function LootCard() {
       <span className="absolute top-2.5 right-2.5 text-[10px] text-indigo-400/40">✦</span>
 
       <div>
+        {/* Cabeçalho */}
         <div className="flex items-center justify-between pb-3.5 mb-3 border-b border-[#1c2242]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-[#2a1d13] border border-[#6b451e] flex items-center justify-center text-[#d4b26f] text-lg">
+            <div className="w-9 h-9 rounded-lg bg-[#2a1d13] border border-[#6b451e] flex items-center justify-center text-oracle-gold text-lg">
               💎
             </div>
             <div>
               <h3 className="text-sm font-bold text-slate-100 uppercase tracking-wider font-['Cinzel']">Tesouro & Saque</h3>
-              <p className="text-[11px] text-slate-400">Moedas, gemas e bugigangas</p>
+              <p className="text-[11px] text-slate-400">Tabelas Oficiais D&D 5e</p>
             </div>
           </div>
 
           <button 
             onClick={roll} 
             title="Sortear novamente"
-            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-[#d4b26f]/50 flex items-center justify-center text-slate-300 hover:text-[#d4b26f] transition-colors"
+            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-oracle-gold/50 flex items-center justify-center text-slate-300 hover:text-oracle-gold transition-colors"
           >
             ↻
           </button>
         </div>
 
-        <div className="mb-4">
-          <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Faixa de Desafio:</label>
-          <select 
-            value={tier} 
-            onChange={(e) => setTier(e.target.value as any)}
-            className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-[#d4b26f]/40"
-          >
-            <option value="cr0_4">🎲 ND 0 a 4 (Iniciante / Salteadores)</option>
-            <option value="cr5_10">🎲 ND 5 a 10 (Heroico / Monstros Célebres)</option>
-          </select>
+        {/* Seletores: Tipo e ND */}
+        <div className="grid grid-cols-2 gap-2 mb-3">
+          <div>
+            <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Tipo:</label>
+            <select 
+              value={lootType} 
+              onChange={(e) => setLootType(e.target.value as LootType)}
+              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-oracle-gold/40"
+            >
+              <option value="individual">💰 Individual (Bolsos)</option>
+              <option value="hoard">👑 Covil / Baú (Hoard)</option>
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Desafio (ND):</label>
+            <select 
+              value={cr} 
+              onChange={(e) => setCr(e.target.value as CRTier)}
+              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-oracle-gold/40"
+            >
+              <option value="cr0_4">ND 0 a 4</option>
+              <option value="cr5_10">ND 5 a 10</option>
+              <option value="cr11_16">ND 11 a 16</option>
+              <option value="cr17">ND 17+</option>
+            </select>
+          </div>
         </div>
 
+        {/* Bloco de Resultado */}
         <div className="mb-3">
           <div className="flex items-center justify-between mb-1">
-            <span className="text-[10px] font-mono tracking-widest uppercase text-slate-400">Saque Sorteado:</span>
-            <button onClick={copy} title="Copiar saque" className="text-slate-500 hover:text-[#d4b26f] text-xs transition-colors">
+            <h4 className="text-base font-bold text-oracle-gold-light font-['Cinzel'] tracking-wide">
+              {data.titulo}
+            </h4>
+            <button onClick={copy} title="Copiar saque" className="text-slate-500 hover:text-oracle-gold text-xs transition-colors shrink-0">
               📋
             </button>
           </div>
-          <h4 className="text-lg font-bold text-[#f2dfb3] font-['Cinzel'] tracking-wide">
-            {tier === 'cr0_4' ? 'COFRE DE BANDIDOS' : 'BAÚ DO COVIL'}
-          </h4>
         </div>
 
-        <div className="space-y-2 text-xs text-slate-300 mb-6 leading-relaxed">
-          <p><strong className="text-slate-100 font-semibold">Moedas:</strong> {data.moedas}</p>
-          <p><strong className="text-slate-100 font-semibold">Gemas:</strong> {data.gemas}</p>
-          <p><strong className="text-slate-100 font-semibold">Bugiganga:</strong> {data.bugiganga}</p>
+        {/* Detalhes do Saque */}
+        <div className="space-y-2 text-xs text-slate-300 mb-6 leading-relaxed bg-[#090d1f]/60 p-3 rounded-lg border border-[#1d2342]">
+          <p><strong className="text-oracle-gold font-semibold">Moedas:</strong> {data.moedas}</p>
+          <p><strong className="text-oracle-gold font-semibold">Gemas / Arte:</strong> {data.valiosos}</p>
+          <p><strong className="text-oracle-gold font-semibold">Magia:</strong> {data.magico}</p>
         </div>
       </div>
 
+      {/* Ações inferiores */}
       <div className="grid grid-cols-2 gap-2.5 pt-2">
         <button 
           onClick={copy}
