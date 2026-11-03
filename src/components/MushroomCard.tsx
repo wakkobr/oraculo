@@ -50,18 +50,17 @@ export default function MushroomCard() {
           </button>
         </div>
 
-        {/* Caixa de Resultado Sorteado */}
-        <div className="mb-4">
-          <div className="flex items-center justify-between mb-1">
-            <span className="text-[10px] font-mono tracking-widest uppercase text-emerald-400/90">Resultado d100 [#{data.id}]:</span>
-            <button onClick={copy} title="Copiar cogumelo" className="text-slate-500 hover:text-oracle-gold text-xs transition-colors">
-              📋
-            </button>
-          </div>
-          <h4 className="text-base md:text-lg font-bold text-oracle-gold-light font-['Cinzel'] tracking-wide leading-snug">
-            {data.nome}
-          </h4>
-        </div>
+        {/* Bloco de Resultado (sem o rótulo d100) */}
+<div className="mb-4">
+  <div className="flex items-center justify-between gap-2">
+    <h4 className="text-base md:text-lg font-bold text-oracle-gold-light font-['Cinzel'] tracking-wide leading-snug">
+      {data.nome}
+    </h4>
+    <button onClick={copy} title="Copiar cogumelo" className="text-slate-500 hover:text-oracle-gold text-xs transition-colors shrink-0">
+      📋
+    </button>
+  </div>
+</div>
 
         {/* Descrição Alquímica */}
         <div className="text-xs text-slate-300 mb-6 leading-relaxed bg-[#090d1f]/60 p-3 rounded-lg border border-[#1d2342]">
