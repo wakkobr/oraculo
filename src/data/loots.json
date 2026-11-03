@@ -1,22 +1,94 @@
 {
   "gemas": {
-    "10gp": ["Azorita azul-escura", "Ágata listrada", "Quartzo olho-de-gato", "Hematita cinza-ferro", "Lápis-lazúli com pirita", "Malaquita verde-clara", "Obsidiana vítrea preta", "Turquesa azulada"],
-    "50gp": ["Pedra-da-lua pálida", "Jaspe vermelho-sangue", "Crisoprásio verde-maçã", "Citrino amarelo-claro", "Quartzo fumê", "Zircônio translúcido"],
-    "100gp": ["Âmbar límpido com inclusões", "Ametista violeta facetada", "Granada vermelha profunda", "Pérola branca imaculada", "Espinélio rubro", "Turmalina verde-oliva"],
-    "500gp": ["Alexandrita que muda de cor", "Água-marinha azul-pálida", "Pérola negra brilhante", "Topázio dourado polido", "Peridoto brilhante"],
-    "1000gp": ["Opala de fogo cintilante", "Safira azul-real", "Esmeralda verde-vívida", "Rubi vermelho-fogo", "Diamante cristalino (1.000 PO)"],
-    "5000gp": ["Diamante negro lendário", "Jacinto reluzente", "Safira estelar vívida", "Rubi imperial de corte perfeito"]
+    "10gp": ["Azorita azul-escura (10 PO)", "Ágata listrada (10 PO)", "Quartzo olho-de-gato (10 PO)", "Hematita cinza-ferro (10 PO)", "Lápis-lazúli com pirita (10 PO)", "Malaquita verde-clara (10 PO)", "Obsidiana vítrea preta (10 PO)", "Turquesa azulada (10 PO)"],
+    "50gp": ["Pedra-da-lua pálida (50 PO)", "Jaspe vermelho-sangue (50 PO)", "Crisoprásio verde-maçã (50 PO)", "Citrino amarelo-claro (50 PO)", "Quartzo fumê (50 PO)", "Zircônio translúcido (50 PO)"],
+    "100gp": ["Âmbar límpido com inclusões (100 PO)", "Ametista violeta facetada (100 PO)", "Granada vermelha profunda (100 PO)", "Pérola branca imaculada (100 PO)", "Espinélio rubro (100 PO)", "Turmalina verde-oliva (100 PO)"],
+    "500gp": ["Alexandrita que muda de cor (500 PO)", "Água-marinha azul-pálida (500 PO)", "Pérola negra brilhante (500 PO)", "Topázio dourado polido (500 PO)", "Peridoto brilhante (500 PO)"],
+    "1000gp": ["Opala de fogo cintilante (1.000 PO)", "Safira azul-real (1.000 PO)", "Esmeralda verde-vívida (1.000 PO)", "Rubi vermelho-fogo (1.000 PO)", "Diamante cristalino puro (1.000 PO)"],
+    "5000gp": ["Diamante negro lendário (5.000 PO)", "Jacinto reluzente (5.000 PO)", "Safira estelar vívida (5.000 PO)", "Rubi imperial de corte perfeito (5.000 PO)"]
   },
   "objetos_arte": {
-    "25gp": ["Jarro de prata polido", "Estatueta de osso esculpida de um corvo", "Bracelete de ouro trabalhado com filigrana", "Pano de veludo com bordado em fios de prata"],
-    "250gp": ["Anel de ouro com sinete de sinete nobre", "Taça de marfim entalhada com cenas de caça", "Manto cerimonial de seda adornado com pequenas pérolas", "Adaga cerimonial de lâmina ondulada de prata"],
-    "750gp": ["Cálice de ouro maciço com pequenas esmeraldas", "Pente de marfim incrustado com pedras-da-lua", "Caixa de música de prata afinada e decorada", "Ídolo de bronze antigo de uma divindade esquecida"],
-    "2500gp": ["Coroa de platina com três safiras", "Máscara de ouro pura funerária", "Tapeçaria de seda élfica intacta retratando uma batalha", "Sextante de ouro e latão de um navegador lendário"],
-    "7500gp": ["Anel de platina com um diamante lapidado colossal", "Cetro real dourado encimado por um orbe de rubi", "Cálice cerimonial incrustado com diamantes e esmeraldas"]
+    "25gp": ["Jarro de prata trabalhado (25 PO)", "Estatueta de osso de um corvo (25 PO)", "Bracelete de ouro em filigrana (25 PO)", "Pano de veludo bordado com fios de prata (25 PO)"],
+    "250gp": ["Anel de ouro com sinete nobre (250 PO)", "Taça de marfim com cenas de caça (250 PO)", "Manto cerimonial de seda com pérolas (250 PO)", "Adaga cerimonial de prata polida (250 PO)"],
+    "750gp": ["Cálice de ouro maciço com esmeraldas (750 PO)", "Pente de marfim com pedras-da-lua (750 PO)", "Caixa de música de prata cinzelada (750 PO)", "Ídolo de bronze antigo de uma divindade esquecida (750 PO)"],
+    "2500gp": ["Coroa de platina com três grandes safiras (2.500 PO)", "Máscara mortuária de ouro maciço (2.500 PO)", "Tapeçaria élfica retratando uma vitória histórica (2.500 PO)", "Sextante de ouro e latão de um navegador lendário (2.500 PO)"],
+    "7500gp": ["Anel de platina com diamante colossal lapidado (7.500 PO)", "Cetro real dourado encimado por orbe de rubi (7.500 PO)", "Cálice cerimonial incrustado de gemas raras (7.500 PO)"]
   },
-  "itens_magicos": {
-    "comum_incomum": ["Poção de Cura Maior", "Pergaminho de Magia (2º Nível)", "Bolsa de Carga (Bag of Holding)", "Arma +1", "Varinha de Mísseis Mágicos", "Botas de Levitação", "Manto de Proteção"],
-    "raro": ["Poção de Cura Suprema", "Arma +2", "Escudo +2", "Anel de Resistência Elemental", "Capa do Morcego", "Botas de Velocidade", "Varinha de Bolas de Fogo"],
-    "muito_raro_lendario": ["Arma +3", "Tomo da Compreensão", "Manual do Bom Exercício", "Cinto de Força do Gigante do Fogo", "Capa da Invisibilidade", "Espada Vorpal"]
-  }
+  "tabela_a": [
+    "Poção de Cura", "Pergaminho de Truque", "Poção de Escalar", "Pergaminho de Magia (1º Nível)",
+    "Pergaminho de Magia (2º Nível)", "Poção de Cura Maior", "Bolsa de Carga (Bag of Holding)", "Globo Flutuante (Driftglobe)"
+  ],
+  "tabela_b": [
+    "Poção de Cura Maior", "Poção de Sopro de Fogo", "Poção de Resistência", "Munição +1 (10 flechas)",
+    "Poção de Amizade Animal", "Poção de Força do Gigante da Colina", "Poção de Crescimento", "Poção de Respirar na Água",
+    "Pergaminho de Magia (2º Nível)", "Pergaminho de Magia (3º Nível)", "Bolsa de Carga", "Pomada de Keoghtom",
+    "Óleo de Escorregamento", "Pó do Desaparecimento", "Pó da Secura", "Gema Elemental", "Filtrum do Amor",
+    "Jarra da Alquimia", "Capuz de Respirar na Água", "Manto da Arraia", "Óculos Noturnos", "Elmo de Compreender Idiomas",
+    "Haste Inamovível", "Lanterna da Revelação", "Armadura de Marinheiro", "Armadura de Mithral", "Anel de Natação",
+    "Manto dos Itens Úteis", "Corda de Escalada", "Varinha de Detectar Magia", "Varinha de Segredos"
+  ],
+  "tabela_c": [
+    "Poção de Cura Superior", "Pergaminho de Magia (4º Nível)", "Munição +2 (10 flechas)", "Poção de Clarividência",
+    "Poção de Diminuição", "Poção de Forma Gasosa", "Poção de Força do Gigante de Gelo", "Poção de Força do Gigante de Pedra",
+    "Poção de Heroísmo", "Poção de Invulnerabilidade", "Poção de Leitura Mental", "Pergaminho de Magia (5º Nível)",
+    "Elixir de Saúde", "Óleo de Eterealidade", "Poção de Força do Gigante do Fogo", "Pena de Quaal", "Pergaminho de Proteção",
+    "Saco de Feijões Mágicos", "Esfera de Força", "Sino de Abertura", "Decantador de Água Infinita", "Barco Dobrável",
+    "Mochila Prática de Heward", "Ferraduras da Velocidade", "Colar de Bolas de Fogo", "Pedras de Mensagem (Sending Stones)"
+  ],
+  "tabela_d": [
+    "Poção de Cura Suprema", "Poção de Invisibilidade", "Poção de Velocidade", "Pergaminho de Magia (6º Nível)",
+    "Pergaminho de Magia (7º Nível)", "Munição +3 (10 flechas)", "Óleo de Afiação", "Poção de Voo",
+    "Poção de Força do Gigante das Nuvens", "Poção de Longevidade", "Poção de Vitalidade", "Pergaminho de Magia (8º Nível)",
+    "Ferraduras do Zéfiro", "Pigmentos Maravilhosos de Nolzur", "Bolsa Devoradora", "Buraco Portátil (Portable Hole)"
+  ],
+  "tabela_e": [
+    "Pergaminho de Magia (8º Nível)", "Poção de Força do Gigante da Tempestade", "Poção de Cura Suprema",
+    "Pergaminho de Magia (9º Nível)", "Solvente Universal", "Flecha Assassina", "Cola Soberana"
+  ],
+  "tabela_f": [
+    "Arma +1", "Escudo +1", "Escudo Sentinela", "Amuleto Antidetecção e Localização", "Botas Élficas",
+    "Botas de Saltar e Passos Largos", "Braçadeiras de Arquearia", "Broche de Proteção", "Vassoura Voadora",
+    "Capa Élfica", "Manto de Proteção", "Manoplas de Força do Ogro", "Chapéu de Disfarce", "Dardo de Relâmpago",
+    "Pérola do Poder", "Bacamarte do Pacto +1", "Chinelos de Patas de Aranha", "Cajado da Serpente",
+    "Espada da Vingança", "Tridente de Comandar Peixes", "Varinha de Mísseis Mágicos", "Varinha do Mago de Batalha +1",
+    "Varinha de Teia", "Arma de Alerta", "Armadura de Adamante (Cota de Malha)", "Bolsa de Truques",
+    "Diadema de Disparo Místico", "Baralho das Ilusões", "Garrafa de Fumaça Eterna", "Olhos da Águia",
+    "Estatueta de Poder Maravilhoso (Corvo de Prata)", "Gema da Luminosidade", "Luvas de Pegar Mísseis",
+    "Tiara do Intelecto", "Elmo de Telepatia", "Instrumento dos Bardos (Alaúde Doss)", "Medalhão dos Pensamentos",
+    "Anel de Saltar", "Anel de Escudo Mental", "Anel de Calor", "Aljava de Ehlonna", "Pedra da Boa Sorte", "Botas Aladas"
+  ],
+  "tabela_g": [
+    "Arma +2", "Estatueta de Poder Maravilhoso (Grifo de Bronze ou Cão de Ônix)", "Amuleto de Saúde (CON 19)",
+    "Cinto dos Anões", "Cinto de Força do Gigante da Colina (FOR 21)", "Machado Berserker", "Botas de Levitação",
+    "Botas de Velocidade", "Braçadeiras de Defesa (+2 CA)", "Manto do Saltimbanco (Porta Dimensional)",
+    "Armadura +1", "Capa do Deslocamento", "Capa do Morcego", "Cubo de Força", "Fortaleza Instantânea de Daern",
+    "Adaga de Veneno", "Grilhões Dimensionais", "Matadora de Dragões (Dragon Slayer)", "Cota de Malha Élfica",
+    "Língua de Fogo (Flame Tongue)", "Gema da Visão Verdadeira", "Matadora de Gigantes", "Elmo de Teletransporte",
+    "Berrante da Destruição", "Pedra Ioun (Proteção ou Reserva)", "Maça da Ruína", "Manto de Resistência à Magia",
+    "Colar de Contas de Oração", "Anel de Evasão", "Anel de Queda Suave", "Anel de Ação Livre", "Anel de Proteção",
+    "Anel de Armazenar Magia", "Anel do Carneiro", "Túnica dos Olhos", "Cajado de Curar", "Cajado das Florestas",
+    "Lâmina Solar (Sun Blade)", "Espada de Roubar Vidas", "Varinha de Bolas de Fogo", "Varinha de Relâmpagos",
+    "Varinha de Paralisia", "Varinha das Maravilhas", "Asas de Voo"
+  ],
+  "tabela_h": [
+    "Arma +3", "Amuleto dos Planos", "Tapete Voador", "Bola de Cristal", "Anel de Regeneração",
+    "Anel de Estrelas Cadentes", "Anel de Telecinésia", "Manto de Estrelas", "Bastão de Absorção",
+    "Bastão do Alerta", "Cimitarra da Velocidade", "Escudo +3", "Cajado do Fogo", "Cajado do Gelo",
+    "Cajado do Poder", "Espada da Afiação (Sword of Sharpness)", "Varinha de Metamorfose", "Escudo Animado",
+    "Cinto de Força do Gigante do Fogo (FOR 25)", "Capa da Aracnídea", "Espada Dançarina", "Armadura Demoníaca",
+    "Armadura de Escamas de Dragão", "Placas dos Anões", "Martelo Arremessador Anão", "Garrafa de Efreeti",
+    "Marca do Gelo (Frost Brand)", "Elmo do Brilho", "Pedra Ioun (Absorção ou Maestria)", "Manual de Saúde Corporal",
+    "Manual do Exercício Físico (+2 FOR)", "Arco do Juramento (Oathbow)", "Escudo Guardião de Magias",
+    "Tomo do Pensamento Claro (+2 INT)", "Tomo da Liderança (+2 CAR)", "Tomo da Compreensão (+2 SAB)"
+  ],
+  "tabela_i": [
+    "Defensora (Defender)", "Martelo dos Trovões (Hammer of Thunderbolts)", "Lâmina da Sorte (Luck Blade)",
+    "Espada da Resposta", "Vingadora Sagrada (Holy Avenger)", "Anel de Convocar Djinni", "Anel de Invisibilidade",
+    "Anel de Refletir Magias", "Bastão do Poder Soberano", "Espada Vorpal (Decapitação)", "Cinto de Força do Gigante da Tempestade (FOR 29)",
+    "Armadura +3", "Capa da Invisibilidade Verdadeira", "Frasco de Ferro", "Manto do Arquimago", "Bastão da Ressurreição",
+    "Escaravelho de Proteção", "Poço dos Muitos Mundos", "Aparelho de Kwalish", "Armadura da Invulnerabilidade",
+    "Portal Cúbico", "Baralho das Surpresas (Deck of Many Things)", "Cota de Malha de Efreeti", "Armadura de Placas Etérea",
+    "Anel de Comandar Elementais do Fogo", "Anel de Três Desejos (Ring of Three Wishes)", "Esfera da Aniquilação",
+    "Talismã do Bem Puro", "Talismã do Mal Absoluto", "Tomo da Língua Calada"
+  ]
 }

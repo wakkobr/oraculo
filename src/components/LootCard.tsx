@@ -15,30 +15,31 @@ type LootType = 'individual' | 'hoard';
 type CRTier = 'cr0_4' | 'cr5_10' | 'cr11_16' | 'cr17';
 
 export default function LootCard() {
-  const [lootType, setLootType] = useState<LootType>('individual');
+  const [lootType, setLootType] = useState<LootType>('hoard');
   const [cr, setCr] = useState<CRTier>('cr0_4');
   const [data, setData] = useState({
-    titulo: 'SAQUE INDIVIDUAL (ND 0-4)',
-    moedas: '14 PC, 8 PP, 2 PO',
-    valiosos: 'Pequena bugiganga de cobre',
-    magico: 'Nenhum item mágico'
+    titulo: 'BAÚ DE COVIL (ND 0–4)',
+    moedas: '2.100 PC, 1.200 PP, 90 PO',
+    valiosos: 'Gemas: Malaquita verde-clara (10 PO), Pedra-da-lua pálida (50 PO)',
+    magico: 'Bolsa de Carga (Bag of Holding) [Tab. A]'
   });
   const [copied, setCopied] = useState(false);
 
   const roll = () => {
     let moedasStr = '';
     let valiososStr = 'Nenhum item de valor';
-    let magicoStr = 'Nenhum item mágico';
+    let magicoStr = 'Nenhum item mágico (saque mundano)';
     let tituloStr = '';
 
     if (lootType === 'individual') {
       if (cr === 'cr0_4') {
         tituloStr = 'SAQUE INDIVIDUAL (ND 0–4)';
-        const cp = rollDice(3, 6);
-        const sp = rollDice(1, 6);
+        const cp = rollDice(3, 6) * 10;
+        const sp = rollDice(1, 6) * 5;
         const gp = rollDice(1, 6);
-        moedasStr = `${cp * 10} PC, ${sp * 5} PP, ${gp} PO`;
+        moedasStr = `${cp} PC, ${sp} PP, ${gp} PO`;
         valiososStr = pick(loots.gemas['10gp']);
+        magicoStr = Math.random() > 0.85 ? `✦ ${pick(loots.tabela_a)} [Tab. A]` : 'Nenhum (bolsos comuns)';
       } else if (cr === 'cr5_10') {
         tituloStr = 'SAQUE INDIVIDUAL (ND 5–10)';
         const sp = rollDice(4, 6) * 10;
@@ -46,51 +47,58 @@ export default function LootCard() {
         const pp = rollDice(1, 6);
         moedasStr = `${sp} PP, ${gp} PO, ${pp} PL`;
         valiososStr = pick(loots.gemas['50gp']);
+        magicoStr = Math.random() > 0.65 ? `✦ ${pick(loots.tabela_b)} [Tab. B]` : 'Nenhum item mágico';
       } else if (cr === 'cr11_16') {
         tituloStr = 'SAQUE INDIVIDUAL (ND 11–16)';
         const gp = rollDice(4, 6) * 100;
         const pp = rollDice(1, 6) * 10;
-        moedasStr = `${gp} PO, ${pp} PL`;
+        moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp} PL`;
         valiososStr = `${pick(loots.gemas['100gp'])} & ${pick(loots.objetos_arte['250gp'])}`;
+        magicoStr = `✦ ${pick(loots.tabela_f)} [Tab. F]`;
       } else {
         tituloStr = 'SAQUE INDIVIDUAL (ND 17+)';
         const gp = rollDice(8, 6) * 100;
         const pp = rollDice(3, 6) * 100;
-        moedasStr = `${gp} PO, ${pp} PL`;
+        moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp.toLocaleString('pt-BR')} PL`;
         valiososStr = `${pick(loots.gemas['500gp'])} & ${pick(loots.objetos_arte['750gp'])}`;
+        magicoStr = `✦ ${pick(loots.tabela_g)} [Tab. G]`;
       }
     } else {
-      // Tesouro Acumulado / Covil (Hoard)
+      // Covil / Baú (Hoard Oficial DMG)
       if (cr === 'cr0_4') {
         tituloStr = 'BAÚ DE COVIL (ND 0–4)';
         const cp = rollDice(6, 6) * 100;
         const sp = rollDice(3, 6) * 100;
         const gp = rollDice(2, 6) * 10;
-        moedasStr = `${cp} PC, ${sp} PP, ${gp} PO`;
-        valiososStr = `2x Gemas: ${pick(loots.gemas['10gp'])}, ${pick(loots.gemas['50gp'])}`;
-        magicoStr = pick(loots.itens_magicos.comum_incomum);
+        moedasStr = `${cp.toLocaleString('pt-BR')} PC, ${sp.toLocaleString('pt-BR')} PP, ${gp} PO`;
+        valiososStr = `Gemas: ${pick(loots.gemas['10gp'])}, ${pick(loots.gemas['50gp'])}`;
+        // Sorteia 1d4 itens da Tab A ou B
+        magicoStr = `✦ ${pick(loots.tabela_a)} [Tab. A] | ✦ ${pick(loots.tabela_b)} [Tab. B]`;
       } else if (cr === 'cr5_10') {
         tituloStr = 'COVIL HEROICO (ND 5–10)';
         const sp = rollDice(4, 6) * 100;
         const gp = rollDice(6, 6) * 100;
         const pp = rollDice(2, 6) * 10;
-        moedasStr = `${sp} PP, ${gp} PO, ${pp} PL`;
-        valiososStr = `Arte: ${pick(loots.objetos_arte['250gp'])} e Gema: ${pick(loots.gemas['100gp'])}`;
-        magicoStr = `${pick(loots.itens_magicos.comum_incomum)} e ${pick(loots.itens_magicos.raro)}`;
+        moedasStr = `${sp.toLocaleString('pt-BR')} PP, ${gp.toLocaleString('pt-BR')} PO, ${pp} PL`;
+        valiososStr = `Arte: ${pick(loots.objetos_arte['250gp'])} & Gema: ${pick(loots.gemas['100gp'])}`;
+        // Sorteia da Tabela C ou F
+        magicoStr = `✦ ${pick(loots.tabela_c)} [Tab. C] & ✦ ${pick(loots.tabela_f)} [Tab. F]`;
       } else if (cr === 'cr11_16') {
         tituloStr = 'TESOURO LENDÁRIO (ND 11–16)';
         const gp = rollDice(12, 6) * 100;
         const pp = rollDice(8, 6) * 100;
-        moedasStr = `${gp} PO, ${pp} PL`;
-        valiososStr = `Arte: ${pick(loots.objetos_arte['750gp'])} e Gema: ${pick(loots.gemas['1000gp'])}`;
-        magicoStr = `Item Raro: ${pick(loots.itens_magicos.raro)} / Muito Raro: ${pick(loots.itens_magicos.muito_raro_lendario)}`;
+        moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp.toLocaleString('pt-BR')} PL`;
+        valiososStr = `Arte: ${pick(loots.objetos_arte['750gp'])} & Gema: ${pick(loots.gemas['1000gp'])}`;
+        // Sorteia das Tabelas D, G e H
+        magicoStr = `✦ ${pick(loots.tabela_d)} [Tab. D] & ✦ ${pick(loots.tabela_g)} [Tab. G] & ✦ ${pick(loots.tabela_h)} [Tab. H]`;
       } else {
         tituloStr = 'COVIL ANCESTRAL (ND 17+)';
         const gp = rollDice(12, 6) * 1000;
         const pp = rollDice(8, 6) * 1000;
         moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp.toLocaleString('pt-BR')} PL`;
         valiososStr = `Relíquia: ${pick(loots.objetos_arte['7500gp'])} & 2x ${pick(loots.gemas['5000gp'])}`;
-        magicoStr = `Lendário: ${pick(loots.itens_magicos.muito_raro_lendario)}`;
+        // Sorteia itens da Tabela E e I (Artefatos Lendários)
+        magicoStr = `✦ Supremo: ${pick(loots.tabela_i)} [Tab. I] & ✦ ${pick(loots.tabela_e)} [Tab. E]`;
       }
     }
 
@@ -102,7 +110,7 @@ export default function LootCard() {
     };
 
     setData(resultado);
-    addHistoryEntry('TESOURO', `${tituloStr} | ${moedasStr} | ${valiososStr}`);
+    addHistoryEntry('TESOURO', `${tituloStr} | ${moedasStr} | ${magicoStr}`);
   };
 
   const copy = () => {
@@ -126,7 +134,7 @@ export default function LootCard() {
             </div>
             <div>
               <h3 className="text-sm font-bold text-slate-100 uppercase tracking-wider font-['Cinzel']">Tesouro & Saque</h3>
-              <p className="text-[11px] text-slate-400">Tabelas Oficiais D&D 5e</p>
+              <p className="text-[11px] text-slate-400">Tabelas Oficiais A–I (D&D 5e)</p>
             </div>
           </div>
 
@@ -148,8 +156,8 @@ export default function LootCard() {
               onChange={(e) => setLootType(e.target.value as LootType)}
               className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-oracle-gold/40"
             >
+              <option value="hoard">👑 Covil / Baú (Itens Mágicos)</option>
               <option value="individual">💰 Individual (Bolsos)</option>
-              <option value="hoard">👑 Covil / Baú (Hoard)</option>
             </select>
           </div>
 
@@ -184,7 +192,10 @@ export default function LootCard() {
         <div className="space-y-2 text-xs text-slate-300 mb-6 leading-relaxed bg-[#090d1f]/60 p-3 rounded-lg border border-[#1d2342]">
           <p><strong className="text-oracle-gold font-semibold">Moedas:</strong> {data.moedas}</p>
           <p><strong className="text-oracle-gold font-semibold">Gemas / Arte:</strong> {data.valiosos}</p>
-          <p><strong className="text-oracle-gold font-semibold">Magia:</strong> {data.magico}</p>
+          <p className="border-t border-[#1d2448] pt-1.5 mt-1.5">
+            <strong className="text-sky-300 font-semibold block mb-0.5">Itens Mágicos:</strong>
+            <span className="text-sky-200 leading-snug block font-mono text-[11px]">{data.magico}</span>
+          </p>
         </div>
       </div>
 
