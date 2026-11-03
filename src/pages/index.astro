@@ -1,31 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 import TavernCard from '../components/TavernCard';
 import NpcCard from '../components/NpcCard';
 import LootCard from '../components/LootCard';
 ---
 
 <Layout>
-  <header class="text-center mb-10 pb-6 border-b border-oracle-border">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-950/60 border border-indigo-500/30 text-indigo-300 text-xs font-semibold tracking-wider uppercase mb-3">
-      <span>✦</span> Beyond Obvious <span>✦</span>
-    </div>
-    <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-amber-200 via-indigo-200 to-sky-200 font-title tracking-wide mb-2">
-      O Oráculo
-    </h1>
-    <p class="text-oracle-muted text-sm md:text-base tracking-wide max-w-md mx-auto">
-      Respostas imediatas para o destino da mesa
-    </p>
-  </header>
+  <Header />
 
-  <!-- Grelha com os 3 Geradores Principais -->
+  <!-- Grid de Cards Idêntico ao Mockup -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <TavernCard client:load />
     <NpcCard client:load />
     <LootCard client:load />
   </div>
 
-  <footer class="mt-16 text-center text-xs text-slate-500 border-t border-oracle-border pt-6">
+  <footer class="mt-14 text-center text-xs text-slate-500 border-t border-[#1a1f38] pt-6 font-mono">
     O Oráculo &bull; beyond-obvious.net &bull; Pronto para expansões arcanas
   </footer>
 </Layout>

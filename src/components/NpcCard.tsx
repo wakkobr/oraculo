@@ -4,86 +4,133 @@ import npcs from '../data/npcs.json';
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
 export default function NpcCard() {
-  const [race, setRace] = useState<'humano' | 'elfo' | 'anao' | 'tiefling'>('humano');
+  const [race, setRace] = useState<'humano' | 'elfo' | 'anao' | 'tiefling'>('anao');
   const [gender, setGender] = useState<'masc' | 'fem'>('masc');
   const [data, setData] = useState({
-    nome: 'Kaelen Pedranegra',
-    traco: 'Extremamente gesticulador; ri alto de quase tudo o que ouve.',
-    segredo: 'Deve uma soma considerável a um sindicato de contrabandistas local.'
+    nome: 'RURIK BARBAFERRO',
+    sub: '(Anão, Neutro)',
+    personalidade: 'Riso estridente e tem o hábito de mascar folhas amargas aromatizadas.',
+    segredo: 'Está usando um anel mágico simples com uma ilusão que esconde uma marca de procurado.'
   });
   const [copied, setCopied] = useState(false);
 
   const roll = () => {
-    const raceData = npcs.nomes[race];
-    const primeiro = pick(raceData[gender]);
+    const raceData = npcs.nomes[race] || npcs.nomes.humano;
+    const primeiro = pick(raceData[gender] || raceData.masc);
     const sobrenome = pick(raceData.sobrenome);
+    
+    const rLabel = race === 'anao' ? 'Anão' : race === 'elfo' ? 'Elfo' : race === 'tiefling' ? 'Tiefling' : 'Humano';
+    const gLabel = gender === 'masc' ? 'Masc' : 'Fem';
+
     setData({
-      nome: `${primeiro} ${sobrenome}`,
-      traco: pick(npcs.tracos),
+      nome: `${primeiro} ${sobrenome}`.toUpperCase(),
+      sub: `(${rLabel}, ${gLabel})`,
+      personalidade: pick(npcs.tracos),
       segredo: pick(npcs.segredos)
     });
-    setCopied(false);
   };
 
   const copy = () => {
-    const text = `NPC: ${data.nome} (${race}, ${gender})\nTraço: ${data.traco}\nSegredo: ${data.segredo}`;
+    const text = `NPC: ${data.nome} ${data.sub}\nPersonalidade: ${data.personalidade}\nSegredo/Gancho: ${data.segredo}`;
     navigator.clipboard.writeText(text);
     setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => setCopied(false), 1800);
   };
 
   return (
-    <div className="bg-oracle-card border border-indigo-500/20 rounded-xl p-5 flex flex-col justify-between shadow-lg relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-28 h-28 bg-sky-500/5 rounded-full blur-2xl pointer-events-none" />
+    <div className="bg-[#0d1124] border border-[#252b4e] rounded-xl p-5 flex flex-col justify-between shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)] relative">
+      <span className="absolute top-2.5 left-2.5 text-[10px] text-indigo-400/40">✦</span>
+      <span className="absolute top-2.5 right-2.5 text-[10px] text-indigo-400/40">✦</span>
 
       <div>
-        <div className="flex items-center justify-between border-b border-indigo-500/10 pb-3 mb-4">
-          <span className="text-xs font-semibold tracking-wider text-sky-400 uppercase">NPCs Instantâneos</span>
+        {/* Topo do Card */}
+        <div className="flex items-center justify-between pb-3.5 mb-3 border-b border-[#1c2242]">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-[#22173a] border border-[#4d2f80] flex items-center justify-center text-purple-300 text-lg">
+              👤
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-slate-100 uppercase tracking-wider font-['Cinzel']">Gerador de NPCs</h3>
+              <p className="text-[11px] text-slate-400">Nome, traço e segredo de mesa</p>
+            </div>
+          </div>
+
           <button 
-            onClick={copy}
-            className="text-xs text-slate-400 hover:text-amber-300 transition-colors px-2 py-1 rounded bg-slate-900/60 border border-slate-700/50"
+            onClick={roll} 
+            title="Sortear novamente"
+            className="w-8 h-8 rounded-lg bg-[#141830] border border-[#2e3766] hover:border-amber-400/50 flex items-center justify-center text-slate-300 hover:text-amber-300 transition-colors"
           >
-            {copied ? 'Copiado!' : 'Copiar'}
+            ↻
           </button>
         </div>
 
-        {/* Filtros */}
+        {/* Filtros Dropdown com rótulos */}
         <div className="grid grid-cols-2 gap-2 mb-4">
-          <select 
-            value={race} 
-            onChange={(e) => setRace(e.target.value as any)}
-            className="bg-slate-900/80 border border-indigo-500/30 rounded px-2.5 py-1 text-xs text-slate-200 focus:outline-none"
-          >
-            <option value="humano">Humano</option>
-            <option value="elfo">Elfo</option>
-            <option value="anao">Anão</option>
-            <option value="tiefling">Tiefling</option>
-          </select>
+          <div>
+            <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Raça:</label>
+            <select 
+              value={race} 
+              onChange={(e) => setRace(e.target.value as any)}
+              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-400/40"
+            >
+              <option value="humano">🎲 Humano</option>
+              <option value="elfo">🎲 Elfo</option>
+              <option value="anao">🎲 Anão</option>
+              <option value="tiefling">🎲 Tiefling</option>
+            </select>
+          </div>
 
-          <select 
-            value={gender} 
-            onChange={(e) => setGender(e.target.value as any)}
-            className="bg-slate-900/80 border border-indigo-500/30 rounded px-2.5 py-1 text-xs text-slate-200 focus:outline-none"
-          >
-            <option value="masc">Masculino</option>
-            <option value="fem">Feminino</option>
-          </select>
+          <div>
+            <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Gênero:</label>
+            <select 
+              value={gender} 
+              onChange={(e) => setGender(e.target.value as any)}
+              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-amber-400/40"
+            >
+              <option value="masc">🎲 Masculino</option>
+              <option value="fem">🎲 Feminino</option>
+            </select>
+          </div>
         </div>
 
-        <h3 className="text-xl font-bold text-amber-200 font-['Cinzel'] mb-3">{data.nome}</h3>
-        
-        <div className="space-y-2 text-sm text-slate-300 mb-6">
-          <p><strong className="text-sky-300">Traço:</strong> {data.traco}</p>
-          <p><strong className="text-sky-300">Segredo:</strong> {data.segredo}</p>
+        {/* Bloco de Resultado Sorteado */}
+        <div className="mb-3">
+          <div className="flex items-center justify-between mb-1">
+            <span className="text-[10px] font-mono tracking-widest uppercase text-slate-400">NPC Sorteado:</span>
+            <button onClick={copy} title="Copiar nome" className="text-slate-500 hover:text-amber-300 text-xs transition-colors">
+              📋
+            </button>
+          </div>
+          <div className="flex items-baseline gap-2 flex-wrap">
+            <h4 className="text-lg font-bold text-amber-200 font-['Cinzel'] tracking-wide">
+              {data.nome}
+            </h4>
+            <span className="text-xs text-slate-400 font-mono">{data.sub}</span>
+          </div>
+        </div>
+
+        {/* Detalhes do NPC */}
+        <div className="space-y-2 text-xs text-slate-300 mb-6 leading-relaxed">
+          <p><strong className="text-slate-100 font-semibold">Personalidade:</strong> {data.personalidade}</p>
+          <p><strong className="text-slate-100 font-semibold">Segredo / Gancho:</strong> {data.segredo}</p>
         </div>
       </div>
 
-      <button 
-        onClick={roll}
-        className="w-full py-2.5 px-4 rounded-lg bg-sky-600/30 hover:bg-sky-600/50 border border-sky-500/40 text-sky-200 font-medium text-sm transition-all active:scale-[0.98]"
-      >
-        Conjurar NPC ✦
-      </button>
+      {/* Ações inferiores */}
+      <div className="grid grid-cols-2 gap-2.5 pt-2">
+        <button 
+          onClick={copy}
+          className="w-full py-2 px-3 rounded-md bg-[#131730] hover:bg-[#1a2042] border border-[#2b3360] text-slate-300 text-xs font-medium transition-colors flex items-center justify-center gap-1.5"
+        >
+          <span>📋</span> {copied ? 'Copiado!' : 'Copiar Ficha'}
+        </button>
+        <button 
+          onClick={roll}
+          className="w-full py-2 px-3 rounded-md bg-linear-to-r from-amber-300 to-amber-400 hover:from-amber-200 hover:to-amber-300 text-slate-950 text-xs font-bold font-['Cinzel'] tracking-wider shadow-sm transition-all active:scale-[0.98] flex items-center justify-center gap-1"
+        >
+          <span>🎲</span> Rolar NPC
+        </button>
+      </div>
     </div>
   );
 }
