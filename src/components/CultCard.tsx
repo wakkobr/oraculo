@@ -91,7 +91,7 @@ export default function CultCard() {
               <p className="text-[11px] text-slate-400">Fanáticos, Rituais & Heresias</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="cultos" />
           <button
             onClick={roll}
             title="Sortear novamente"

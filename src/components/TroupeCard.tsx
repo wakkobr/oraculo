@@ -71,7 +71,7 @@ export default function TroupeCard() {
               <p className="text-[11px] text-slate-400">Facções & Artistas Mambembes</p>
             </div>
           </div>
-          <PinButton cardId="trupe" />
+          <PinButton cardId="trupes" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

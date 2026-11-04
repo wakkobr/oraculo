@@ -41,7 +41,7 @@ const [data, setData] = useState({
               <p className="text-[11px] text-slate-400">100 Fungos & Efeitos (d100)</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="alquimia-cogumelo" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

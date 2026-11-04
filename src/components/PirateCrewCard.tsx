@@ -139,7 +139,7 @@ export default function PirateCrewCard() {
               <p className="text-[11px] text-slate-400">Corsários, Naus & Abordagens</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="piratas" />
           <button
             onClick={roll}
             title="Sortear novamente"

@@ -1,6 +1,5 @@
 const PIN_STORAGE_KEY = 'oracle:pinned_cards';
 
-// Cards essenciais que vêm afixados por defeito na primeira utilização
 export const DEFAULT_PINS = ['taverna', 'npc', 'cenas', 'tesouro'];
 
 export function getPinnedCards(): string[] {
@@ -14,11 +13,13 @@ export function getPinnedCards(): string[] {
 }
 
 export function isCardPinned(cardId: string): boolean {
-  return getPinnedCards().includes(cardId);
+  const current = getPinnedCards();
+  return current.includes(cardId);
 }
 
 export function toggleCardPin(cardId: string): boolean {
   if (typeof window === 'undefined') return false;
+  
   const current = getPinnedCards();
   let updated: string[];
 
@@ -30,9 +31,12 @@ export function toggleCardPin(cardId: string): boolean {
 
   try {
     localStorage.setItem(PIN_STORAGE_KEY, JSON.stringify(updated));
-    window.dispatchEvent(new CustomEvent('oracle:pins-updated', { detail: updated }));
+    // Dispara o evento passando a lista exata de IDs afixados
+    window.dispatchEvent(
+      new CustomEvent<string[]>('oracle:pins-updated', { detail: updated })
+    );
   } catch (err) {
-    console.error('Erro ao guardar pin:', err);
+    console.error('Erro ao salvar pins:', err);
   }
 
   return updated.includes(cardId);

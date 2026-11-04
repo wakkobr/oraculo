@@ -141,7 +141,7 @@ export default function MerchantGuildCard() {
               <p className="text-[11px] text-slate-400">Companhias, Moedas & Mascates</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="mercadores" />
           <button
             onClick={roll}
             title="Sortear novamente"

@@ -51,7 +51,7 @@ export default function VignetteCard() {
               <p className="text-[11px] text-slate-400">Ganchos visuais e eventos locais</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="cenas" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

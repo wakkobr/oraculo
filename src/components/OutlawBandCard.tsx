@@ -126,7 +126,7 @@ export default function OutlawBandCard() {
               <p className="text-[11px] text-slate-400">Salteadores, Caçadores & Contrabando</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="foras-da-lei" />
           <button
             onClick={roll}
             title="Sortear novamente"

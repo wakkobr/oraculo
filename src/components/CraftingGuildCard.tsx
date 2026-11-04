@@ -121,7 +121,7 @@ export default function CraftingGuildCard() {
               <p className="text-[11px] text-slate-400">Artesãos, Oficinas & Mestres</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="artesaos" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

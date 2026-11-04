@@ -94,7 +94,7 @@ export default function DruidCircleCard() {
               <p className="text-[11px] text-slate-400">Guardiões da Natureza & Ermos</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="druidas" />
           <button
             onClick={roll}
             title="Sortear novamente"

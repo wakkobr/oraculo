@@ -125,7 +125,7 @@ export default function NobleHouseCard() {
               <p className="text-[11px] text-slate-400">Linhagens, Feudos & Conspirações</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="nobres" />
           <button
             onClick={roll}
             title="Sortear novamente"

@@ -100,7 +100,7 @@ export default function GoblinGangCard() {
               <p className="text-[11px] text-slate-400">Goblins, Covis & Emboscadas</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="goblins" />
           <button
             onClick={roll}
             title="Sortear novamente"

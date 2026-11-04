@@ -130,7 +130,7 @@ export default function MilitaryCompanyCard() {
               <p className="text-[11px] text-slate-400">Regimentos, Linhas & Recrutas</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="militares" />
           <button
             onClick={roll}
             title="Sortear novamente"

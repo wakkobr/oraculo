@@ -47,7 +47,7 @@ export default function BookCard() {
               <p className="text-[11px] text-slate-400">Obras de estante & manuscritos</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="tomos" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

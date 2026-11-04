@@ -85,7 +85,7 @@ export default function SpellCard() {
               <p className="text-[11px] text-slate-400">Magias por Classe & Círculo</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="grimorio" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

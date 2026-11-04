@@ -102,7 +102,7 @@ export default function AssassinGuildCard() {
               <p className="text-[11px] text-slate-400">Contratos, Venenos & Sombras</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="assassinos" />
           <button
             onClick={roll}
             title="Sortear novamente"

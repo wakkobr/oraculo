@@ -2,8 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Navbar from '../components/Navbar.astro';
-import SpellCard from '../components/SpellCard';
-import BookCard from '../components/BookCard';
+import MushroomCard from '../components/MushroomCard';
 import SessionLog from '../components/SessionLog';
 ---
 
@@ -14,10 +13,10 @@ import SessionLog from '../components/SessionLog';
   <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl bg-[#0a0d1d] border border-[#1e2444]">
     <div>
       <h2 class="text-lg font-bold text-slate-100 font-['Cinzel'] tracking-wide flex items-center gap-2">
-        <span>✨</span> Compêndio Arcano & Tomos Proibidos
+        <span>🍄</span> Botânica, Fungos & Alquimia dos Ermos
       </h2>
       <p class="text-xs text-slate-400 mt-0.5">
-        Grimório completo de magias por classe/nível e gerador de manuscritos raros para bibliotecas e tesouros.
+        Espécimes fúngicos, propriedades botânicas e efeitos alquímicos colhidos no subterrâneo e florestas.
       </p>
     </div>
     <div class="text-[11px] text-oracle-gold font-mono bg-[#141830] px-3 py-1.5 rounded-md border border-oracle-gold/30 self-start md:self-auto">
@@ -25,14 +24,13 @@ import SessionLog from '../components/SessionLog';
     </div>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div><SpellCard client:load /></div>
-    <div><BookCard client:load /></div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div><MushroomCard client:load /></div>
   </div>
 
   <SessionLog client:load />
 
   <footer class="mt-14 text-center text-xs text-slate-500 border-t border-[#1a1f38] pt-6 font-mono">
-    O Oráculo &bull; Arcano & Grimório &bull; beyond-obvious.net
+    O Oráculo &bull; Alquimia & Ermos &bull; beyond-obvious.net
   </footer>
 </Layout>

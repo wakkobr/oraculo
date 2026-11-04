@@ -60,7 +60,7 @@ export default function NpcCard() {
               <p className="text-[11px] text-slate-400">Nome, traço e segredo de mesa</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="npc" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

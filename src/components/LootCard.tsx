@@ -157,7 +157,7 @@ export default function LootCard() {
               <p className="text-[11px] text-slate-400">Tabelas Oficiais D&D 5e</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="tesouro" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

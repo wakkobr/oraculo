@@ -95,7 +95,7 @@ export default function MercenaryCard() {
               <p className="text-[11px] text-slate-400">Espadas de Aluguel & Guerras</p>
             </div>
           </div>
-          <PinButton cardId="taverna" />
+          <PinButton cardId="mercenarios" />
           <button
             onClick={roll}
             title="Sortear novamente"
