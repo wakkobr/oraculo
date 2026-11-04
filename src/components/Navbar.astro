@@ -1,0 +1,30 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+
+const links = [
+  { href: '/', label: '✦ A Mesa', icon: '🎲' },
+  { href: '/faccoes', label: 'Facções & Poder', icon: '🏛️' },
+  { href: '/arcano', label: 'Arcano & Grimório', icon: '✨' },
+  { href: '/alquimia', label: 'Alquimia & Ermos', icon: '🍄' },
+];
+---
+
+<nav class="flex items-center gap-2 overflow-x-auto pb-3 mb-6 border-b border-[#1c2242] no-scrollbar text-xs font-['Cinzel'] tracking-wider">
+  {links.map((link) => {
+    const isActive = currentPath === link.href;
+    return (
+      <a
+        href={link.href}
+        class={`px-3.5 py-2 rounded-lg flex items-center gap-1.5 transition-all uppercase whitespace-nowrap ${
+          isActive
+            ? 'bg-[#161d3b] text-oracle-gold border border-oracle-gold/50 font-bold shadow-[0_2px_12px_rgba(212,178,111,0.15)]'
+            : 'bg-[#0a0d1d] text-slate-400 hover:text-slate-200 border border-[#1e2444] hover:border-[#2e3766]'
+        }`}
+      >
+        <span>{link.icon}</span>
+        <span>{link.label}</span>
+      </a>
+    );
+  })}
+</nav>

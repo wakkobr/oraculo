@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
+
+import TroupeCard from '../components/TroupeCard';
+import AssassinGuildCard from '../components/AssassinGuildCard';
+import CraftingGuildCard from '../components/CraftingGuildCard';
+import CultCard from '../components/CultCard';
+import DruidCircleCard from '../components/DruidCircleCard';
+import GoblinGangCard from '../components/GoblinGangCard';
+import MercenaryCard from '../components/MercenaryCard';
+import MerchantGuildCard from '../components/MerchantGuildCard';
+import MilitaryCompanyCard from '../components/MilitaryCompanyCard';
+import NobleHouseCard from '../components/NobleHouseCard';
+import OutlawBandCard from '../components/OutlawBandCard';
+import PirateCrewCard from '../components/PirateCrewCard';
+import SessionLog from '../components/SessionLog';
+---
+
+<Layout>
+  <Header />
+  <Navbar />
+
+  <!-- Cabeçalho da Rota de Facções -->
+  <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl bg-[#0a0d1d] border border-[#1e2444]">
+    <div>
+      <h2 class="text-lg font-bold text-slate-100 font-['Cinzel'] tracking-wide flex items-center gap-2">
+        <span>🏛️</span> Compêndio de Facções, Guildas & Sociedades
+      </h2>
+      <p class="text-xs text-slate-400 mt-0.5">
+        10 geradores completos de poder, ordens secretas, corporações e bandos armados para o cenário.
+      </p>
+    </div>
+    <div class="text-[11px] text-oracle-gold font-mono bg-[#141830] px-3 py-1.5 rounded-md border border-oracle-gold/30 self-start md:self-auto">
+      ✦ Use 📌 em qualquer card para fixá-lo na Mesa Principal
+    </div>
+  </div>
+
+  <!-- Grid com todas as 10 Facções -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div><NobleHouseCard client:load /></div>
+    <div><MilitaryCompanyCard client:load /></div>
+    <div><MercenaryCard client:load /></div>
+    <div><AssassinGuildCard client:load /></div>
+    <div><OutlawBandCard client:load /></div>
+    <div><PirateCrewCard client:load /></div>
+    <div><GoblinGangCard client:load /></div>
+    <div><CultCard client:load /></div>
+    <div><DruidCircleCard client:load /></div>
+    <div><MerchantGuildCard client:load /></div>
+    <div><CraftingGuildCard client:load /></div>
+    <div><TroupeCard client:load /></div>
+  </div>
+
+  <SessionLog client:load />
+
+  <footer class="mt-14 text-center text-xs text-slate-500 border-t border-[#1a1f38] pt-6 font-mono">
+    O Oráculo &bull; Facções & Poder &bull; beyond-obvious.net
+  </footer>
+</Layout>

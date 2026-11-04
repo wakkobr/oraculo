@@ -1,134 +1,122 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
+
+// Cards Essenciais Padrão da Mesa
 import TavernCard from '../components/TavernCard';
 import NpcCard from '../components/NpcCard';
+import VignetteCard from '../components/VignetteCard';
 import LootCard from '../components/LootCard';
+
+// Cards Complementares Disponíveis para Afixar
+import SpellCard from '../components/SpellCard';
 import BookCard from '../components/BookCard';
 import MushroomCard from '../components/MushroomCard';
-import SpellCard from '../components/SpellCard';
-import VignetteCard from '../components/VignetteCard';
-import TroupeCard from '../components/TroupeCard';
+import NobleHouseCard from '../components/NobleHouseCard';
+import MercenaryCard from '../components/MercenaryCard';
 import AssassinGuildCard from '../components/AssassinGuildCard';
-import CraftingGuildCard from '../components/CraftingGuildCard';
+import PirateCrewCard from '../components/PirateCrewCard';
+import OutlawBandCard from '../components/OutlawBandCard';
+import GoblinGangCard from '../components/GoblinGangCard';
 import CultCard from '../components/CultCard';
 import DruidCircleCard from '../components/DruidCircleCard';
-import GoblinGangCard from '../components/GoblinGangCard';
-import MercenaryCard from '../components/MercenaryCard';
 import MerchantGuildCard from '../components/MerchantGuildCard';
+import CraftingGuildCard from '../components/CraftingGuildCard';
 import MilitaryCompanyCard from '../components/MilitaryCompanyCard';
-import NobleHouseCard from '../components/NobleHouseCard';
-import OutlawBandCard from '../components/OutlawBandCard';
-import PirateCrewCard from '../components/PirateCrewCard';
-import UpcomingModules from '../components/UpcomingModules.astro';
+import TroupeCard from '../components/TroupeCard';
+
 import SessionLog from '../components/SessionLog';
 ---
 
 <Layout>
   <Header />
+  <Navbar />
 
-  <!-- Barra de Filtros por Categoria com Ação Dinâmica -->
-  <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 border-b border-[#1c2242] no-scrollbar text-xs">
-    <button 
-      data-filter="all" 
-      class="filter-btn active px-3.5 py-1.5 rounded-md bg-[#161d3b] text-oracle-gold border border-oracle-gold/40 font-semibold uppercase tracking-wider font-['Cinzel'] transition-all"
-    >
-      ✦ Todos
-    </button>
-    <button 
-      data-filter="cidades" 
-      class="filter-btn px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-all uppercase tracking-wider font-['Cinzel']"
-    >
-      ⚔ Sessão & Cidades
-    </button>
-    <button 
-      data-filter="faccoes" 
-      class="filter-btn px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-all uppercase tracking-wider font-['Cinzel']"
-    >
-      🏛️ Facções & Grupos
-    </button>
-    <button 
-      data-filter="arcano" 
-      class="filter-btn px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-all uppercase tracking-wider font-['Cinzel']"
-    >
-      ✨ Arcano & Magia
-    </button>
-    <button 
-      data-filter="alquimia" 
-      class="filter-btn px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-all uppercase tracking-wider font-['Cinzel']"
-    >
-      🍄 Alquimia & Ermos
-    </button>
-    <button 
-      data-filter="tesouros" 
-      class="filter-btn px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-all uppercase tracking-wider font-['Cinzel']"
-    >
-      📜 Tesouros & Tomos
-    </button>
+  <!-- Faixa de Boas-vindas / Estado da Mesa -->
+  <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#1c2242]">
+    <div>
+      <h2 class="text-base font-bold text-slate-100 font-['Cinzel'] tracking-wide">
+        Mesa Principal da Sessão
+      </h2>
+      <p class="text-xs text-slate-400">
+        Cards essenciais e geradores afixados para consulta imediata na rodada.
+      </p>
+    </div>
+    <div class="flex items-center gap-2">
+      <a
+        href="/faccoes"
+        class="text-xs text-oracle-gold hover:text-oracle-gold-light border border-[#2b3360] hover:border-oracle-gold/40 px-2.5 py-1.5 rounded-lg bg-[#0e1224] transition-all font-mono flex items-center gap-1"
+      >
+        <span>🏛️</span> Explorar Todas as Facções →
+      </a>
+    </div>
   </div>
 
-  <!-- Grid com os Geradores -->
-  <div id="generator-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="card-item" data-category="cidades">
+  <!-- Grid Principal (Cards Padrão + Espaço para Afixados) -->
+  <div id="deck-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Essenciais Básicos -->
+    <div class="deck-card" data-card-id="taverna">
       <TavernCard client:load />
     </div>
-    <div class="card-item" data-category="cidades">
+    <div class="deck-card" data-card-id="npc">
       <NpcCard client:load />
     </div>
-    <div class="card-item" data-category="cidades">
+    <div class="deck-card" data-card-id="cenas">
       <VignetteCard client:load />
     </div>
-    <div class="card-item" data-category="faccoes">
-      <PirateCrewCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <OutlawBandCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <NobleHouseCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <MilitaryCompanyCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <MerchantGuildCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <MercenaryCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <GoblinGangCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <DruidCircleCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <CultCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <CraftingGuildCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <AssassinGuildCard client:load />
-    </div>
-    <div class="card-item" data-category="faccoes">
-      <TroupeCard client:load />
-    </div>
-    <div class="card-item" data-category="tesouros">
+    <div class="deck-card" data-card-id="tesouro">
       <LootCard client:load />
     </div>
-    <div class="card-item" data-category="arcano">
+
+    <!-- Cards Adicionais (Controlados dinamicamente via Pins) -->
+    <div class="deck-card hidden" data-card-id="grimorio">
       <SpellCard client:load />
     </div>
-    <div class="card-item" data-category="tesouros">
+    <div class="deck-card hidden" data-card-id="tomos">
       <BookCard client:load />
     </div>
-    <div class="card-item" data-category="alquimia">
+    <div class="deck-card hidden" data-card-id="alquimia-cogumelos">
       <MushroomCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="nobres">
+      <NobleHouseCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="mercenarios">
+      <MercenaryCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="assassinos">
+      <AssassinGuildCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="piratas">
+      <PirateCrewCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="foras-da-lei">
+      <OutlawBandCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="goblins">
+      <GoblinGangCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="cultos">
+      <CultCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="druidas">
+      <DruidCircleCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="mercadores">
+      <MerchantGuildCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="artesaos">
+      <CraftingGuildCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="militares">
+      <MilitaryCompanyCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="trupes">
+      <TroupeCard client:load />
     </div>
   </div>
 
-  <UpcomingModules />
   <SessionLog client:load />
 
   <footer class="mt-14 text-center text-xs text-slate-500 border-t border-[#1a1f38] pt-6 font-mono">
@@ -137,34 +125,24 @@ import SessionLog from '../components/SessionLog';
 </Layout>
 
 <script>
-  function setupFilters() {
-    const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-    const cards = document.querySelectorAll<HTMLDivElement>('.card-item');
+  import { getPinnedCards } from '../utils/pins';
 
-    buttons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
+  function applyPins() {
+    const pinned = getPinnedCards();
+    const cards = document.querySelectorAll<HTMLDivElement>('.deck-card');
 
-        buttons.forEach((b) => {
-          b.classList.remove('active', 'bg-[#161d3b]', 'text-oracle-gold', 'border-oracle-gold/40', 'font-semibold');
-          b.classList.add('bg-[#0e1224]', 'text-slate-400', 'border-[#22294c]');
-        });
-
-        btn.classList.add('active', 'bg-[#161d3b]', 'text-oracle-gold', 'border-oracle-gold/40', 'font-semibold');
-        btn.classList.remove('bg-[#0e1224]', 'text-slate-400', 'border-[#22294c]');
-
-        cards.forEach((card) => {
-          const category = card.dataset.category;
-          if (filter === 'all' || category === filter) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
+    cards.forEach((card) => {
+      const id = card.dataset.cardId;
+      if (id && pinned.includes(id)) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
     });
   }
 
-  setupFilters();
-  document.addEventListener('astro:page-load', setupFilters);
+  // Executa na carga e escuta atualizações de pins
+  applyPins();
+  window.addEventListener('oracle:pins-updated', applyPins);
+  document.addEventListener('astro:page-load', applyPins);
 </script>
