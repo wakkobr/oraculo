@@ -87,7 +87,7 @@ export default function VignetteCard() {
         </div>
 
         {/* Texto da Cena */}
-        <div className="text-xs text-slate-200 mb-6 leading-relaxed bg-[#090d1f]/60 p-3.5 rounded-lg border border-[#1d2342] min-h-[78px] flex items-center">
+        <div className="text-xs text-slate-200 mb-6 leading-relaxed bg-[#090d1f]/60 p-3.5 rounded-lg border border-[#1d2342] min-h-19.5 flex items-center">
           <p className="italic font-serif">"{data.texto}"</p>
         </div>
       </div>

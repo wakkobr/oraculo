@@ -118,7 +118,7 @@ export default function SessionLog() {
                 >
                   {item.tipo === 'ENCONTRO' ? 'CENA' : item.tipo}
                 </span>
-                <span className="text-slate-300 break-words leading-relaxed">
+                <span className="text-slate-300 wrap-break-word leading-relaxed">
                   {item.texto}
                 </span>
               </div>
