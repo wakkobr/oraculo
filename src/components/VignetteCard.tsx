@@ -23,7 +23,7 @@ export default function VignetteCard() {
       texto
     });
 
-    addHistoryEntry('ENCONTRO' as any, `[${pool.nome}] ${texto}`);
+    addHistoryEntry('ENCONTRO', `[${pool.nome}] ${texto}`);
   };
 
   const copy = () => {
@@ -39,15 +39,15 @@ export default function VignetteCard() {
       <span className="absolute top-2.5 right-2.5 text-[10px] text-indigo-400/40">✦</span>
 
       <div>
-        {/* Topo do Card */}
+        {/* Cabeçalho do Card */}
         <div className="flex items-center justify-between pb-3.5 mb-3 border-b border-[#1c2242]">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg bg-[#1f1938] border border-[#443673] flex items-center justify-center text-amber-200 text-lg">
               🎭
             </div>
             <div>
-              <h3 className="text-sm font-bold text-slate-100 uppercase tracking-wider font-['Cinzel']">Vinhetas & Cenas</h3>
-              <p className="text-[11px] text-slate-400">Pedaços de cor & Encontros rápidos</p>
+              <h3 className="text-sm font-bold text-slate-100 uppercase tracking-wider font-['Cinzel']">Cenas & Detalhes</h3>
+              <p className="text-[11px] text-slate-400">Ganchos visuais e eventos locais</p>
             </div>
           </div>
 
@@ -79,14 +79,14 @@ export default function VignetteCard() {
         {/* Bloco de Resultado */}
         <div className="mb-3">
           <div className="flex items-center justify-between mb-1">
-            <span className="text-[10px] font-mono tracking-widest uppercase text-amber-300/80">Cena Observada:</span>
+            <span className="text-[10px] font-mono tracking-widest uppercase text-amber-300/80">O que vocês observam:</span>
             <button onClick={copy} title="Copiar cena" className="text-slate-500 hover:text-oracle-gold text-xs transition-colors shrink-0">
               📋
             </button>
           </div>
         </div>
 
-        {/* Texto da Vinheta */}
+        {/* Texto da Cena */}
         <div className="text-xs text-slate-200 mb-6 leading-relaxed bg-[#090d1f]/60 p-3.5 rounded-lg border border-[#1d2342] min-h-[78px] flex items-center">
           <p className="italic font-serif">"{data.texto}"</p>
         </div>
