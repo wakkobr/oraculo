@@ -7,6 +7,7 @@ import LootCard from '../components/LootCard';
 import BookCard from '../components/BookCard';
 import MushroomCard from '../components/MushroomCard';
 import SpellCard from '../components/SpellCard';
+import VignetteCard from '../components/VignetteCard';
 import UpcomingModules from '../components/UpcomingModules.astro';
 import SessionLog from '../components/SessionLog';
 ---
@@ -48,13 +49,16 @@ import SessionLog from '../components/SessionLog';
     </button>
   </div>
 
-  <!-- Grid com os 6 Geradores e Seleção de Categoria -->
+  <!-- Grid com os Geradores -->
   <div id="generator-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <div class="card-item" data-category="cidades">
       <TavernCard client:load />
     </div>
     <div class="card-item" data-category="cidades">
       <NpcCard client:load />
+    </div>
+    <div class="card-item" data-category="cidades">
+      <VignetteCard client:load />
     </div>
     <div class="card-item" data-category="tesouros">
       <LootCard client:load />
@@ -87,7 +91,6 @@ import SessionLog from '../components/SessionLog';
       btn.addEventListener('click', () => {
         const filter = btn.dataset.filter;
 
-        // Atualiza estilo dos botões
         buttons.forEach((b) => {
           b.classList.remove('active', 'bg-[#161d3b]', 'text-oracle-gold', 'border-oracle-gold/40', 'font-semibold');
           b.classList.add('bg-[#0e1224]', 'text-slate-400', 'border-[#22294c]');
@@ -96,7 +99,6 @@ import SessionLog from '../components/SessionLog';
         btn.classList.add('active', 'bg-[#161d3b]', 'text-oracle-gold', 'border-oracle-gold/40', 'font-semibold');
         btn.classList.remove('bg-[#0e1224]', 'text-slate-400', 'border-[#22294c]');
 
-        // Mostra ou esconde cards
         cards.forEach((card) => {
           const category = card.dataset.category;
           if (filter === 'all' || category === filter) {
@@ -109,7 +111,6 @@ import SessionLog from '../components/SessionLog';
     });
   }
 
-  // Executa no carregamento e após trocas de rota
   setupFilters();
   document.addEventListener('astro:page-load', setupFilters);
 </script>
