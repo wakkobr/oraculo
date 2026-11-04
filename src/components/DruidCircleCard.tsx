@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import druidsData from '../data/druid_circles.json';
 import { addHistoryEntry } from '../utils/history';
+import PinButton from './PinButton';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -93,7 +94,7 @@ export default function DruidCircleCard() {
               <p className="text-[11px] text-slate-400">Guardiões da Natureza & Ermos</p>
             </div>
           </div>
-
+          <PinButton cardId="taverna" />
           <button
             onClick={roll}
             title="Sortear novamente"

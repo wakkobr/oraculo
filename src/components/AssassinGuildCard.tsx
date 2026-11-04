@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import guildsData from '../data/assassins.json';
 import { addHistoryEntry } from '../utils/history';
+import PinButton from './PinButton';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -101,7 +102,7 @@ export default function AssassinGuildCard() {
               <p className="text-[11px] text-slate-400">Contratos, Venenos & Sombras</p>
             </div>
           </div>
-
+          <PinButton cardId="taverna" />
           <button
             onClick={roll}
             title="Sortear novamente"

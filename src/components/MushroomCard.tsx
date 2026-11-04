@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import mushrooms from '../data/mushrooms.json';
 import { addHistoryEntry } from '../utils/history';
+import PinButton from './PinButton';
 
 export default function MushroomCard() {
 const [data, setData] = useState({
@@ -40,7 +41,7 @@ const [data, setData] = useState({
               <p className="text-[11px] text-slate-400">100 Fungos & Efeitos (d100)</p>
             </div>
           </div>
-
+          <PinButton cardId="taverna" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

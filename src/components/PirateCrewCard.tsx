@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import piratesData from '../data/pirates.json';
 import { addHistoryEntry } from '../utils/history';
+import PinButton from './PinButton';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -138,7 +139,7 @@ export default function PirateCrewCard() {
               <p className="text-[11px] text-slate-400">Corsários, Naus & Abordagens</p>
             </div>
           </div>
-
+          <PinButton cardId="taverna" />
           <button
             onClick={roll}
             title="Sortear novamente"

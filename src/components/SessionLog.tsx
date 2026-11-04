@@ -1,15 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import type { HistoryItem } from '../utils/history';
 
+const HISTORY_STORAGE_KEY = 'oracle:session-history';
+
 export default function SessionLog() {
-  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [history, setHistory] = useState<HistoryItem[]>(() => {
+    if (typeof window === 'undefined') return [];
+    try {
+      const stored = localStorage.getItem(HISTORY_STORAGE_KEY);
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
   const [copiedAll, setCopiedAll] = useState(false);
 
   useEffect(() => {
     const handleNewItem = (event: Event) => {
       const customEvent = event as CustomEvent<HistoryItem>;
       if (customEvent.detail) {
-        setHistory((prev) => [customEvent.detail, ...prev].slice(0, 30));
+        setHistory((prev) => {
+          const updated = [customEvent.detail, ...prev].slice(0, 30);
+          try {
+            localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(updated));
+          } catch (e) {
+            console.error('Erro ao guardar histórico:', e);
+          }
+          return updated;
+        });
       }
     };
 
@@ -19,6 +37,11 @@ export default function SessionLog() {
 
   const clearHistory = () => {
     setHistory([]);
+    try {
+      localStorage.removeItem(HISTORY_STORAGE_KEY);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   const copyAllHistory = () => {
@@ -70,7 +93,6 @@ export default function SessionLog() {
 
   return (
     <section className="mt-12 bg-oracle-card border border-[#222744] rounded-xl p-5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.5)]">
-      {/* Cabeçalho do Histórico */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3.5 mb-4 border-b border-[#1c2242] gap-3">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-[#141830] border border-[#283058] flex items-center justify-center text-oracle-gold text-sm">
@@ -81,7 +103,7 @@ export default function SessionLog() {
               Registro da Sessão
             </h3>
             <p className="text-[11px] text-slate-400">
-              Histórico dos últimos resultados sorteados na mesa
+              Histórico unificado dos últimos resultados sorteados na mesa
             </p>
           </div>
         </div>
@@ -108,10 +130,9 @@ export default function SessionLog() {
         </div>
       </div>
 
-      {/* Lista de Registros */}
       {history.length === 0 ? (
         <div className="py-8 text-center text-xs text-slate-500 font-mono">
-          Nenhuma rolagem feita nesta sessão ainda. Role qualquer gerador acima para registrar aqui.
+          Nenhuma rolagem feita nesta sessão ainda. Role qualquer gerador para registrar aqui.
         </div>
       ) : (
         <div className="space-y-2 max-h-72 overflow-y-auto pr-1">

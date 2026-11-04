@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import booksData from '../data/books.json';
 import { addHistoryEntry } from '../utils/history';
+import PinButton from './PinButton';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -46,7 +47,7 @@ export default function BookCard() {
               <p className="text-[11px] text-slate-400">Obras de estante & manuscritos</p>
             </div>
           </div>
-
+          <PinButton cardId="taverna" />
           <button 
             onClick={roll} 
             title="Sortear novamente"

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import outlawsData from '../data/outlaws.json';
 import { addHistoryEntry } from '../utils/history';
+import PinButton from './PinButton';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -125,7 +126,7 @@ export default function OutlawBandCard() {
               <p className="text-[11px] text-slate-400">Salteadores, Caçadores & Contrabando</p>
             </div>
           </div>
-
+          <PinButton cardId="taverna" />
           <button
             onClick={roll}
             title="Sortear novamente"

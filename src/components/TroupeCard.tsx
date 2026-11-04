@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import troupesData from '../data/troupes.json';
 import { addHistoryEntry } from '../utils/history';
+import PinButton from './PinButton';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -70,7 +71,7 @@ export default function TroupeCard() {
               <p className="text-[11px] text-slate-400">Facções & Artistas Mambembes</p>
             </div>
           </div>
-
+          <PinButton cardId="trupe" />
           <button 
             onClick={roll} 
             title="Sortear novamente"
