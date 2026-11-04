@@ -11,6 +11,7 @@ import VignetteCard from '../components/VignetteCard';
 import TroupeCard from '../components/TroupeCard';
 import AssassinGuildCard from '../components/AssassinGuildCard';
 import CraftingGuildCard from '../components/CraftingGuildCard';
+import CultCard from '../components/CultCard';
 import UpcomingModules from '../components/UpcomingModules.astro';
 import SessionLog from '../components/SessionLog';
 ---
@@ -68,6 +69,9 @@ import SessionLog from '../components/SessionLog';
     </div>
     <div class="card-item" data-category="cidades">
       <VignetteCard client:load />
+    </div>
+    <div class="card-item" data-category="faccoes">
+      <CultCard client:load />
     </div>
     <div class="card-item" data-category="faccoes">
       <CraftingGuildCard client:load />
