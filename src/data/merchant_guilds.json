@@ -1,0 +1,146 @@
+{
+  "controle": [
+    "Um chefão pragmático e implacável que abomina burocracia e reuniões.",
+    "Um gnomo de rosto franzido e olhar faminto com ganância desenfreada por moedas.",
+    "Um nobre jovem inexperiente e petulante, obcecado em encher os próprios bolsos.",
+    "Um conselho conjunto formado pelos mestres das principais guildas de ofício locais.",
+    "Uma democracia de assembleia barulhenta e caótica entre todos os mascates e lojistas.",
+    "Um estatuto ancestral imutável executado com mão de ferro pela milícia municipal.",
+    "O magnata mercador mais rico e influente de toda a cidade.",
+    "Um monge nomeado pelo conselho municipal, que fez votos de pobreza absoluta."
+  ],
+  "corrupcao_ilegalidades": [
+    "Nenhuma; são baluartes da probidade moral, honestos até o último centavo.",
+    "Dentro da lei; deslizam apenas em impostos menores alegando pura ignorância burocrática.",
+    "Artífices do jogo político; trocam presentes e favores indiretos com magistrados e fiscais.",
+    "Cifrões no olhar; cartelizam mercadorias e tabelam preços abusivos quando a demanda aperta.",
+    "Preços mínimos tabelados por cartel e propinas rotineiras para acobertar pequenas contravenções.",
+    "Subornos no alto escalão da corte, golpes comerciais e desdém pelas queixas do clero.",
+    "Corrupção sistêmica; conluio com a Guilda de Ladrões e contratação eventual de assassinos.",
+    "Pactos abissais por frotas protegidas, falsificação de moedas em massa e alta traição."
+  ],
+  "status_controle": [
+    "Decadente; outrora colossal, enfrenta crise severa e luta para não perder suas concessões.",
+    "Recém-criada; recruta associados aos montes no bazar para arrebatar poder no conselho.",
+    "Em expansão explosiva; um monopólio ou rota recente garantiu margens de lucro monumentais.",
+    "Em declínio lento; uma companhia concorrente vem mordendo sua clientela semana após semana.",
+    "Absoluto e tirânico; domínio monopolista de ponta a ponta sobre o comércio da comarca.",
+    "Instável; dependendo da colheita e das marés, seus membros bebem vinho élfico ou vinagre azedo.",
+    "Inquestionável; exerce hegemonia total sobre todas as demais guildas e oficinas da região.",
+    "Duvidoso; afirmam controlar o mercado, mas atravessadores e contrabandistas zombam de suas ordens."
+  ],
+  "sede": [
+    "Na imponente mansão senhorial do presidente ou comitê diretor da guilda.",
+    "No porão empoeirado e úmido sob o palácio da prefeitura municipal.",
+    "Em um sobrado muito alto e estreito, inclinado perigosamente sobre o calçamento.",
+    "No convés luxuoso de um galeão atracado no porto (ou nau encalhada convertida em entreposto).",
+    "Em um pavilhão aberto de mármore e seda no coração da praça do grande mercado.",
+    "Operando discretamente nos fundos e cofres de uma das casas bancárias mais prestigiadas.",
+    "Em um semiplano faustoso com teto de ouro, cujo portal se esconde num beco escuso.",
+    "Dividida em condomínio com as demais corporações — com a Guilda dos Ladrões nos esgotos logo abaixo."
+  ],
+  "missoes": {
+    "menor": [
+      "Um lojista associado foi extorquido por arruaceiros da guarda; envie um recado enérgico.",
+      "Cofres momentaneamente vazios; exige-se uma 'contribuição voluntária' de 500 moedas de ouro.",
+      "Escoltar o transporte de um item mágico raro até a filial da cidade vizinha.",
+      "Um comboio teme emboscadas em uma trilha recém-aberta na mata; forneça guarda de honra.",
+      "Um sargento da milícia começou a fazer perguntas incômodas sobre manifestos de carga.",
+      "Uma guilda de artesãos hesita em assinar o programa de fidelidade exclusiva da federação.",
+      "Uma infestação incômoda de ratos no porão do armazém central precisa ser dedetizada.",
+      "Ratos infestam a adega... mas a toca na verdade é uma fenda para o imundo Plano dos Roedores."
+    ],
+    "padrao": [
+      "Uma caravana de especiarias inteira desapareceu misteriosamente na travessia das colinas.",
+      "Uma nova guilda de ladrões em ascensão recusa os acordos de cavalheiros e saqueia armazéns.",
+      "Um magistrado moralista e intransigente assumiu o posto jurando fechar o livre mercado.",
+      "Uma companhia mercante concorrente estrangeira começou a queimar preços deslealmente.",
+      "Um bloqueio armado na rota comercial principal precisa ser desfeito por ouro ou aço.",
+      "Boatos de aparições de aberrações alienígenas à noite afugentaram compradores do mercado.",
+      "Um conselheiro sênior da diretoria enlouqueceu, limpou o cofre principal e fugiu.",
+      "A infestação de ratos cresceu: a fenda abriu um Portal permanente e voraz de onde brotam pragas."
+    ],
+    "maior": [
+      "Um exército mercenário mercenário sitiou as muralhas da cidade exigindo tributo dos cofres!",
+      "Golpe nos bastidores da diretoria: metade dos acionistas revelou-se devoradores de mentes disfarçados.",
+      "Um reavivamento religioso fervoroso faz as massas renunciarem a posses e quebra o faturamento.",
+      "Um faraó mumificado despertou e tomou como refém o comboio com os maiores investimentos do ano.",
+      "Revolução popular armada ameaça queimar e saquear os depósitos; contenha sem ferir civis inocentes.",
+      "O Mestre dos Espiões do Rei abriu um inquérito minucioso sobre os contratos ilegais da guilda.",
+      "Uma entidade extraplanar aprisionou o Grão-Mestre em uma jaula dimensional e assumiu seu corpo.",
+      "O porão central foi inundado por um dilúvio de roedores liderados pelo Avatar vivo do Deus dos Ratos."
+    ]
+  },
+  "companhia_maritima": {
+    "especialidades": [
+      "Comércio naval de longo curso, exploração de rotas marítimas e transporte de frotas.",
+      "Comércio aéreo transcontinental realizado com naves celestes, mensageiros aarakocra ou montarias de rocs.",
+      "Captura, caça e tráfico de monstros lendários e animais fantásticos vivos.",
+      "Companhia de fachada manipulada pela corte de um império para sabotar rotas vizinhas.",
+      "Gestão de comboios terrestres de longa distância e financiamento da abertura de estradas e pontes.",
+      "Exploração, colonização e espoliação agressiva de territórios recém-descobertos em outros Planos."
+    ],
+    "diretoria": [
+      "Um ser extraplanar disfarçado de magnata aristocrata gerindo contratos de almas e comércio.",
+      "Um conselho supremo reunindo os Mestres da Moeda de todos os reinos civilizados.",
+      "Um goblin prodígio e genial que alcançou a imortalidade por meio de uma barganha divina.",
+      "Um aventureiro veterano e calejado que trocou o calabouço pela contabilidade de navios.",
+      "Um colegiado de acionistas anônimos que vota por cartas seladas com cera negra.",
+      "Uma democracia barulhenta e brigona entre capitães de navios e mestres de comboio.",
+      "O lendário senhor de caravanas que descobriu e saqueou sozinho uma cidade mítica de ouro puro.",
+      "Um senhor de escravos corpulento e grotesco que calcula lucros em vidas humanas."
+    ]
+  },
+  "lojista": {
+    "humor": [
+      "Entediado até os ossos, apoiado no balcão espanando um frasco com ar de desdém.",
+      "Hiperativo e solícito demais, tentando empurrar quinquilharias a qualquer custo.",
+      "Visivelmente perturbado e com olheiras fundas, saltando ao menor ruído da porta.",
+      "Olhando nervosamente para a rua de instante em instante como quem espera cobradores."
+    ],
+    "desejo": [
+      "Alguém desatento o bastante para comprar um lote de mercadorias defeituosas ou amaldiçoadas.",
+      "Um comprador atacadista com fundos para desovar uma carga volumosa retida no cais.",
+      "Alguém paciente para ouvir seus lamentos sobre impostos e dores nas costas.",
+      "Dividir uma garrafa de vinho barato atrás do balcão e fofocar sobre a vizinhança."
+    ]
+  },
+  "mercador": {
+    "origem": [
+      "Membro juramentado de um tradicional clã de caravaneiros nômades.",
+      "Um fidalgo empobrecido de título pomposo buscando restaurar o brasão da família.",
+      "Um mascate empreendedor que começou com uma cesta na feira e muita lábia.",
+      "Herdeiro mimado de uma das famílias patrícias mais influentes da metrópole.",
+      "Um plebeu de nascimento humilde que subiu à força de cálculo e astúcia fria.",
+      "O procurador autorizado e preposto de um magnata misterioso que nunca aparece."
+    ],
+    "aparencia": [
+      "Um sorriso desagradável e dentes de ouro que reluzem à luz de velas.",
+      "Um ar arrogante e sorriso de escárnio de quem sabe que você precisa dele.",
+      "Uma nuvem asfixiante de perfume de flores exóticas para disfarçar o suor.",
+      "Roupas de seda largas e vistosas tentando esconder uma avantajada barriga de cerveja."
+    ],
+    "agenda": [
+      "Contratar aventureiros para resgatar ou afanar um artefato arcano sob encomenda.",
+      "Um intermediário corajoso para negociar um contrato perigoso em território neutro.",
+      "Sabotar os armazéns ou o carregamento de um mercador rival atravessador.",
+      "Uma companhia de escolta para acompanhá-lo em uma noite de farras e jogatina cara."
+    ],
+    "bolsos": [
+      "Um medalhão de família com sinete antigo de cera.",
+      "Diversos livros de registro contábil e manifestos alfandegários rasurados.",
+      "Algumas gemas preciosas lapidadas costuradas no forro da túnica.",
+      "Uma carta de amor anônima com revelações políticas escandalosas.",
+      "Uma pequena adaga de estilete afiada escondida na bota de veludo.",
+      "Um frasco com poção de cura disfarçado de licor para casos de emergência."
+    ],
+    "moeda_alternativa": [
+      "Gemas brutas, colares de pérolas e joalheria de corte antigo.",
+      "Barras e lingotes puros de ouro e prata sem cunho real.",
+      "Barris de água pura potável, rações de viagem e fardos de tecidos.",
+      "Conchas raras, contas de vidro lapidado e miçangas de escambo.",
+      "Favores políticos ou acordos verbais a serem cobrados no futuro.",
+      "Segredos de alcova e informações escandalosas sobre nobres ou clérigos locais."
+    ]
+  }
+}
