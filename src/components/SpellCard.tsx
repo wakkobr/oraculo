@@ -4,47 +4,64 @@ import { addHistoryEntry } from '../utils/history';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
+type SpellClass = 'mago' | 'bruxo' | 'feiticeiro' | 'clerigo' | 'druida' | 'bardo' | 'paladino' | 'guardiao';
+
+const classLabels: Record<SpellClass, string> = {
+  mago: 'Mago',
+  feiticeiro: 'Feiticeiro',
+  bruxo: 'Bruxo',
+  clerigo: 'Clérigo',
+  druida: 'Druida',
+  bardo: 'Bardo',
+  paladino: 'Paladino',
+  guardiao: 'Guardião'
+};
+
 export default function SpellCard() {
-  const [mode, setMode] = useState<'nivel' | 'classe'>('nivel');
+  const [selectedClass, setSelectedClass] = useState<SpellClass>('mago');
   const [selectedLevel, setSelectedLevel] = useState<string>('3');
-  const [selectedClass, setSelectedClass] = useState<string>('mago');
   
   const [data, setData] = useState({
     nome: 'Bola de Fogo',
-    detalhe: 'Magia de 3º Nível (Evocação)',
-    sub: 'Arcana / Mago & Feiticeiro'
+    detalhe: 'Magia de 3º Círculo / Nível',
+    sub: 'Grimório de Mago'
   });
   const [copied, setCopied] = useState(false);
 
-  const roll = () => {
-    let nomeMagia = '';
-    let detalheStr = '';
-    let subStr = '';
+  // Paladino e Guardião só conjuram de 1º a 5º nível
+  const isHalfCaster = selectedClass === 'paladino' || selectedClass === 'guardiao';
+  const availableLevels = isHalfCaster 
+    ? ['1', '2', '3', '4', '5'] 
+    : ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
-    if (mode === 'nivel') {
-      const list = spellsData.por_nivel[selectedLevel as keyof typeof spellsData.por_nivel] || spellsData.por_nivel['1'];
-      nomeMagia = pick(list);
-      detalheStr = selectedLevel === '0' ? 'Truque Mágico' : `Magia de ${selectedLevel}º Círculo / Nível`;
-      subStr = 'Sorteada por Círculo Arcano';
-    } else {
-      const list = spellsData.por_classe[selectedClass as keyof typeof spellsData.por_classe] || spellsData.por_classe.mago;
-      nomeMagia = pick(list);
-      const cLabel = selectedClass.charAt(0).toUpperCase() + selectedClass.slice(1);
-      detalheStr = `Grimório de ${cLabel}`;
-      subStr = `Lista de Conjurador: ${cLabel}`;
+  const handleClassChange = (newClass: SpellClass) => {
+    setSelectedClass(newClass);
+    if ((newClass === 'paladino' || newClass === 'guardiao') && (selectedLevel === '0' || Number(selectedLevel) > 5)) {
+      setSelectedLevel('1');
     }
+  };
+
+  const roll = () => {
+    const classSpells = spellsData.classes[selectedClass] as Record<string, string[]>;
+    const spellList = classSpells[selectedLevel] || classSpells['1'] || [];
+
+    if (spellList.length === 0) return;
+
+    const nomeMagia = pick(spellList);
+    const nivelLabel = selectedLevel === '0' ? 'Truque Mágico' : `Magia de ${selectedLevel}º Círculo`;
+    const classeLabel = classLabels[selectedClass];
 
     setData({
       nome: nomeMagia,
-      detalhe: detalheStr,
-      sub: subStr
+      detalhe: nivelLabel,
+      sub: `Grimório de ${classeLabel}`
     });
 
-    addHistoryEntry('MAGIA' as any, `${nomeMagia} (${detalheStr})`);
+    addHistoryEntry('MAGIA', `${nomeMagia} (${classeLabel}, ${nivelLabel})`);
   };
 
   const copy = () => {
-    const text = `Magia Sorteada: ${data.nome}\n${data.detalhe} - ${data.sub}`;
+    const text = `Magia: ${data.nome}\n${data.detalhe} - ${data.sub}`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 1800);
@@ -64,7 +81,7 @@ export default function SpellCard() {
             </div>
             <div>
               <h3 className="text-sm font-bold text-slate-100 uppercase tracking-wider font-['Cinzel']">Grimório Arcano</h3>
-              <p className="text-[11px] text-slate-400">Magias por Nível ou Classe</p>
+              <p className="text-[11px] text-slate-400">Magias por Classe & Círculo</p>
             </div>
           </div>
 
@@ -77,58 +94,39 @@ export default function SpellCard() {
           </button>
         </div>
 
-        {/* Seletores: Modo e Filtro */}
+        {/* Seletores Combinados: Classe E Círculo */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Filtrar por:</label>
+            <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Classe:</label>
             <select 
-              value={mode} 
-              onChange={(e) => setMode(e.target.value as 'nivel' | 'classe')}
+              value={selectedClass} 
+              onChange={(e) => handleClassChange(e.target.value as SpellClass)}
               className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-oracle-gold/40"
             >
-              <option value="nivel">📖 Círculo (Nível)</option>
-              <option value="classe">🧙 Classe</option>
+              <option value="mago">Mago</option>
+              <option value="feiticeiro">Feiticeiro</option>
+              <option value="bruxo">Bruxo</option>
+              <option value="clerigo">Clérigo</option>
+              <option value="druida">Druida</option>
+              <option value="bardo">Bardo</option>
+              <option value="paladino">Paladino</option>
+              <option value="guardiao">Guardião</option>
             </select>
           </div>
 
           <div>
-            {mode === 'nivel' ? (
-              <>
-                <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Círculo:</label>
-                <select 
-                  value={selectedLevel} 
-                  onChange={(e) => setSelectedLevel(e.target.value)}
-                  className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-oracle-gold/40"
-                >
-                  <option value="0">Truques (Nível 0)</option>
-                  <option value="1">1º Nível</option>
-                  <option value="2">2º Nível</option>
-                  <option value="3">3º Nível</option>
-                  <option value="4">4º Nível</option>
-                  <option value="5">5º Nível</option>
-                  <option value="6">6º Nível</option>
-                  <option value="7">7º Nível</option>
-                  <option value="8">8º Nível</option>
-                  <option value="9">9º Nível</option>
-                </select>
-              </>
-            ) : (
-              <>
-                <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Classe:</label>
-                <select 
-                  value={selectedClass} 
-                  onChange={(e) => setSelectedClass(e.target.value)}
-                  className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-oracle-gold/40"
-                >
-                  <option value="mago">Mago</option>
-                  <option value="feiticeiro">Feiticeiro</option>
-                  <option value="bruxo">Bruxo</option>
-                  <option value="clerigo">Clérigo</option>
-                  <option value="druida">Druida</option>
-                  <option value="bardo">Bardo</option>
-                </select>
-              </>
-            )}
+            <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Círculo:</label>
+            <select 
+              value={selectedLevel} 
+              onChange={(e) => setSelectedLevel(e.target.value)}
+              className="w-full bg-[#0a0d1c] border border-[#252b4e] rounded px-2 py-1.5 text-xs text-slate-200 focus:outline-none focus:border-oracle-gold/40"
+            >
+              {availableLevels.map((lvl) => (
+                <option key={lvl} value={lvl}>
+                  {lvl === '0' ? 'Truques (Nível 0)' : `${lvl}º Nível`}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
 
@@ -146,8 +144,8 @@ export default function SpellCard() {
 
         {/* Detalhes da Magia */}
         <div className="space-y-1.5 text-xs text-slate-300 mb-6 leading-relaxed bg-[#090d1f]/60 p-3 rounded-lg border border-[#1d2342]">
-          <p><strong className="text-purple-300 font-semibold">Classificação:</strong> {data.detalhe}</p>
-          <p><strong className="text-purple-300 font-semibold">Origem:</strong> {data.sub}</p>
+          <p><strong className="text-purple-300 font-semibold">Círculo:</strong> {data.detalhe}</p>
+          <p><strong className="text-purple-300 font-semibold">Conjurador:</strong> {data.sub}</p>
         </div>
       </div>
 

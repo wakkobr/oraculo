@@ -1,7 +1,95 @@
 {
+  "classes": {
+    "mago": {
+      "0": ["Raio de Fogo", "Raio de Gelo", "Toque Chocante", "Mãos Mágicas", "Ilusão Menor", "Prestidigitação", "Luz", "Mensagem", "Golpe Certeiro", "Lança Mental"],
+      "1": ["Armadura Arcana", "Mísseis Mágicos", "Escudo Arcano", "Mãos Flamejantes", "Onda Trovejante", "Sono", "Queda Suave", "Leque de Cores", "Riso Histérico de Tasha", "Disco Flutuante de Tenser", "Detectar Magia", "Identificação"],
+      "2": ["Passo Nebuloso", "Invisibilidade", "Reflexos", "Despedaçar", "Levitação", "Teia", "Chama Contínua", "Lufada de Vento", "Esfera Flamejante", "Ver o Invisível", "Arrombar", "Truque de Corda"],
+      "3": ["Bola de Fogo", "Relâmpago", "Contra-mágica", "Dissipar Magia", "Voo", "Velocidade", "Lentidão", "Padrão Hipnótico", "Medo", "Forma Gasosa", "Respirar na Água", "Clarividência"],
+      "4": ["Porta Dimensional", "Invisibilidade Maior", "Metamorfose", "Tentáculos Negros de Evard", "Muralha de Fogo", "Tempestade de Gelo", "Pele de Pedra", "Banimento", "Cão Fiel de Mordenkainen"],
+      "5": ["Cone de Frio", "Telecinésia", "Teletransporte por Círculo", "Muralha de Força", "Criar Mortos-Vivos", "Similaridade", "Vidência", "Dominar Pessoa", "Sonho", "Mão de Bigby"],
+      "6": ["Desintegrar", "Corrente de Relâmpagos", "Globo de Invulnerabilidade", "Olhar Penetrante", "Muralha de Gelo", "Carne em Pedra", "Sugestão em Massa", "Mover Terra"],
+      "7": ["Espada de Mordenkainen", "Dedo da Morte", "Bola de Fogo Controlável", "Mansão Magnífica de Mordenkainen", "Teletransporte", "Viagem Planar", "Forma Etérea", "Prisão de Energia"],
+      "8": ["Labirinto", "Clone", "Antipatia/Simpatia", "Campo Antimagia", "Dominar Monstro", "Semiplano", "Nuvem Incendiária", "Limpar a Mente"],
+      "9": ["Desejo", "Chuva de Meteoros", "Parar o Tempo", "Metamorfose Verdadeira", "Aprisionamento", "Palavra de Poder: Matar", "Muralha Prismática", "Portal"]
+    },
+    "bruxo": {
+      "0": ["Rajada Mística", "Toque Macabro", "Ilusão Menor", "Prestidigitação", "Amigos", "Toque Chocante"],
+      "1": ["Armadura de Agathys", "Repreensão Infernal", "Braços de Hadar", "Bruxaria (Hex)", "Compreender Idiomas", "Raio de Bruxa"],
+      "2": ["Passo Nebuloso", "Escuridão", "Raio do Enfraquecimento", "Sugestão", "Imobilizar Pessoa", "Cegueira/Surdez"],
+      "3": ["Fome de Hadar", "Toque Vampírico", "Contra-mágica", "Dissipar Magia", "Medo", "Padrão Hipnótico", "Voo"],
+      "4": ["Banimento", "Porta Dimensional", "Invisibilidade Maior", "Bactérias Espoliadoras", "Assassino Fantasmagórico"],
+      "5": ["Dominar Monstro", "Vidência", "Sonho", "Contato Extraplanar", "Imobilizar Monstro"],
+      "6": ["Círculo da Morte", "Olhar Penetrante", "Carne em Pedra", "Portal Arcano"],
+      "7": ["Dedo da Morte", "Viagem Planar", "Força Etérea"],
+      "8": ["Dominar Monstro", "Semiplano", "Enfraquecer o Intelecto"],
+      "9": ["Palavra de Poder: Matar", "Aprisionamento", "Metamorfose Verdadeira", "Projeção Astral"]
+    },
+    "feiticeiro": {
+      "0": ["Raio de Fogo", "Raio de Gelo", "Toque Chocante", "Luz", "Mensagem", "Prestidigitação", "Rajada de Veneno"],
+      "1": ["Mãos Flamejantes", "Onda Trovejante", "Escudo Arcano", "Mísseis Mágicos", "Leque de Cores", "Queda Suave", "Salto"],
+      "2": ["Raio Ardente", "Reflexos", "Despedaçar", "Passo Nebuloso", "Invisibilidade", "Levitação", "Teia"],
+      "3": ["Bola de Fogo", "Relâmpago", "Contra-mágica", "Dissipar Magia", "Velocidade", "Lentidão", "Voo", "Padrão Hipnótico"],
+      "4": ["Tempestade de Gelo", "Muralha de Fogo", "Porta Dimensional", "Invisibilidade Maior", "Banimento", "Metamorfose"],
+      "5": ["Cone de Frio", "Telecinésia", "Dominar Pessoa", "Muralha de Pedra", "Similaridade", "Criação"],
+      "6": ["Corrente de Relâmpagos", "Desintegrar", "Globo de Invulnerabilidade", "Muralha de Gelo", "Sugestão em Massa"],
+      "7": ["Bola de Fogo Controlável", "Dedo da Morte", "Teletransporte", "Inverter Gravidade", "Tempestade de Fogo"],
+      "8": ["Terremoto", "Nuvem Incendiária", "Dominar Monstro", "Explosão Solar"],
+      "9": ["Chuva de Meteoros", "Desejo", "Parar o Tempo", "Palavra de Poder: Matar", "Portal"]
+    },
+    "clerigo": {
+      "0": ["Chama Sagrada", "Orientação", "Resistência", "Poupar os Moribundos", "Taumaturgia", "Luz"],
+      "1": ["Bênção", "Perdição", "Comando", "Curar Ferimentos", "Palavra Curativa", "Detectar Magia", "Santuário", "Escudo da Fé", "Fogo das Fadas"],
+      "2": ["Arma Espiritual", "Oração de Cura", "Restauração Menor", "Imobilizar Pessoa", "Silêncio", "Acalmar Emoções", "Localizar Objeto"],
+      "3": ["Espíritos Guardiões", "Reviver", "Dissipar Magia", "Remover Maldição", "Falar com os Mortos", "Rogar Maldição", "Luz do Dia"],
+      "4": ["Guardião da Fé", "Banimento", "Movimentação Livre", "Localizar Criatura", "Adivinhação", "Proteção contra a Morte"],
+      "5": ["Coluna de Chamas", "Reviver os Mortos", "Comunhão", "Curar Ferimentos em Massa", "Dissipar o Mal e Bem", "Praga de Insetos"],
+      "6": ["Cura Completa", "Barreira de Lâminas", "Banquete dos Heróis", "Encontrar o Caminho", "Palavra de Recordação", "Proibição"],
+      "7": ["Palavra Divina", "Tempestade de Fogo", "Conjurar Celestial", "Forma Etérea", "Ressurreição"],
+      "8": ["Aura Sagrada", "Terremoto", "Campo Antimagia", "Controlar o Clima"],
+      "9": ["Ressurreição Verdadeira", "Cura Completa em Massa", "Portal", "Projeção Astral"]
+    },
+    "druida": {
+      "0": ["Bordão Mágico", "Chicote de Espinhos", "Orientação", "Resistência", "Criar Chamas", "Morfose"],
+      "1": ["Constrição", "Fogo das Fadas", "Falar com Animais", "Curar Ferimentos", "Palavra Curativa", "Névoa Obscurecente", "Salto"],
+      "2": ["Passos Sem Pegadas", "Crescimento de Espinhos", "Esfera Flamejante", "Pele de Árvore", "Lâmina Flamejante", "Raio Lunar"],
+      "3": ["Invocar Animais", "Crescimento de Plantas", "Muralha de Vento", "Convocar Relâmpagos", "Respirar na Água", "Nevasca"],
+      "4": ["Pele de Pedra", "Muralha de Fogo", "Invocar Seres da Floresta", "Confusão", "Localizar Criatura", "Forma Bestial"],
+      "5": ["Praga de Insetos", "Muralha de Pedra", "Despertar", "Comunhão com a Natureza", "Curar Ferimentos em Massa", "Reencarnar"],
+      "6": ["Mover Terra", "Banquete dos Heróis", "Cura Completa", "Muralha de Espinhos", "Raio Solar"],
+      "7": ["Inverter Gravidade", "Tempestade de Fogo", "Miragem Arcana", "Regeneração"],
+      "8": ["Terremoto", "Controlar o Clima", "Explosão Solar", "Formas Animais"],
+      "9": ["Alterar Forma", "Tempestade da Vingança", "Ressurreição Verdadeira"]
+    },
+    "bardo": {
+      "0": ["Zombaria Viciosa", "Luz", "Mãos Mágicas", "Ilusão Menor", "Mensagem", "Prestidigitação"],
+      "1": ["Riso Histérico de Tasha", "Sono", "Curar Ferimentos", "Palavra Curativa", "Compreender Idiomas", "Fogo das Fadas", "Sussurros Dissonantes"],
+      "2": ["Sugestão", "Invisibilidade", "Despedaçar", "Imobilizar Pessoa", "Cegueira/Surdez", "Acalmar Emoções", "Silêncio"],
+      "3": ["Padrão Hipnótico", "Medo", "Dissipar Magia", "Clarividência", "Falar com os Mortos", "Línguas"],
+      "4": ["Porta Dimensional", "Invisibilidade Maior", "Metamorfose", "Confusão", "Movimentação Livre"],
+      "5": ["Similaridade", "Curar Ferimentos em Massa", "Modificar Memória", "Dominar Pessoa", "Enganação", "Missão"],
+      "6": ["Sugestão em Massa", "Visão da Verdade", "Dança Irresistível de Otto", "Encontrar o Caminho"],
+      "7": ["Mansão Magnífica de Mordenkainen", "Espada de Mordenkainen", "Forma Etérea", "Projetar Imagem"],
+      "8": ["Dominar Monstro", "Limpar a Mente", "Enfraquecer o Intelecto", "Palavra de Poder: Atordoar"],
+      "9": ["Palavra de Poder: Matar", "Palavra de Poder: Curar", "Metamorfose Verdadeira", "Sexto Sentido"]
+    },
+    "paladino": {
+      "1": ["Destruição Colérica", "Destruição Trovejante", "Bênção", "Curar Ferimentos", "Duelo Compelido", "Escudo da Fé", "Comando"],
+      "2": ["Arma Mágica", "Localizar Objeto", "Ajuda", "Destruição Marcante", "Zona da Verdade", "Restauração Menor"],
+      "3": ["Manto do Cruzado", "Luz do Dia", "Dissipar Magia", "Reviver", "Arma Elemental", "Cegueira/Surdez"],
+      "4": ["Banimento", "Guardião da Fé", "Destruição Estonteante", "Localizar Criatura", "Proteção contra a Morte"],
+      "5": ["Destruição Banidora", "Onda Destrutiva", "Círculo de Poder", "Reviver os Mortos", "Missão"]
+    },
+    "guardiao": {
+      "1": ["Marca do Caçador", "Golpe Enredante", "Passos Longos", "Falar com Animais", "Alarme", "Curar Ferimentos"],
+      "2": ["Passos Sem Pegadas", "Crescimento de Espinhos", "Cordão de Flechas", "Sentido Bestial", "Localizar Animais ou Plantas"],
+      "3": ["Conjurar Saraivada", "Flecha Relampejante", "Respirar na Água", "Andar na Água", "Crescimento de Plantas"],
+      "4": ["Conjurar Seres da Floresta", "Pele de Pedra", "Localizar Criatura", "Movimentação Livre"],
+      "5": ["Saraivada de Flechas", "Comunhão com a Natureza", "Árvore Caminhante", "Ira da Natureza"]
+    }
+  },
   "por_nivel": {
-    "0": ["Rajada Mística", "Raio de Fogo", "Raio de Gelo", "Mãos Mágicas", "Ilusão Menor", "Toque Chocante", "Prestidigitação", "Chama Sagrada", "Orientação", "Bordão Mágico", "Zombaria Viciosa", "Chicote de Espinhos", "Toque Macabro", "Rajada de Veneno", "Luz", "Consertar", "Mensagem", "Golpe Certeiro", "Amigos", "Lança Mental"],
-    "1": ["Armadura Arcana", "Mísseis Mágicos", "Escudo Arcano", "Mãos Flamejantes", "Onda Trovejante", "Sono", "Raio de Bruxa", "Queda Suave", "Leque de Cores", "Falar com Animais", "Cura Pelas Mãos", "Palavra Curativa", "Bênção", "Perdição", "Comando", "Fogo das Fadas", "Constrição", "Marca do Caçador", "Repreensão Infernal", "Armadura de Agathys", "Riso Histérico de Tasha", "Disco Flutuante de Tenser", "Detectar Magia", "Identificação", "Passos Longos"],
+    "0": ["Rajada Mística", "Raio de Fogo", "Raio de Gelo", "Mãos Mágicas", "Ilusão Menor", "Toque Chocante", "Prestidigitação", "Chama Sagrada", "Orientação", "Bordão Mágico", "Zombaria Viciosa", "Chicote de Espinhos", "Toque Macabro", "Luz", "Mensagem", "Lança Mental"],
+    "1": ["Armadura Arcana", "Mísseis Mágicos", "Escudo Arcano", "Mãos Flamejantes", "Onda Trovejante", "Sono", "Queda Suave", "Leque de Cores", "Falar com Animais", "Curar Ferimentos", "Palavra Curativa", "Bênção", "Perdição", "Comando", "Fogo das Fadas", "Constrição", "Marca do Caçador", "Repreensão Infernal", "Armadura de Agathys", "Riso Histérico de Tasha", "Disco Flutuante de Tenser", "Detectar Magia", "Identificação", "Passos Longos"],
     "2": ["Passo Nebuloso", "Invisibilidade", "Reflexos", "Despedaçar", "Levitação", "Cegueira/Surdez", "Sugestão", "Teia", "Chama Contínua", "Lufada de Vento", "Esfera Flamejante", "Ver o Invisível", "Restauração Menor", "Arma Espiritual", "Imobilizar Pessoa", "Oração de Cura", "Crescimento de Espinhos", "Passos Sem Pegadas", "Raio Ardente", "Truque de Corda", "Arrombar"],
     "3": ["Bola de Fogo", "Relâmpago", "Contra-mágica", "Dissipar Magia", "Voo", "Velocidade", "Lentidão", "Padrão Hipnótico", "Medo", "Forma Gasosa", "Respirar na Água", "Espíritos Guardiões", "Reviver", "Clarividência", "Falar com os Mortos", "Invocar Animais", "Crescimento de Plantas", "Muralha de Vento", "Toque Vampírico", "Rogar Maldição"],
     "4": ["Porta Dimensional", "Invisibilidade Maior", "Metamorfose", "Tentáculos Negros de Evard", "Muralha de Fogo", "Tempestade de Gelo", "Pele de Pedra", "Banimento", "Localizar Criatura", "Guardião da Fé", "Movimentação Livre", "Confusão", "Cão Fiel de Mordenkainen", "Assassino Fantasmagórico"],
@@ -10,13 +98,5 @@
     "7": ["Espada de Mordenkainen", "Dedo da Morte", "Bola de Fogo Controlável", "Mansão Magnífica de Mordenkainen", "Teletransporte", "Viagem Planar", "Forma Etérea", "Palavra Divina", "Tempestade de Fogo", "Inverter Gravidade", "Prisão de Energia"],
     "8": ["Labirinto", "Clone", "Antipatia/Simpatia", "Campo Antimagia", "Dominar Monstro", "Semiplano", "Nuvem Incendiária", "Terremoto", "Aura Sagrada", "Limpar a Mente", "Explosão Solar"],
     "9": ["Desejo", "Chuva de Meteoros", "Parar o Tempo", "Metamorfose Verdadeira", "Aprisionamento", "Palavra de Poder: Matar", "Palavra de Poder: Curar", "Ressurreição Verdadeira", "Sexto Sentido", "Muralha Prismática", "Portal"]
-  },
-  "por_classe": {
-    "mago": ["Mísseis Mágicos", "Escudo Arcano", "Bola de Fogo", "Contra-mágica", "Passo Nebuloso", "Invisibilidade", "Desintegrar", "Porta Dimensional", "Metamorfose", "Desejo", "Chuva de Meteoros", "Muralha de Força", "Tentáculos Negros de Evard", "Olhar Penetrante", "Mão de Bigby"],
-    "bruxo": ["Rajada Mística", "Armadura de Agathys", "Repreensão Infernal", "Fome de Hadar", "Passo Nebuloso", "Escuridão", "Toque Vampírico", "Invisibilidade Maior", "Banimento", "Porta Dimensional", "Dominar Monstro", "Aprisionamento"],
-    "feiticeiro": ["Raio de Fogo", "Escudo Arcano", "Mãos Flamejantes", "Raio Ardente", "Bola de Fogo", "Velocidade", "Metamorfose", "Tempestade de Gelo", "Cone de Frio", "Corrente de Relâmpagos", "Chuva de Meteoros", "Desejo"],
-    "clerigo": ["Chama Sagrada", "Cura Pelas Mãos", "Palavra Curativa", "Bênção", "Arma Espiritual", "Oração de Cura", "Espíritos Guardiões", "Reviver", "Guardião da Fé", "Coluna de Chamas", "Reviver os Mortos", "Cura Completa", "Palavra Divina"],
-    "druida": ["Bordão Mágico", "Chicote de Espinhos", "Fogo das Fadas", "Constrição", "Passos Sem Pegadas", "Crescimento de Espinhos", "Invocar Animais", "Crescimento de Plantas", "Pele de Pedra", "Muralha de Fogo", "Mover Terra", "Tempestade de Fogo"],
-    "bardo": ["Zombaria Viciosa", "Riso Histérico de Tasha", "Sono", "Sugestão", "Invisibilidade", "Despedaçar", "Padrão Hipnótico", "Medo", "Similaridade", "Curar Ferimentos em Massa", "Palavra de Poder: Matar"]
   }
 }
