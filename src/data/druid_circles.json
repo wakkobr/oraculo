@@ -1,0 +1,206 @@
+{
+  "categorias": {
+    "terra": {
+      "nome": "Círculo da Terra",
+      "foco_natural": [
+        "Tocas e galerias subterrâneas cavadas no solo.",
+        "Desfiladeiros e cânions profundos esculpidos por eras.",
+        "Cavernas profundas e fendas rochosas.",
+        "Tempestades de poeira e redemoinhos de terra.",
+        "Montanhas escarpadas e picos nevados.",
+        "Dunas de areia mutáveis do deserto."
+      ],
+      "besta_favorecida": [
+        "Texugos vigorosos ou raposas astutas.",
+        "Grandes ursos-pardos ou cavernosos.",
+        "Águias-reais ou urubus solitários.",
+        "Camundongos esguios ou ratos toupeira.",
+        "Gosmas cavernosas ou elementais da terra despertados.",
+        "Aranhas gigantes escavadoras."
+      ],
+      "habito_ritual": [
+        "Nunca limpam a poeira e o barro incrustado em seus pés.",
+        "Pintam o rosto e o peito com lama fresca ou cinzas minerais.",
+        "Dormem estritamente sobre a terra nua sem esteiras.",
+        "Beijam o solo sagrado assim que despertam a cada manhã.",
+        "Só calçam sapatos quando são forçados a entrar sob tetos urbanos.",
+        "Recusam-se terminantemente a embarcar em qualquer tipo de barco."
+      ]
+    },
+    "clima": {
+      "nome": "Círculo dos Ventos & Clima",
+      "foco_natural": [
+        "A radiância solar e o calor do meio-dia.",
+        "Tempestades elétricas com trovões ensurdecedores.",
+        "Lufadas de ventania livre e vendavais uivantes.",
+        "Chuvas torrenciais purificadoras e garoas matinais.",
+        "Névoas rasteiras densas que cobrem os vales.",
+        "Nevascas glaciais e ventos cortantes do norte."
+      ],
+      "besta_favorecida": [
+        "Nuvens de pássaros canoros ou enxames de moscas zumbidoras.",
+        "Lagartos ágeis do deserto ou sapos cururus.",
+        "Águias altivas ou corujas de voo silencioso.",
+        "Pequenos espíritos ou elementais do ar e da brisa.",
+        "Leões caçadores ou panteras sombrias.",
+        "Lobos cinzentos uivadores."
+      ],
+      "habito_ritual": [
+        "Dormem sempre ao ar livre, independentemente do temporal.",
+        "Nunca secam suas vestes ao molharem-se sob a chuva sagrada.",
+        "Dedicam a primeira hora da alvorada a preces pelo equilíbrio das chuvas.",
+        "Pressentem infalivelmente a aproximação de precipitações no ar.",
+        "Semeiam grãos selvagens por onde quer que seus passos passem.",
+        "Atacam qualquer conjurador que tente manipular magicamente o clima."
+      ]
+    },
+    "desastres": {
+      "nome": "Círculo dos Cataclismos",
+      "foco_natural": [
+        "Nevascas fulminantes que sepultam cordilheiras.",
+        "Terremotos violentos que rasgam o chão de pedra.",
+        "Inundações colossais que limpam as várzeas fluviais.",
+        "Tornados destrutivos que arrancam raízes e rochas.",
+        "Tsunamis implacáveis que engolem litorais.",
+        "Vulcões em erupção, magma e cinzas asfixiantes."
+      ],
+      "besta_favorecida": [
+        "Ursos polares ou ursos cicatrizados.",
+        "Manifestações elementais brutas de fogo ou magma.",
+        "Águias cinzentas de rapina.",
+        "Ratos farejadores sobreviventes.",
+        "Enxames frenéticos de insetos ou peixes em debandada.",
+        "Lobos árticos ou focas predadoras."
+      ],
+      "habito_ritual": [
+        "Nunca falam em tom mais alto do que um sussurro abafado.",
+        "Tatuam a própria carne com cicatrizes rituais a cada desastre que sobrevivem.",
+        "Praticam períodos severos de jejum ascético extremo.",
+        "Meditam imóveis por semanas ininterruptas sobre picos de rocha.",
+        "Não possuem mais pertences do que conseguem carregar na própria trouxa.",
+        "Jamais desperdiçam qualquer farelo ou gota de comida."
+      ]
+    },
+    "arvores": {
+      "nome": "Círculo das Árvores Anciãs",
+      "foco_natural": [
+        "Carvalhos majestosos ou bordos de copa dourada.",
+        "Macieiras silvestres e cerejeiras aromáticas floridas.",
+        "Pinheiros esguios ou cedros ancestrais milenares.",
+        "Abetos resistentes e zimbros selvagens das montanhas.",
+        "Faia frondosas ou palmeiras litorâneas esguias.",
+        "Nogueiras nobres e oliveiras rústicas e centenárias."
+      ],
+      "besta_favorecida": [
+        "Morcegos cavernícolas ou aranhas tecedoras arbóreas.",
+        "Gaviões de copa ou corujas-buraqueiras.",
+        "Guaxinins astutos ou gambás noturnos.",
+        "Pássaros canoros de plumagem viva e canto claro.",
+        "Cobras arborícolas esguias que se camuflam nos galhos.",
+        "Esquilos velozes ou macacos ágeis e brincalhões."
+      ],
+      "habito_ritual": [
+        "Dormem exclusivamente suspensos na copa de árvores altas.",
+        "Só usam madeira que caiu naturalmente dos galhos ao chão.",
+        "Jamais acendem fogueiras ou queimam madeira viva.",
+        "Descansam em pé, mantendo os pés alinhados às raízes.",
+        "Extinguem imediatamente qualquer chama exposta que encontrem.",
+        "Preparam um chá alucinógeno sagrado fervendo cascas de árvores anciãs."
+      ]
+    },
+    "bestas": {
+      "nome": "Círculo das Bestas Primitivas",
+      "foco_natural": [
+        "Bestas predadoras alfa que caçam pela carne.",
+        "Bestas carniceiras e necrófagas que limpam a floresta.",
+        "Bestas de manada que pastam em bandos maciços.",
+        "Bestas noturnas que caçam na mais absoluta escuridão.",
+        "Bestas anfíbias e aquáticas dos rios e pântanos.",
+        "Bestas escamosas, sáurios e répteis pré-históricos."
+      ],
+      "besta_favorecida": [
+        "Um enxame denso de criaturas minúsculas e vorazes.",
+        "Uma matilha diversificada de feras irmãs de espécies distintas.",
+        "Um casal acasalado de feras ferozmente fiéis entre si.",
+        "Um espécime perfeito e colossal (paragom de sua espécie).",
+        "Uma fera com inteligência ancestral quase humana nos olhos.",
+        "Uma manada inteira de bestas galopantes em uníssono."
+      ],
+      "habito_ritual": [
+        "Recusam-se terminantemente a dormir sob tetos construídos.",
+        "Nunca se banham com sabão ou removem o cheiro de fera.",
+        "Alimentam-se apenas de carne e raízes cruas e frescas.",
+        "Cuidam uns dos outros lambendo feridas e ciscando pelos.",
+        "Comunicam-se entre si por rosnados, estalos e grunhidos guturais.",
+        "Dominam uma linguagem secreta codificada de assovios de pássaros."
+      ]
+    },
+    "aguas": {
+      "nome": "Círculo das Águas Profundas",
+      "foco_natural": [
+        "Oceanos tropicais de corais e águas tépidas.",
+        "Mares boreais gelados e geleiras flutuantes.",
+        "Rios caudalosos de correntezas violentas.",
+        "Lagos plácidos e límpidos no coração dos vales.",
+        "Lagos subterrâneos e grutas inundadas sem luz.",
+        "Pântanos viscosos, turfeiras e manguezais densos."
+      ],
+      "besta_favorecida": [
+        "Enxames de rãs coaxantes, libélulas azuis ou peixes.",
+        "Caranguejos gigantes de carapaça rochosa ou lagostins fluviais.",
+        "Tartarugas marinhas ou de carapaça couraçada.",
+        "Lontras brincalhonas de rio ou focas litorâneas.",
+        "Orcas marinhas ou hipopótamos territoriais colossais.",
+        "Tubarões predadores ou bagres gigantes de caverna."
+      ],
+      "habito_ritual": [
+        "Têm pavor da aridez e borrifam água benta sobre a pele o tempo todo.",
+        "Só consomem alimentos fervidos em caldos, salmouras ou infusões.",
+        "Carregam frascos com águas sagradas de diferentes nascentes.",
+        "Jamais escrevem em pergaminhos de papel, pois se dissolvem na água.",
+        "Recusam-se a ingerir a carne de qualquer habitante das águas.",
+        "Já foram afogados ritualmente até a inconsciência e revividos pelo círculo."
+      ]
+    }
+  },
+  "filosofias": [
+    "O equilíbrio absoluto entre a vida, a morte e a decadência.",
+    "A mudança contínua e as estações como uma inevitabilidade cósmica.",
+    "A resiliência inabalável perante as tempestades da existência.",
+    "A harmonia mística e a comunhão plena com o mundo natural.",
+    "A proteção dos indefesos, dos filhotes e das mudas frágeis.",
+    "A força implacável e a seleção natural contra invasores e corrompidos."
+  ],
+  "locais_sagrados": [
+    "Uma caverna colossal repleta de maravilhas geológicas e geodos reluzentes.",
+    "Uma gruta úmida e escura entrelaçada por raízes de árvores milenares.",
+    "Uma caverna oculta e fresca atrás de uma cachoeira majestosa.",
+    "O interior oco e cavernoso de uma árvore anciã de proporções titânicas.",
+    "Um bosque sagrado protegido onde a luz do sol dança entre folhas intocadas.",
+    "Um círculo concêntrico de menires e monólitos megalíticos ancestrais."
+  ],
+  "detalhes_sitio": [
+    "Pinturas rupestres primitivas feitas com sangue e tintas minerais ancestrais.",
+    "Gavinhas e videiras espinhosas entrelaçadas em padrões geométricos vivos.",
+    "Flores raras e perfumadas cujo aroma induz transe meditativo.",
+    "Cogumelos gigantescos bioluminescentes que pulsam com uma luz suave.",
+    "Formações minerais estonteantes e veios de cristais expostos.",
+    "Frutos suculentos, maduros e fartos que brotam durante todas as estações."
+  ],
+  "focos_druidicos": [
+    "Uma varinha entalhada em madeira abençoada por uma dríade.",
+    "Um cajado de tronco retorcido colhido de uma árvore milenar petrificada.",
+    "Um bastão de madeira polida encimado por uma gema bruta reluzente.",
+    "Um colar ritual de contas de pedra lascada, conchas e dentes de predador.",
+    "Tatuagens rituais intrincadas com pigmentos naturais por todo o corpo.",
+    "Um troféu de fera sagrada (garras, presas, penas, peles ou crânio polido)."
+  ],
+  "missoes": [
+    "Resgatar e preservar a pureza natural de um local perante o avanço da civilização.",
+    "Sabotar ativamente caravanas, estradas e desmatamentos que tentem domar os ermos.",
+    "Libertar animais de cativeiro e quebrar lavouras domesticadas da região.",
+    "Guardar o selo místico da terra que aprisiona uma abominação anciã.",
+    "Erradicar mortos-vivos, demônios ou pragas que corrompam a fauna e flora local.",
+    "Proteger e preparar o ninho sagrado para o nascimento de uma linhagem de dragões."
+  ]
+}
