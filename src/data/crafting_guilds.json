@@ -1,0 +1,156 @@
+{
+  "oficios": [
+    "Mineiros & Provedores de Minério",
+    "Madeireiros & Silvicultores",
+    "Fazendeiros, Lavradores & Grananjeiros",
+    "Trabalhadores Braçais & Estivadores",
+    "Ferreiros de Armas & Armaduras",
+    "Barbeiros-Cirurgiões & Dentistas",
+    "Joalheiros & Lapidários de Gemas",
+    "Bobos da Corte, Artistas & Menestréis",
+    "Construtores Navais & Carpinteiros Náuticos",
+    "Curtidores, Peleiros & Sapateiros",
+    "Açougueiros & Salgadores de Carne",
+    "Cerralheiros, Armadores & Pregueiros",
+    "Oleiros, Ceramistas & Tintureiros",
+    "Seleiros, Ferradores & Mestres de Estábulos",
+    "Marceneiros, Tanoeiros & Construtores de Carroças",
+    "Pedreiros & Mestres Maçons",
+    "Tecelões, Alfaiates & Costureiros",
+    "Ourives, Prateiros & Relojoeiros",
+    "Profissionais Eruditos: Alquimistas",
+    "Profissionais Eruditos: Arquitetos",
+    "Profissionais Eruditos: Calígrafos & Iluminadores",
+    "Profissionais Eruditos: Historiadores & Cronistas",
+    "Profissionais Eruditos: Advogados, Magistrados & Juízes",
+    "Profissionais Eruditos: Escribas & Copistas",
+    "Profissionais Eruditos: Engenheiros de Cerco",
+    "Profissionais Eruditos: Escritores & Dramaturgos",
+    "Artífices Especiais: Cervejeiros & Mestres Cervejeiros",
+    "Artífices Especiais: Veloeiros (Velas & Sebo)",
+    "Artífices Especiais: Chefs & Mestres Culinários",
+    "Artífices Especiais: Vidreiros & Sopradores de Vidro",
+    "Artífices Especiais: Reencenadores Históricos",
+    "Artífices Especiais: Ferreiros de Mithral",
+    "Artífices Especiais: Músicos & Construtores de Instrumentos",
+    "Artífices Especiais: Pintores & Retratistas",
+    "Artífices Especiais: Escultores em Mármore",
+    "Artífices Especiais: Plateros & Ferreiros de Prata"
+  ],
+  "status_controle": [
+    "Decadente; outrora imensa, enfrenta tempos difíceis e luta desesperadamente para manter suas prerrogativas.",
+    "Recém-fundada; recruta membros freneticamente nas feiras para disputar espaço no conselho municipal.",
+    "Em ascensão explosiva; uma descoberta ou contrato recente rendeu lucros fabulosos.",
+    "Em declínio silencioso; uma oficina concorrente está minando sua fatia de mercado dia após dia.",
+    "Monopólio absoluto; controle rigoroso sobre cada grama de matéria-prima e produto final na região.",
+    "Instável; dependendo do humor do comércio, seus mestres bebem vinho élfico ou aguardente podre.",
+    "Soberana e incontestada; dita as regras e impõe sua vontade a todas as outras corporações locais.",
+    "Questionável; embora alardeie controle supremo, artesãos clandestinos ignoram suas regras impunemente."
+  ],
+  "corrupcao_ilegalidades": [
+    "Nenhuma; são paladinos da retidão moral, rígidos no padrão e honestos com a balança.",
+    "Dentro da legalidade; deslizam apenas em algumas taxas tributárias menores por descuido dos escribas.",
+    "Mestres da influência política; trocam favores sutis e presentes refinados com magistrados e fiscais.",
+    "Ambiciosos e gananciosos; cartelizam estoques e tabelam preços abusivos quando a demanda aperta.",
+    "Prática de propinas rotineiras a fiscais municipais para encobrir peso fraudado ou matérias de segunda linha.",
+    "Esquemas de suborno no alto escalão, pequenos golpes comerciais e constantes advertências do clero local.",
+    "Corrupção descarada; subornos sistemáticos de guardas, contrabando no porto e aliança com a Guilda de Ladrões.",
+    "Pactos demoníacos por insumos mágicos, falsificação em larga escala e conspirações contra a coroa são rotina."
+  ],
+  "sede": [
+    "Na mansão imponente e suntuosa do mestre da guilda.",
+    "No porão empoeirado e úmido sob o palácio da prefeitura municipal.",
+    "Em um sobrado muito estreito e alto, inclinado perigosamente sobre a rua de calçamento.",
+    "No convés e porões de um navio ancorado no porto (ou doca seca).",
+    "Em um pavilhão aberto de colunas de pedra no coração do grande bazar da cidade.",
+    "Atrás dos cofres e salões de uma das casas bancárias mais prestigiadas.",
+    "Em um semiplano ricamente decorado cujo portal fica escondido num beco sombrio.",
+    "Sede conjunta dividida com outras guildas da cidade — com esgotos infestados de gatunos logo abaixo."
+  ],
+  "missoes": {
+    "menor": [
+      "Liberar um carregamento retido nos portões da cidade por um fiscal alfandegário burocrata e inflexível.",
+      "Buscar suprimentos na aldeia vizinha, onde os camponeses paralisaram a produção por superstição com bruxas.",
+      "Desembaraçar uma troca errônea de mercadorias ocorrida no entreposto de uma cidade próxima.",
+      "Colher você mesmo ervas ou minerais brutos na natureza selvagem, para aprender as raízes do ofício.",
+      "Resgatar remessas penhoradas como garantia no cofre de um usurário da cidade.",
+      "Atravessar o salão da guilda e levar a encomenda até a mesa ao lado (uma tarefa de aprendiz humilhado)."
+    ],
+    "padrao": [
+      "Uma sociedade comercial com um barão rival azedou feio, deixando os armazéns lacrados.",
+      "Um bloqueio armado na estrada comercial principal precisa ser rompido ou negociado.",
+      "A Guilda de Ladrões local elegeu as oficinas como alvo e exige propina; eles precisam ser persuadidos a recuar.",
+      "Um mestre gastou o estoque sagrado de ligas especiais em devaneios; exige-se reposição idêntica urgente.",
+      "Um decreto do conselho proibiu a substância principal, classificando-a como 'moralmente perniciosa'.",
+      "Gastaram todo o erário em subornos e contratos extravagantes, faltando fundos para o lote básico de insumos."
+    ],
+    "maior": [
+      "Negociar e trazer uma matéria-prima lendária dos bazares fumegantes da Cidade de Bronze.",
+      "Recuperar lingotes arcanos esquecidos nas profundezas das forjas de uma cidadela anã arruinada.",
+      "Capturar uma espécime viva rara nos pastos selvagens e perigosos do Plano de Arbórea.",
+      "Explorar uma ilha ultramarina isolada e maldita, guardada por canibais e magias corrompidas.",
+      "Alcançar uma miragem mística no deserto que só se materializa por vinte minutos a cada século.",
+      "Mergulhar nas fossas e labirintos do Plano dos Roedores para extrair a glândula de uma criatura abissal."
+    ]
+  },
+  "aprendiz": {
+    "humor": [
+      "Entediado até a alma, fingindo limpar a bancada com uma flanela gasta.",
+      "Efervescente e ávido por aprender qualquer segredo ou técnica do ofício.",
+      "Frustrado e furioso com os próprios erros e peças quebradas.",
+      "Olhando nervosamente por cima do ombro, temendo a chibata do mestre."
+    ],
+    "busca": [
+      "Dicas e conselhos práticos de quem realmente entende do trabalho.",
+      "Alguém disposto a comprar sua primeira peça criada em segredo.",
+      "Histórias de heróis e batalhas que alimentem sua imaginação artística.",
+      "Uma desculpa para fugir até a taverna da esquina, bebericar e namorar."
+    ]
+  },
+  "artesao": {
+    "posto": [
+      "Um jovem jornaleiro recém-aprovado no teste da bancada.",
+      "Um jornaleiro de talento medíocre que sobrevive de remendos.",
+      "Um jornaleiro habilidoso prestes a apresentar sua obra-prima.",
+      "Um artesão veterano, com as mãos calejadas por décadas de forja.",
+      "Um mestre consagrado de reputação incontestável.",
+      "Um velho mestre decrépito que já viu gerações passarem."
+    ],
+    "tracos": [
+      "Sorriso caloroso e dentes fortes de homem do trabalho.",
+      "Olhos atentos e penetrantes que medem milímetros num piscar.",
+      "Olhar lacrimejante e avermelhado pelo calor de fogueiras e forjas.",
+      "Cranho obstinado e cenho fechado, pronto para discutir qualquer preço.",
+      "Expressão severa e taciturna de poucas palavras.",
+      "Um dente de ouro proeminente no lugar de um incisivo perdido.",
+      "Olhos exaustos de noites insones terminando encomendas.",
+      "Um sorriso cínico e divertido de quem já viu de tudo."
+    ],
+    "peculiaridade": [
+      "Caminha mancando pesadamente de uma perna.",
+      "Corcunda curvada pelas horas debruçado sobre a bigorna ou bancada.",
+      "Mãos trêmulas quando em repouso, mas firmes como rocha ao trabalhar.",
+      "O hábito humilde de manter os olhos fixos no chão enquanto fala.",
+      "Um nariz bulboso e avermelhado pelo tabaco ou vinho barato.",
+      "Cicatriz profunda de queimadura de solda ou ácido em metade da face.",
+      "Um bigode ralo e pontiagudo cuidadosamente encerado.",
+      "Um bigode espesso e grisalho que cobre a boca inteira."
+    ],
+    "pericia": [
+      "Forjar ou confeccionar um item específico com perfeição incomparável.",
+      "Bater o olho e identificar a pureza e procedência de qualquer matéria-prima.",
+      "Dar o acabamento, polimento e detalhes finais com maestria absoluta.",
+      "Instruir aprendizes e passar os segredos mais complexos com paciência.",
+      "Pechinchar e extrair o último centavo de lucro em qualquer transação.",
+      "Manobrar nos bastidores e intrigas políticas do conselho da guilda."
+    ],
+    "sonho": [
+      "Produzir a obra-prima definitiva que imortalizará seu nome na história.",
+      "Assumir as rédeas e ser eleito Grão-Mestre da corporação.",
+      "Aposentar-se em paz numa fazenda longe do martelo e da fumaça.",
+      "Ficar podre de rico e comprar um título nobiliárquico para os filhos.",
+      "Largar as ferramentas, fechar as portas e fugir para recomeçar a vida.",
+      "Abandonar a oficina e viver uma vida perigosa de aventuras e masmorras."
+    ]
+  }
+}
