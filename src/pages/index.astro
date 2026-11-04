@@ -2,14 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Navbar from '../components/Navbar.astro';
+import ManageDeckModal from '../components/ManageDeckModal';
 
-// Cards Essenciais Padrão da Mesa
+// Todos os cards carregados sob demanda
 import TavernCard from '../components/TavernCard';
 import NpcCard from '../components/NpcCard';
 import VignetteCard from '../components/VignetteCard';
 import LootCard from '../components/LootCard';
-
-// Cards Complementares Disponíveis para Afixar
 import SpellCard from '../components/SpellCard';
 import BookCard from '../components/BookCard';
 import MushroomCard from '../components/MushroomCard';
@@ -33,29 +32,35 @@ import SessionLog from '../components/SessionLog';
   <Header />
   <Navbar />
 
-  <!-- Faixa de Boas-vindas / Estado da Mesa -->
+  <!-- Faixa de Controle da Mesa -->
   <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#1c2242]">
     <div>
       <h2 class="text-base font-bold text-slate-100 font-['Cinzel'] tracking-wide">
         Mesa Principal da Sessão
       </h2>
       <p class="text-xs text-slate-400">
-        Cards essenciais e geradores afixados para consulta imediata na rodada.
+        Geradores afixados para consulta e rolagem imediata durante o jogo.
       </p>
     </div>
     <div class="flex items-center gap-2">
-      <a
-        href="/faccoes"
-        class="text-xs text-oracle-gold hover:text-oracle-gold-light border border-[#2b3360] hover:border-oracle-gold/40 px-2.5 py-1.5 rounded-lg bg-[#0e1224] transition-all font-mono flex items-center gap-1"
-      >
-        <span>🏛️</span> Explorar Todas as Facções →
-      </a>
+      <ManageDeckModal client:load />
     </div>
   </div>
 
-  <!-- Grid Principal (Cards Padrão + Espaço para Afixados) -->
+  <!-- Mensagem para quando nenhum card estiver afixado -->
+  <div id="empty-deck-alert" class="hidden py-12 text-center rounded-xl border border-dashed border-[#242b50] bg-[#0a0d1d]/60 p-6 my-4">
+    <span class="text-2xl mb-2 block">📌</span>
+    <h3 class="text-sm font-bold text-slate-200 font-['Cinzel']">Sua Mesa está vazia</h3>
+    <p class="text-xs text-slate-400 max-w-sm mx-auto mt-1 mb-4">
+      Você desafixou todos os cards. Clique abaixo para escolher quais geradores quer de volta ou navegue pelas abas acima.
+    </p>
+    <button id="btn-restore-deck" class="px-3.5 py-1.5 rounded bg-[#161d3b] border border-oracle-gold/50 text-oracle-gold text-xs font-semibold uppercase tracking-wider font-['Cinzel']">
+      Restaurar Cards Essenciais
+    </button>
+  </div>
+
+  <!-- Grid Principal (Cards controlados dinamicamente via Pins) -->
   <div id="deck-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Essenciais Básicos -->
     <div class="deck-card" data-card-id="taverna">
       <TavernCard client:load />
     </div>
@@ -68,8 +73,6 @@ import SessionLog from '../components/SessionLog';
     <div class="deck-card" data-card-id="tesouro">
       <LootCard client:load />
     </div>
-
-    <!-- Cards Adicionais (Controlados dinamicamente via Pins) -->
     <div class="deck-card hidden" data-card-id="grimorio">
       <SpellCard client:load />
     </div>
@@ -82,17 +85,20 @@ import SessionLog from '../components/SessionLog';
     <div class="deck-card hidden" data-card-id="nobres">
       <NobleHouseCard client:load />
     </div>
+    <div class="deck-card hidden" data-card-id="militares">
+      <MilitaryCompanyCard client:load />
+    </div>
     <div class="deck-card hidden" data-card-id="mercenarios">
       <MercenaryCard client:load />
     </div>
     <div class="deck-card hidden" data-card-id="assassinos">
       <AssassinGuildCard client:load />
     </div>
-    <div class="deck-card hidden" data-card-id="piratas">
-      <PirateCrewCard client:load />
-    </div>
     <div class="deck-card hidden" data-card-id="foras-da-lei">
       <OutlawBandCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="piratas">
+      <PirateCrewCard client:load />
     </div>
     <div class="deck-card hidden" data-card-id="goblins">
       <GoblinGangCard client:load />
@@ -109,9 +115,6 @@ import SessionLog from '../components/SessionLog';
     <div class="deck-card hidden" data-card-id="artesaos">
       <CraftingGuildCard client:load />
     </div>
-    <div class="deck-card hidden" data-card-id="militares">
-      <MilitaryCompanyCard client:load />
-    </div>
     <div class="deck-card hidden" data-card-id="trupes">
       <TroupeCard client:load />
     </div>
@@ -125,23 +128,39 @@ import SessionLog from '../components/SessionLog';
 </Layout>
 
 <script>
-  import { getPinnedCards } from '../utils/pins';
+  import { getPinnedCards, DEFAULT_PINS } from '../utils/pins';
 
   function applyPins() {
     const pinned = getPinnedCards();
     const cards = document.querySelectorAll<HTMLDivElement>('.deck-card');
+    const emptyAlert = document.getElementById('empty-deck-alert');
+    let visibleCount = 0;
 
     cards.forEach((card) => {
       const id = card.dataset.cardId;
       if (id && pinned.includes(id)) {
         card.classList.remove('hidden');
+        visibleCount++;
       } else {
         card.classList.add('hidden');
       }
     });
+
+    if (emptyAlert) {
+      if (visibleCount === 0) {
+        emptyAlert.classList.remove('hidden');
+      } else {
+        emptyAlert.classList.add('hidden');
+      }
+    }
   }
 
-  // Executa na carga e escuta atualizações de pins
+  const btnRestore = document.getElementById('btn-restore-deck');
+  btnRestore?.addEventListener('click', () => {
+    localStorage.setItem('oracle:pinned_cards', JSON.stringify(DEFAULT_PINS));
+    window.dispatchEvent(new CustomEvent('oracle:pins-updated', { detail: DEFAULT_PINS }));
+  });
+
   applyPins();
   window.addEventListener('oracle:pins-updated', applyPins);
   document.addEventListener('astro:page-load', applyPins);

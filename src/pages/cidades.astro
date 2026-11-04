@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
+
+import TavernCard from '../components/TavernCard';
+import NpcCard from '../components/NpcCard';
+import VignetteCard from '../components/VignetteCard';
+import LootCard from '../components/LootCard';
+
+import SessionLog from '../components/SessionLog';
+---
+
+<Layout>
+  <Header />
+  <Navbar />
+
+  <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl bg-[#0a0d1d] border border-[#1e2444]">
+    <div>
+      <h2 class="text-lg font-bold text-slate-100 font-['Cinzel'] tracking-wide flex items-center gap-2">
+        <span>⚔️</span> Sessão, Cidades & Improviso Imediato
+      </h2>
+      <p class="text-xs text-slate-400 mt-0.5">
+        Geradores essenciais de tavernas, NPCs rápidos de rua, ganchos narrativos e tabelas de saque/tesouros.
+      </p>
+    </div>
+    <div class="text-[11px] text-oracle-gold font-mono bg-[#141830] px-3 py-1.5 rounded-md border border-oracle-gold/30 self-start md:self-auto">
+      ✦ Use 📌 para fixar de volta na Mesa Principal
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div><TavernCard client:load /></div>
+    <div><NpcCard client:load /></div>
+    <div><VignetteCard client:load /></div>
+    <div><LootCard client:load /></div>
+  </div>
+
+  <SessionLog client:load />
+
+  <footer class="mt-14 text-center text-xs text-slate-500 border-t border-[#1a1f38] pt-6 font-mono">
+    O Oráculo &bull; Sessão & Cidades &bull; beyond-obvious.net
+  </footer>
+</Layout>
