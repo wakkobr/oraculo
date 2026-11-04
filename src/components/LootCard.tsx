@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import loots from '../data/loots.json';
+import spellsData from '../data/spells.json';
 import { addHistoryEntry } from '../utils/history';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
@@ -9,6 +10,29 @@ const rollDice = (count: number, sides: number) => {
     total += Math.floor(Math.random() * sides) + 1;
   }
   return total;
+};
+
+// Gera o nome do pergaminho com a magia arcana real
+const getScroll = (level: "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9") => {
+  const spellName = pick(spellsData.por_nivel[level]);
+  return level === "0" 
+    ? `Pergaminho de Truque: ${spellName}` 
+    : `Pergaminho de Magia (${level}º Nível): ${spellName}`;
+};
+
+// Substitui nomes genéricos de pergaminhos por itens com a magia definida
+const enrichMagicItem = (item: string) => {
+  if (item.includes("Pergaminho de Truque")) return getScroll("0");
+  if (item.includes("1º Nível")) return getScroll("1");
+  if (item.includes("2º Nível")) return getScroll("2");
+  if (item.includes("3º Nível")) return getScroll("3");
+  if (item.includes("4º Nível")) return getScroll("4");
+  if (item.includes("5º Nível")) return getScroll("5");
+  if (item.includes("6º Nível")) return getScroll("6");
+  if (item.includes("7º Nível")) return getScroll("7");
+  if (item.includes("8º Nível")) return getScroll("8");
+  if (item.includes("9º Nível")) return getScroll("9");
+  return item;
 };
 
 type LootType = 'individual' | 'hoard';
@@ -21,7 +45,7 @@ export default function LootCard() {
     titulo: 'BAÚ DE COVIL (ND 0–4)',
     moedas: '2.100 PC, 1.200 PP, 90 PO',
     valiosos: 'Gemas: Malaquita verde-clara (10 PO), Pedra-da-lua pálida (50 PO)',
-    magico: 'Bolsa de Carga'
+    magico: `Bolsa de Carga | Pergaminho de Magia (1º Nível): Mísseis Mágicos`
   });
   const [copied, setCopied] = useState(false);
 
@@ -39,7 +63,7 @@ export default function LootCard() {
         const gp = rollDice(1, 6);
         moedasStr = `${cp} PC, ${sp} PP, ${gp} PO`;
         valiososStr = pick(loots.gemas['10gp']);
-        magicoStr = Math.random() > 0.85 ? `✦ ${pick(loots.tabela_a)}` : 'Nenhum (bolsos comuns)';
+        magicoStr = Math.random() > 0.85 ? `✦ ${enrichMagicItem(pick(loots.tabela_a))}` : 'Nenhum (bolsos comuns)';
       } else if (cr === 'cr5_10') {
         tituloStr = 'SAQUE INDIVIDUAL (ND 5–10)';
         const sp = rollDice(4, 6) * 10;
@@ -47,21 +71,21 @@ export default function LootCard() {
         const pp = rollDice(1, 6);
         moedasStr = `${sp} PP, ${gp} PO, ${pp} PL`;
         valiososStr = pick(loots.gemas['50gp']);
-        magicoStr = Math.random() > 0.65 ? `✦ ${pick(loots.tabela_b)}` : 'Nenhum item mágico';
+        magicoStr = Math.random() > 0.65 ? `✦ ${enrichMagicItem(pick(loots.tabela_b))}` : 'Nenhum item mágico';
       } else if (cr === 'cr11_16') {
         tituloStr = 'SAQUE INDIVIDUAL (ND 11–16)';
         const gp = rollDice(4, 6) * 100;
         const pp = rollDice(1, 6) * 10;
         moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp} PL`;
         valiososStr = `${pick(loots.gemas['100gp'])} & ${pick(loots.objetos_arte['250gp'])}`;
-        magicoStr = `✦ ${pick(loots.tabela_f)}`;
+        magicoStr = `✦ ${enrichMagicItem(pick(loots.tabela_f))}`;
       } else {
         tituloStr = 'SAQUE INDIVIDUAL (ND 17+)';
         const gp = rollDice(8, 6) * 100;
         const pp = rollDice(3, 6) * 100;
         moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp} PL`;
         valiososStr = `${pick(loots.gemas['500gp'])} & ${pick(loots.objetos_arte['750gp'])}`;
-        magicoStr = `✦ ${pick(loots.tabela_g)}`;
+        magicoStr = `✦ ${enrichMagicItem(pick(loots.tabela_g))}`;
       }
     } else {
       // Covil / Baú (Hoard)
@@ -72,7 +96,7 @@ export default function LootCard() {
         const gp = rollDice(2, 6) * 10;
         moedasStr = `${cp.toLocaleString('pt-BR')} PC, ${sp.toLocaleString('pt-BR')} PP, ${gp} PO`;
         valiososStr = `Gemas: ${pick(loots.gemas['10gp'])}, ${pick(loots.gemas['50gp'])}`;
-        magicoStr = `✦ ${pick(loots.tabela_a)} | ✦ ${pick(loots.tabela_b)}`;
+        magicoStr = `✦ ${enrichMagicItem(pick(loots.tabela_a))} | ✦ ${enrichMagicItem(pick(loots.tabela_b))}`;
       } else if (cr === 'cr5_10') {
         tituloStr = 'COVIL HEROICO (ND 5–10)';
         const sp = rollDice(4, 6) * 100;
@@ -80,21 +104,21 @@ export default function LootCard() {
         const pp = rollDice(2, 6) * 10;
         moedasStr = `${sp.toLocaleString('pt-BR')} PP, ${gp.toLocaleString('pt-BR')} PO, ${pp} PL`;
         valiososStr = `Arte: ${pick(loots.objetos_arte['250gp'])} & Gema: ${pick(loots.gemas['100gp'])}`;
-        magicoStr = `✦ ${pick(loots.tabela_c)} & ✦ ${pick(loots.tabela_f)}`;
+        magicoStr = `✦ ${enrichMagicItem(pick(loots.tabela_c))} & ✦ ${enrichMagicItem(pick(loots.tabela_f))}`;
       } else if (cr === 'cr11_16') {
         tituloStr = 'TESOURO LENDÁRIO (ND 11–16)';
         const gp = rollDice(12, 6) * 100;
         const pp = rollDice(8, 6) * 100;
         moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp} PL`;
         valiososStr = `Arte: ${pick(loots.objetos_arte['750gp'])} & Gema: ${pick(loots.gemas['1000gp'])}`;
-        magicoStr = `✦ ${pick(loots.tabela_d)} & ✦ ${pick(loots.tabela_g)} & ✦ ${pick(loots.tabela_h)}`;
+        magicoStr = `✦ ${enrichMagicItem(pick(loots.tabela_d))} & ✦ ${enrichMagicItem(pick(loots.tabela_g))} & ✦ ${enrichMagicItem(pick(loots.tabela_h))}`;
       } else {
         tituloStr = 'COVIL ANCESTRAL (ND 17+)';
         const gp = rollDice(12, 6) * 1000;
         const pp = rollDice(8, 6) * 1000;
         moedasStr = `${gp.toLocaleString('pt-BR')} PO, ${pp.toLocaleString('pt-BR')} PL`;
         valiososStr = `Relíquia: ${pick(loots.objetos_arte['7500gp'])} & 2x ${pick(loots.gemas['5000gp'])}`;
-        magicoStr = `✦ Supremo: ${pick(loots.tabela_i)} & ✦ ${pick(loots.tabela_e)}`;
+        magicoStr = `✦ Supremo: ${enrichMagicItem(pick(loots.tabela_i))} & ✦ ${enrichMagicItem(pick(loots.tabela_e))}`;
       }
     }
 
@@ -122,7 +146,6 @@ export default function LootCard() {
       <span className="absolute top-2.5 right-2.5 text-[10px] text-indigo-400/40">✦</span>
 
       <div>
-        {/* Cabeçalho */}
         <div className="flex items-center justify-between pb-3.5 mb-3 border-b border-[#1c2242]">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg bg-[#2a1d13] border border-[#6b451e] flex items-center justify-center text-oracle-gold text-lg">
@@ -143,7 +166,6 @@ export default function LootCard() {
           </button>
         </div>
 
-        {/* Seletores: Tipo e ND */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
             <label className="block text-[10px] font-mono tracking-wider uppercase text-slate-400 mb-1">Tipo:</label>
@@ -172,7 +194,6 @@ export default function LootCard() {
           </div>
         </div>
 
-        {/* Bloco de Resultado */}
         <div className="mb-3">
           <div className="flex items-center justify-between mb-1">
             <h4 className="text-base font-bold text-oracle-gold-light font-['Cinzel'] tracking-wide">
@@ -184,7 +205,6 @@ export default function LootCard() {
           </div>
         </div>
 
-        {/* Detalhes do Saque */}
         <div className="space-y-2 text-xs text-slate-300 mb-6 leading-relaxed bg-[#090d1f]/60 p-3 rounded-lg border border-[#1d2342]">
           <p><strong className="text-oracle-gold font-semibold">Moedas:</strong> {data.moedas}</p>
           <p><strong className="text-oracle-gold font-semibold">Gemas / Arte:</strong> {data.valiosos}</p>
@@ -195,7 +215,6 @@ export default function LootCard() {
         </div>
       </div>
 
-      {/* Ações inferiores */}
       <div className="grid grid-cols-2 gap-2.5 pt-2">
         <button 
           onClick={copy}

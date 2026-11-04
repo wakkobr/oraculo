@@ -6,6 +6,7 @@ import NpcCard from '../components/NpcCard';
 import LootCard from '../components/LootCard';
 import BookCard from '../components/BookCard';
 import MushroomCard from '../components/MushroomCard';
+import SpellCard from '../components/SpellCard';
 import UpcomingModules from '../components/UpcomingModules.astro';
 import SessionLog from '../components/SessionLog';
 ---
@@ -13,35 +14,17 @@ import SessionLog from '../components/SessionLog';
 <Layout>
   <Header />
 
-  <!-- Barra de Filtros por Categoria -->
-  <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 border-b border-[#1c2242] no-scrollbar text-xs">
-    <button class="px-3.5 py-1.5 rounded-md bg-[#161d3b] text-oracle-gold border border-oracle-gold/40 font-semibold uppercase tracking-wider font-['Cinzel']">
-      ✦ Todos
-    </button>
-    <button class="px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-colors uppercase tracking-wider font-['Cinzel']">
-      ⚔ Sessão & Cidades
-    </button>
-    <button class="px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-colors uppercase tracking-wider font-['Cinzel']">
-      🍄 Alquimia & Ermos
-    </button>
-    <button class="px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-colors uppercase tracking-wider font-['Cinzel']">
-      📜 Tesouros & Tomos
-    </button>
-  </div>
-
-  <!-- Grid dos Geradores Ativos -->
+  <!-- Grid com os 6 Geradores Completos -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     <TavernCard client:load />
     <NpcCard client:load />
     <LootCard client:load />
+    <SpellCard client:load />
     <BookCard client:load />
     <MushroomCard client:load />
   </div>
 
-  <!-- Próximos Módulos & Tabelas Expansíveis -->
   <UpcomingModules />
-
-  <!-- Registro da Sessão (Últimos Sorteios) -->
   <SessionLog client:load />
 
   <footer class="mt-14 text-center text-xs text-slate-500 border-t border-[#1a1f38] pt-6 font-mono">
