@@ -4,20 +4,46 @@ import { addHistoryEntry } from '../utils/history';
 
 const pick = (arr: string[]) => arr[Math.floor(Math.random() * arr.length)];
 
-const nomesCasas = [
-  'Casa Ravenscroft',
-  'Casa Valmont',
-  'Casa Vane-Blackwood',
-  'Casa Silverthorne',
-  'Casa Ashford',
-  'Casa Castamere',
-  'Casa Belmont',
-  'Casa Wintermere'
+// Nomes com sonoridade clássica em Português e Latim
+const nomesCasasPT = [
+  'Casa Valmonte',
+  'Casa Silveira dos Montes',
+  'Casa Corvo-Negro',
+  'Casa Montesclaros',
+  'Casa Bragança do Norte',
+  'Casa Leão de Castela',
+  'Casa Águia-Real',
+  'Casa Espada-Branca',
+  'Casa Rio-Profundo',
+  'Casa Pedra-Firme',
+  'Casa Boaventura',
+  'Casa Castelo-Velho',
+  'Casa Sol-Poente',
+  'Casa Alencastro',
+  'Casa Marialva'
+];
+
+const nomesCasasLatim = [
+  'Domus Noctis',
+  'Gens Aurelia',
+  'Domus Bellator',
+  'Gens Corvinus',
+  'Domus Ferrum',
+  'Domus Ignis Aeterna',
+  'Gens Valeriana',
+  'Domus Solaris',
+  'Gens Draconis',
+  'Domus Argentum',
+  'Domus Aquilae',
+  'Gens Serpentis',
+  'Domus Mortis',
+  'Gens Flavia',
+  'Domus Caelestis'
 ];
 
 export default function NobleHouseCard() {
   const [data, setData] = useState({
-    nome: 'Casa Ravenscroft',
+    nome: 'Casa Valmonte',
     linhagem: 'Antiga e venerável, profundamente respeitada por todas as casas, grandes ou pequenas.',
     cores: 'Violeta imperial & Prata / Cinza-claro',
     brasao: 'Uma ave nobre (corvo da torre)',
@@ -31,7 +57,10 @@ export default function NobleHouseCard() {
   const [copied, setCopied] = useState(false);
 
   const roll = () => {
-    const nome = pick(nomesCasas);
+    // Sorteia entre tradição em Português (50%) ou Latim (50%)
+    const poolNomes = Math.random() > 0.5 ? nomesCasasPT : nomesCasasLatim;
+    const nome = pick(poolNomes);
+
     const linhagem = pick(housesData.linhagens);
     const cor1 = pick(housesData.cores);
     const cor2 = pick(housesData.cores);
