@@ -9,6 +9,7 @@ import MushroomCard from '../components/MushroomCard';
 import SpellCard from '../components/SpellCard';
 import VignetteCard from '../components/VignetteCard';
 import TroupeCard from '../components/TroupeCard';
+import AssassinGuildCard from '../components/AssassinGuildCard';
 import UpcomingModules from '../components/UpcomingModules.astro';
 import SessionLog from '../components/SessionLog';
 ---
@@ -66,6 +67,9 @@ import SessionLog from '../components/SessionLog';
     </div>
     <div class="card-item" data-category="cidades">
       <VignetteCard client:load />
+    </div>
+    <div class="card-item" data-category="faccoes">
+      <AssassinGuildCard client:load />
     </div>
     <div class="card-item" data-category="faccoes">
       <TroupeCard client:load />
