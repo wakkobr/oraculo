@@ -17,6 +17,7 @@ import GoblinGangCard from '../components/GoblinGangCard';
 import MercenaryCard from '../components/MercenaryCard';
 import MerchantGuildCard from '../components/MerchantGuildCard';
 import MilitaryCompanyCard from '../components/MilitaryCompanyCard';
+import NobleHouseCard from '../components/NobleHouseCard';
 import UpcomingModules from '../components/UpcomingModules.astro';
 import SessionLog from '../components/SessionLog';
 ---
@@ -74,6 +75,9 @@ import SessionLog from '../components/SessionLog';
     </div>
     <div class="card-item" data-category="cidades">
       <VignetteCard client:load />
+    </div>
+    <div class="card-item" data-category="faccoes">
+      <NobleHouseCard client:load />
     </div>
     <div class="card-item" data-category="faccoes">
       <MilitaryCompanyCard client:load />
