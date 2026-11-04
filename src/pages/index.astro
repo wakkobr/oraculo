@@ -13,6 +13,7 @@ import AssassinGuildCard from '../components/AssassinGuildCard';
 import CraftingGuildCard from '../components/CraftingGuildCard';
 import CultCard from '../components/CultCard';
 import DruidCircleCard from '../components/DruidCircleCard';
+import GoblinGangCard from '../components/GoblinGangCard';
 import UpcomingModules from '../components/UpcomingModules.astro';
 import SessionLog from '../components/SessionLog';
 ---
@@ -70,6 +71,9 @@ import SessionLog from '../components/SessionLog';
     </div>
     <div class="card-item" data-category="cidades">
       <VignetteCard client:load />
+    </div>
+    <div class="card-item" data-category="faccoes">
+      <GoblinGangCard client:load />
     </div>
     <div class="card-item" data-category="faccoes">
       <DruidCircleCard client:load />

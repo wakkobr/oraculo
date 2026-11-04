@@ -1,0 +1,133 @@
+{
+  "negocios": [
+    "Saquear aldeias camponesas e fazendas isoladas.",
+    "Arrombar armazéns alfandegários e lojas da periferia.",
+    "Extorquir e assediar qualquer um que cruze seu território.",
+    "Emboscar caravanas mercantes com gemas e metais preciosos.",
+    "Assaltar barcaças fluviais ou carroções mercantes.",
+    "Contrabandear narcóticos alquímicos (erva-de-fumo, pó de cogumelo ou sais torporíferos).",
+    "Contrabando e tráfico de feras exóticas e cativos para trabalho escravo.",
+    "Atuar como capangas e bucha de canhão para tiranos da região.",
+    "Mineração clandestina e forja de armamentos rudimentares.",
+    "Trotilhar, aplicar pegadinhas perigosas e espalhar caos pelas redondezas."
+  ],
+  "simbolos": [
+    "Um crânio quebrado pintado com cal.",
+    "Uma flecha torta e manchada de fuligem.",
+    "Uma adaga curva serrilhada.",
+    "Uma lua crescente vermelha ou pálida.",
+    "Uma estrela de dentes afiados.",
+    "Uma serpente rastejante de boca aberta.",
+    "Uma aranha de pernas pontiagudas.",
+    "Um rato gordo mordendo um osso.",
+    "A silhueta de um lobo uivante.",
+    "Um morcego com presas expostas."
+  ],
+  "cores": [
+    "Preto sólido", "Marrom-escuro enlameado", "Carmesim vívido", "Cinza-chumbo",
+    "Amarelo-ouro queimado", "Cáqui desbotado", "Verde-oliva escuro", "Branco-osso",
+    "Verde-escuro e Dourado", "Preto e Dourado", "Marrom e Cinza", "Cinza e Branco",
+    "Preto e Cinza", "Preto e Branco", "Preto e Carmesim", "Marrom e Carmesim",
+    "Carmesim e Cáqui", "Marrom e Cáqui", "Cáqui e Verde-escuro", "Verde-escuro e Carmesim"
+  ],
+  "locais_covil": [
+    "Nas profundezas de uma floresta escura e assombrada.",
+    "Em um bosque encantado de fadas e vegetação traiçoeira.",
+    "Ao longo de uma garganta estreita em um passo de montanha.",
+    "No topo de picos rochosos e escarpados na montanha.",
+    "Nos canais labirínticos de esgotos sob uma metrópole agitada.",
+    "Atrás das colinas próximas a uma pacata vila rural."
+  ],
+  "tipo_covil": [
+    "Um complexo labiríntico de cavernas naturais gotejantes.",
+    "Uma mina de carvão ou ferro abandonada há décadas.",
+    "Uma mina ativa na qual os goblins escavam freneticamente dia e noite.",
+    "Uma fortaleza de pedra subterrânea erguida por anões antigos.",
+    "Um acampamento militarizado semi-organizado com paliçadas de troncos.",
+    "Um acampamento tosco de tendas de pele e fogueiras fedorentas."
+  ],
+  "alvos_favoritos": [
+    "Pescadores humildes e marinheiros bêbados.",
+    "Mendigos maltrapilhos e ébrios caídos na sarjeta.",
+    "Mercadores prósperos, caixeiros-viajantes e cambistas.",
+    "Jovens nobres almofadinhas desacompanhados.",
+    "Damiselas nobres e filhas de fidalgos.",
+    "Matronas aristocratas com joias vistosas.",
+    "Apostadores de taverna e ladrões amadores.",
+    "Padres dos templos e monges mendicantes.",
+    "Sacerdotisas e noviças consagradas.",
+    "Patrulheiros rurais e xerifes municipais.",
+    "Guardas do castelo e sentinelas da muralha.",
+    "Cozinheiros gordos e criadas de estalagem.",
+    "Taberneiros e garçonetes de cervejaria.",
+    "Cortesãs e donas de bordéis da periferia.",
+    "Acrobatas e saltimbancos de feira itinerante.",
+    "Viajantes forasteiros e camponesas indefesas.",
+    "Crianças pequenas descuidadas perto da mata.",
+    "Mineiros e garimpeiros com sacos de cascalho.",
+    "Patrulheiros élficos e caçadores da floresta.",
+    "Anões orgulhosos e gnomos curiosos."
+  ],
+  "plano_invasao": [
+    "A mansão fortificada do barão local ou grão-mestre de guilda.",
+    "A oficina abarrotada de um artífice ou mestre alfaiate.",
+    "O escritório comercial de um agiota ou casa de câmbio.",
+    "A adega e despensa de uma taverna ou hospedaria famosa.",
+    "Os fundos de um bordel de luxo na zona baixa da cidade.",
+    "Um grande armazém alfandegário perto dos estaleiros.",
+    "As relíquias guardadas no santuário de um templo venerado.",
+    "A câmara de arquivos e cofres do palácio municipal.",
+    "Um vilarejo miserável de pescadores nos arredores.",
+    "A residência senhorial de um ricaço pomposo da comarca."
+  ],
+  "chefes": [
+    "Um guerreiro goblin egocêntrico com armadura cheia de troféus de lata.",
+    "Um ladino goblin carismático e falastrão de florete torto.",
+    "Um xamã goblin sinistro cercado por fumaça verde e ossos mágicos.",
+    "Um mestre ladrão goblin capaz de se esgueirar pela menor das frestas.",
+    "Um veterano de guerra condecorado e cheio de cicatrizes horrendas.",
+    "Um feiticeiro goblin implacável que conjura maldições e hexágonos de fogo.",
+    "Uma matriarca goblin astuta e maquiavélica que dita as ordens das sombras.",
+    "Um clérigo de guerra hobgoblin disciplinado, sádico e brutal.",
+    "Um senhor da guerra hobgoblin tático, brilhante e implacável.",
+    "Um assassino bugbear frio, colossal e assustadoramente silencioso."
+  ],
+  "ambicoes": [
+    "Sabotar completamente a estabilidade política e o conselho da região.",
+    "Estrangular as rotas comerciais até que as cidades vizinhas passem fome.",
+    "Vingar-se de forma sangrenta contra uma facção ou nobreza específica.",
+    "Massacrar e erradicar uma gangue goblinóide rival das redondezas.",
+    "Semear anarquia, queimadas e caos pelo simples prazer de ver queimar.",
+    "Encontrar e tomar a posse definitiva de um artefato arcano ancestral."
+  ],
+  "taticas_luta": [
+    "Táticas de enxame: pulando dezenas de uma vez sobre cada alvo.",
+    "Bater e correr: disparando virotes envenenados e sumindo nos arbustos.",
+    "Emboscadas covardes: redes suspensas, valas com estacas e pedras caindo.",
+    "Manobras coreografadas: escudos de madeira tosca e lanças sincronizadas.",
+    "Manobras totalmente imprevisíveis e caóticas que confundem o oponente.",
+    "Rindo alto, fazendo caretas bizarras e debochando para irritar o grupo.",
+    "Pulos acrobáticos tresloucados e piruetas esquisitas no combate.",
+    "Gritaria ensurdecedora, batendo panelas e berros de guerra histéricos.",
+    "Chutes nas canelas, cotoveladas e pisões desleais nas botas dos heróis.",
+    "Cabeçadas suicidas e impulsos brutos no estômago do adversário.",
+    "Mordidas ferozes nas orelhas e unhadas furiosas no pescoço.",
+    "Armadilhas improvisadas: óleo no piso, tachas e laços de corda nas pernas."
+  ],
+  "reforcos": [
+    "Mercenários hobgoblins bem treinados com pique e escudo.",
+    "Capangas bugbears armados com clavas pesadas e maças cravadas.",
+    "Ogros selvagens brutamontes usados como aríetes vivos.",
+    "Orcs berserkers mercenários ávidos por sangue.",
+    "Trolls famintos atraídos com carcaças podres.",
+    "Outra gangue aliada de goblins menores disposta a engrossar as fileiras."
+  ],
+  "guardioes_pets": [
+    "Lobos famintos com coleiras de ferro enferrujado.",
+    "Wargs cinzentos inteligentes e ardilosos usados como montaria.",
+    "Aranhas gigantes venenosas tecidas nos tetos das passagens.",
+    "Javalis selvagens com presas afiadas em troncos de pedra.",
+    "Morcegos gigantes pendurados nas galerias mais altas.",
+    "Ratos atrozes colossais e agressivos que roem as sobras."
+  ]
+}
