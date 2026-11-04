@@ -1,0 +1,186 @@
+{
+  "negocios": [
+    "Caça ilegal nas reservas florestais da Coroa ou nos bosques de um barão influente.",
+    "Acolhimento e proteção a fugitivos da justiça e desertores.",
+    "Extorsão, emboscadas e assédio constante a cobradores de impostos e nobres na estrada real.",
+    "Assalto a comboios e caravanas carregadas de gemas, metais preciosos e tapeçarias.",
+    "Interceptação e saque a carroças mercantes e barcaças fluviais nas fronteiras.",
+    "Contrabando de narcóticos (folha-de-fumo, cogumelos alucinógenos, sal torporífero ou açúcar-da-vigília).",
+    "Contrabando e receptação de antiguidades e relíquias raras saqueadas de tumbas.",
+    "Receptação, lavagem e escoamento de mercadorias furtadas de armazéns.",
+    "Tráfico de cativos, feras exóticas aprisionadas e fugitivos da corte.",
+    "Servir de capangas armados para mercadores corruptos ou donos de casas noturnas."
+  ],
+  "cores": [
+    "Preto sólido",
+    "Dourado queimado",
+    "Verde-floresta escuro",
+    "Bronze envelhecido",
+    "Cáqui / Areia",
+    "Castanho / Castor",
+    "Cinza-chumbo / Aço escuro",
+    "Bordô / Carmesim seco",
+    "Marrom-chocolate escuro",
+    "Verde-oliva rústico"
+  ],
+  "simbolos": [
+    "Um crânio rústico pintado com carvão.",
+    "Uma flecha entalhada apontada para o chão.",
+    "Uma adaga de lâmina curta enferrujada.",
+    "Um cálice entalhado em madeira.",
+    "Uma lua crescente pálida.",
+    "Uma estrela de cinco pontas tosca.",
+    "Uma serpente rastejante de boca aberta.",
+    "Um texugo agressivo com presas expostas.",
+    "Uma aranha de patas longas em teia espiral.",
+    "Um rato cinzento roendo uma corda.",
+    "Um lobo solitário uivante.",
+    "A pata de um urso com garras cravadas."
+  ],
+  "lideres": [
+    "Um megalomaníaco perigoso com delírios de coroar-se rei dos bosques.",
+    "Um demagogo carismático que convence os camponeses com discursos inflamados.",
+    "Um estrangeiro misterioso fugido de conflitos em terras distantes.",
+    "Um mestre ladrão ardiloso foragido das masmorras da capital.",
+    "O herdeiro deserdado de uma influente casa nobre buscando afrontar os pais.",
+    "Um carrasco frio e implacável acostumado a não deixar testemunhas.",
+    "Uma mulher fatal astuta que comanda as operações com lábia e veneno.",
+    "Um ladino charmoso e galanteador que rouba com elegância e deboche.",
+    "Um espadachim arrojado e duelista audacioso de capa e florete.",
+    "Um brutamontes truculento promovido pela força descomunal de seus punhos.",
+    "Um clérigo devoto renegado que vê as emboscadas como desígnio divino.",
+    "Um fugitivo de alta periculosidade com a cabeça a prêmio em todo o reino."
+  ],
+  "membros": [
+    "Artesãos arruinados e desempregados pelo avanço dos monopólios.",
+    "Camponeses despejados de suas lavouras por decretos feudais.",
+    "Lavradores desesperados sem condições de pagar o dízimo da colheita.",
+    "Escravizados e servos foragidos em busca de refúgio e liberdade.",
+    "Veteranos de guerras passadas desmobilizados sem terra nem pensão.",
+    "Refugiados estrangeiros que não encontraram acolhida nas cidades."
+  ],
+  "ambicoes": [
+    "Controlar e cobrar pedágio de todo o comércio e carretas da província.",
+    "Sabotar e estrangular sistematicamente as rotas comerciais dos nobres.",
+    "Vingar uma traição sangrenta contra um bando rival de foras-da-lei.",
+    "Vingar abusos cometidos contra suas famílias pela aristocracia local.",
+    "Instigar uma rebelião armada popular contra os barões e o regente.",
+    "Lutar por liberdade, equidade e abolição dos dízimos feudais.",
+    "Acumular ouro suficiente para comprar uma anistia e aposentar-se em paz.",
+    "Semear destruição e violência pura para saciar a sede de sangue."
+  ],
+  "armamentos": [
+    "Clavas pesadas de carvalho e porretes cravados de pregos.",
+    "Adagas largas de caça e cutelos de desossar.",
+    "Arcos curtos de teixo e aljavas com flechas artesanais.",
+    "Arcos longos de precisão colhidos dos próprios guardas florestais.",
+    "Bestas leves de caça e adagas de estocada.",
+    "Machadinhas de arremesso e facas compridas no cinto.",
+    "Tacapes rústicos, fundas e pedras afiadas de rio.",
+    "Espadas curtas saqueadas de sentinelas da estrada.",
+    "Soqueiras de latão e golpes desleais corpo a corpo.",
+    "Adagas afiadas combinadas com estilingues de chumbo."
+  ],
+  "esconderijos": [
+    "Em celeiros e passagens secretas nas terras de um nobre simpático à causa.",
+    "Disfarçados entre as barracas e vielas da praça do mercado da vila.",
+    "Nos fundos falsos e estábulos de uma estalagem de beira de estrada.",
+    "Nas adegas barulhentas de uma taverna decadente da encruzilhada.",
+    "Atrás das cortinas e quartos de um bordel rural isolado.",
+    "Nas ruínas desmoronadas de um antigo farol costeiro abandonado.",
+    "Em uma cabana decrépita e esquecida no meio da charneca.",
+    "Em uma gruta úmida e oculta atrás de uma cachoeira ruidosa.",
+    "Em uma rede de cavernas naturais de calcário nas colinas.",
+    "Em um arraial improvisado no coração de um bosque fechado e impenetrável."
+  ],
+  "reputacao": [
+    "Emissários da coroa e cobradores de impostos municipais.",
+    "Mercadores prósperos, comboieiros e mascates de feira.",
+    "Políticos da corte, intendentes e juízes da comarca.",
+    "Sentinelas da guarda urbana, xerifes e meirinhos.",
+    "Guerreiros condecorados, soldados e capitães veteranos.",
+    "Nobres arrogantes, cortesãos e damas de carruagem.",
+    "Cavaleiros juramentados e defensores leais do trono.",
+    "Camponeses, granjeiros e servos oprimidos da redondeza.",
+    "Monges dos eremitérios, sacerdotes e sábios andarilhos.",
+    "Famílias, donzelas e crianças dos vilarejos vizinhos."
+  ],
+  "traço_individual": [
+    "Um brinco de ouro vistoso pendendo de uma orelha rasgada.",
+    "Botas de couro fino de montaria cuidadosamente lustradas com graxa.",
+    "Um furo visível na ponta da bota deixando o polegar de fora.",
+    "Uma adaga de estilete afiada enfiada em cada uma das botas.",
+    "Uma máscara de tecido rústico cobrindo o rosto da ponte do nariz para baixo.",
+    "Um chapéu de abas largas desabadas adornado com uma pena de coruja.",
+    "A tatuagem de um dragão serpenteante no antebraço calejado.",
+    "Uma tatuagem de chamas ardentes contornando todo o braço.",
+    "Uma risada maníaca, ruidosa e descompassada que ecoa à toa.",
+    "O nariz visivelmente torto, quebrado mais de uma vez em brigas.",
+    "Camisa de linho desabotoada até a barriga exibindo peito peludo.",
+    "Bigodes longos e extravagantes encerados com capricho para cima."
+  ],
+  "subtipos": {
+    "cacadores": {
+      "presas": [
+        "Ursos marrons e ursos-pardos das colinas.",
+        "Aves de rapina (águias reais, falcões peregrinos, gaviões ou corujas).",
+        "Javalões selvagens de presas afiadas.",
+        "Cervos nobres da reserva real (alces coroados, gamos ou corças).",
+        "Feras exóticas raras (grifos, hipogrifos, leões ou ursos-coruja).",
+        "Aves cinegéticas silvestres (faisões dourados, perdizes ou codornas).",
+        "Aves aquáticas de lagoa (cisnes reais, patos selvagens ou garças).",
+        "Pequenos animais de pele valiosa (castores, arminhos, lontras ou doninhas).",
+        "Predadores dos ermos (texugos ferozes, coiotes ou raposas vermelhas).",
+        "Lobos cinzentos das matas profundas."
+      ],
+      "motivo": [
+        "Por puro esporte e prazer mórbido na pontaria.",
+        "Para garantir alimento e caldeirão farto para suas famílias famintas.",
+        "Para caçar carne de caça nobre e distribuir clandestinamente aos aldeões pobres.",
+        "Por vingança declarada contra a arrogância do senhor das terras.",
+        "Para desossar, salgar e vender a carne fresca em tavernas clandestinas.",
+        "Para comercializar couros, plumas e peles nobres com peleiros do porto."
+      ]
+    },
+    "salteadores": {
+      "tatica": [
+        "Ataque em enxame berrando e saltando dos barrancos sobre as carroças.",
+        "Bater e correr: disparando saraivadas de flechas e sumindo na mata.",
+        "Emboscada clássica: troncos tombados na via e laços de corda nas rodas.",
+        "Manobras coordenadas bloqueando a retaguarda e a vanguarda do comboio.",
+        "Avanço caótico, saltos acrobáticos e imprevisibilidade que apavora condutores.",
+        "Jogo de pernas ágil com floretes e fintas elegantes desarmando guardas."
+      ],
+      "notoriedade": [
+        "Jamais deixar sobreviventes ou testemunhas para relatar à milícia.",
+        "Marcar a face dos cativos com ferro em brasa antes de soltá-los na estrada.",
+        "Escalpar os capitães de escolta para enviar como aviso aos mercadores.",
+        "Incendiar por completo carroças, cargas e fardos após o saque.",
+        "Utilizar frascos de fogo alquímico e explosivos caseiros nas emboscadas.",
+        "Romances escandalosos e raptos consentidos de herdeiros nobres.",
+        "Cantarolar jograis chulos em coro enquanto limpam os baús alheios.",
+        "Esvaziar e secar os barris de vinho e cerveja das cargas no próprio acostamento."
+      ]
+    },
+    "contrabandistas": {
+      "metodo": [
+        "Rede labiríntica de túneis subterrâneos escavados sob as muralhas.",
+        "Fundos falsos em carroções agrícolas e barris de peixe em conserva.",
+        "Saveiros e botes camuflados navegando sem lanternas em noites sem lua.",
+        "Mulas humanas: carregadores a pé cruzando picadas ermas de montanha.",
+        "Suborno sistemático de sargentos da alfândega e vigias do portão.",
+        "Rede encadeada de refúgios e depósitos seguros em fazendas complacentes."
+      ],
+      "patrono": [
+        "Um mercador prestigiado do grêmio comercial financiando as remessas.",
+        "Um magistrado ou intendente de justiça da cidade recebendo porcentagem.",
+        "O chefão incontestável da Guilda dos Ladrões da metrópole.",
+        "Um capitão corsário que emparelha sua chalupa nas enseadas da costa.",
+        "O almirante da marinha ou capitão da patrulha naval com vistas grossas.",
+        "Uma célula de insurgentes políticos conspirando para derrubar a coroa.",
+        "O próprio xerife municipal ou capitão da guarda da comarca.",
+        "O maior nobre rival e arqui-inimigo do governante soberano."
+      ]
+    }
+  }
+}
