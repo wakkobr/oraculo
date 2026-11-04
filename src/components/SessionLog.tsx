@@ -25,7 +25,12 @@ export default function SessionLog() {
     if (history.length === 0) return;
     const text = history
       .map((item) => {
-        const label = item.tipo === 'ENCONTRO' ? 'CENA' : item.tipo;
+        const label =
+          item.tipo === 'ENCONTRO'
+            ? 'CENA'
+            : item.tipo === 'FACCAO'
+            ? 'FACÇÃO'
+            : item.tipo;
         return `[${item.hora}] [${label}] ${item.texto}`;
       })
       .join('\n');
@@ -49,10 +54,18 @@ export default function SessionLog() {
         return 'bg-[#27153b] text-purple-300 border border-[#582885]';
       case 'ENCONTRO':
         return 'bg-[#2b1f14] text-amber-300 border border-[#6b4c23]';
+      case 'FACCAO':
+        return 'bg-[#2b172a] text-pink-300 border border-[#6b2567]';
       case 'TESOURO':
       default:
         return 'bg-[#2a1d13] text-[#d4b26f] border border-[#6b451e]/40';
     }
+  };
+
+  const getBadgeLabel = (tipo: HistoryItem['tipo']) => {
+    if (tipo === 'ENCONTRO') return 'CENA';
+    if (tipo === 'FACCAO') return 'FACÇÃO';
+    return tipo;
   };
 
   return (
@@ -116,7 +129,7 @@ export default function SessionLog() {
                     item.tipo
                   )}`}
                 >
-                  {item.tipo === 'ENCONTRO' ? 'CENA' : item.tipo}
+                  {getBadgeLabel(item.tipo)}
                 </span>
                 <span className="text-slate-300 wrap-break-word leading-relaxed">
                   {item.texto}
@@ -124,7 +137,7 @@ export default function SessionLog() {
               </div>
               <button
                 onClick={() => {
-                  const label = item.tipo === 'ENCONTRO' ? 'CENA' : item.tipo;
+                  const label = getBadgeLabel(item.tipo);
                   navigator.clipboard.writeText(`[${label}] ${item.texto}`);
                 }}
                 title="Copiar este item"

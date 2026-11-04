@@ -8,6 +8,7 @@ import BookCard from '../components/BookCard';
 import MushroomCard from '../components/MushroomCard';
 import SpellCard from '../components/SpellCard';
 import VignetteCard from '../components/VignetteCard';
+import TroupeCard from '../components/TroupeCard';
 import UpcomingModules from '../components/UpcomingModules.astro';
 import SessionLog from '../components/SessionLog';
 ---
@@ -28,6 +29,12 @@ import SessionLog from '../components/SessionLog';
       class="filter-btn px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-all uppercase tracking-wider font-['Cinzel']"
     >
       ⚔ Sessão & Cidades
+    </button>
+    <button 
+      data-filter="faccoes" 
+      class="filter-btn px-3.5 py-1.5 rounded-md bg-[#0e1224] text-slate-400 hover:text-slate-200 border border-[#22294c] transition-all uppercase tracking-wider font-['Cinzel']"
+    >
+      🏛️ Facções & Grupos
     </button>
     <button 
       data-filter="arcano" 
@@ -59,6 +66,9 @@ import SessionLog from '../components/SessionLog';
     </div>
     <div class="card-item" data-category="cidades">
       <VignetteCard client:load />
+    </div>
+    <div class="card-item" data-category="faccoes">
+      <TroupeCard client:load />
     </div>
     <div class="card-item" data-category="tesouros">
       <LootCard client:load />

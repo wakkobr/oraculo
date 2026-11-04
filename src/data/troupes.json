@@ -1,0 +1,62 @@
+{
+  "transporte": [
+    "A bordo de uma pequena caravela ou saveiro costeiro.",
+    "A bordo de uma balsa rústica ou chata fluvial.",
+    "Montados a cavalo com mantos de viagem vistosos.",
+    "Em uma carroça cigana pintada e colorida, puxada por belos corcéis.",
+    "Em uma carroça rústica de carga sem adornos, puxada por uma parelha de bois.",
+    "A pé pelo acostamento, carregando mochilas pesadas nas costas.",
+    "A pé, conduzindo alguns cavalos de carga com os cenários e baús.",
+    "A pé, acompanhados de mulas de carga rústicas e teimosas.",
+    "Metade da trupe a pé e a outra metade montada em burros de carga.",
+    "Por meios misteriosos e arcanos; ninguém os viu chegar e ninguém jamais os vê partir."
+  ],
+  "reputacao": [
+    "Tragédias dilacerantes e atuações de fazer a plateia chorar copiosamente.",
+    "Comédias obscenas, farsas populares e piadas de taverna.",
+    "Alegorias moralistas e dramas religiosos cheios de virtude.",
+    "Números musicais empolgantes, coros animados e jograis.",
+    "Efeitos visuais mágicos deslumbrantes e ilusões pirotécnicas.",
+    "Sátira política mordaz e escárnio da nobreza local.",
+    "Contos românticos açucarados de amores proibidos e impossíveis.",
+    "Épicos heroicos grandiosos de cavaleiros e monstros que arrebatam multidões.",
+    "Acrobacias perigosas, engolidores de tochas e façanhas arriscadas.",
+    "Organizar e animar as festas e bebedeiras mais loucas da região."
+  ],
+  "divulgacao": [
+    "Campanha de sussurros e boatos espalhados pelas tabernas da cidade.",
+    "Pequenas encenações e esquetes teatrais nas esquinas mais movimentadas.",
+    "Monólogos e trechos cômicos apresentados diretamente sobre as mesas de bares.",
+    "Panfletos e cartazes artesanais colados em postes, muros e portas de capelas.",
+    "Contratação de cortesãs e acompanhantes locais para espalhar a notícia entre os clientes.",
+    "Provocações e insultos públicos direcionados ao clero ou templo local.",
+    "Provocações ácidas e sátiras públicas direcionadas à guarda ou ao prefeito.",
+    "Distribuição de doces, guloseimas e brinquedos de madeira para as crianças.",
+    "Músicos entoando um jingle grudento e bem-humorado pelas feiras livres.",
+    "Lançamento sutil de magias de encantamento ou sugestão nos transeuntes da praça."
+  ],
+  "partida_anterior": [
+    "Ao término glorioso de uma temporada aclamada e cheia de aplausos.",
+    "Sob promessas solenes ao público de retornarem na próxima colheita.",
+    "Escapando às pressas sob uma chuva de pedras e legumes podres atirados por uma turba furiosa.",
+    "Sob ameaça direta de masmorra expedida por um senhor feudal ofendido.",
+    "Sob sentença de execução sumária emitida pelo sumo sacerdote da última cidade.",
+    "Logo após sobreviverem a um atentado de assassinato orquestrado por capangas de um líder do crime.",
+    "Após receberem ameaças veladas de um barão mercador poderoso.",
+    "Após darem um golpe financeiro descarado em um mercador avarento.",
+    "Após passarem a perna e limparem os cofres de um chefão da guilda de ladrões local.",
+    "De forma sobrenatural; nem os próprios artistas conseguem explicar como foram parar aqui."
+  ],
+  "boato_secreto": [
+    "Consegue invadir e caminhar livremente pelos sonhos de quem assiste à peça.",
+    "Possui o dom de falar com os mortos e usa esqueletos como conselheiros de bastidores.",
+    "É um necromante clandestino capaz de erguer cadáveres para atuar como figurantes.",
+    "É um mestre boticário capaz de destilar venenos letais e insípidos.",
+    "Nutre uma vingança secreta de sangue contra um nobre ou mercador desta cidade.",
+    "Carrega sangue abissal/infernal ardendo nas veias disfarçado por maquiagem teatral.",
+    "Possui linhagem dracônica manifesta em momentos de clímax dramático.",
+    "Dizem que no passado matou um dragão verdadeiro com um florete cênico.",
+    "Dizem que no passado derrubou um gigante sozinho em um confronto épico.",
+    "É, na verdade, um fora da lei famigerado e procurado pela coroa sob disfarce impecável."
+  ]
+}
