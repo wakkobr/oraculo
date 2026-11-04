@@ -1,0 +1,122 @@
+{
+  "cores": [
+    "Preto sólido",
+    "Vermelho-escarlate",
+    "Dourado brilhante",
+    "Verde-floresta",
+    "Azul-real",
+    "Castanho / Castor",
+    "Cinza-escuro / Ferro fundido",
+    "Bordô / Grená",
+    "Azul-marinho profundo",
+    "Marrom-chocolate escuro",
+    "Aço / Cinza-azulado",
+    "Verde-oliva militar"
+  ],
+  "estandarte": [
+    "Um crânio humano sobre fundo neutro.",
+    "Um espectro ou fantasma esvoaçante.",
+    "Um punho fechado erguido em desafio.",
+    "Uma labareda de fogo ardente.",
+    "Uma flecha pontiaguda trespassando o tecido.",
+    "Uma adaga de lâmina curta gotejante.",
+    "Uma espada longa fincada no solo.",
+    "Um martelo de guerra pesado cruzado.",
+    "Um sol radiante de pontas agudas.",
+    "Uma lua crescente em quarto minguante.",
+    "Um morcego de asas abertas.",
+    "Um touro furioso com chifres afiados.",
+    "Um dragão rampante de fauces abertas.",
+    "Um falcão de caça em mergulho veloz.",
+    "Um leão coroado de garras erguidas.",
+    "Um corvo pousado de olhar atento.",
+    "Um escorpião negro com o ferrão armado.",
+    "Uma serpente venenosa enrolada para o bote.",
+    "Um abutre carniceiro empoleirado em ossos.",
+    "Um lobo cinzento de caninos expostos."
+  ],
+  "comandantes": [
+    "Um forasteiro fora-da-lei audacioso e insolente.",
+    "Um demagogo carismático que inflama tropas com discursos.",
+    "Um veterano estrangeiro de além-mar com métodos enigmáticos.",
+    "Um deserdado rebelde expulso de uma influente casa nobre.",
+    "Um carrasco frio e implacável acostumado a chacinas.",
+    "Um espadachim elegante, arrogante e letal em duelo.",
+    "Um brutamontes truculento que resolve dissidências no soco.",
+    "Um herói lendário de guerras passadas coberto de medalhas.",
+    "Um cavaleiro caído em desgraça destituído de seus votos.",
+    "Um ex-campeão das arenas de gladiadores coberto de cicatrizes."
+  ],
+  "moral_tropa": [
+    "Amigável, leal e disposta a seguir o capitão até o inferno.",
+    "Profissional, respeitosa e estritamente atenta ao soldo.",
+    "Cautelosa, insegura e sempre pesando o risco de motim.",
+    "Aterrorizada, calada e submissa sob disciplina brutal.",
+    "Decepcionada, cínica e respondona perante ordens estúpidas.",
+    "Rebelde, enfurecida e na beira de derrubar a liderança."
+  ],
+  "situacao_atual": [
+    "Empregada com bom soldo como escolta de elite e guarda de muralha.",
+    "Em plena campanha militar ativa, marchando nas linhas de frente.",
+    "Sob contrato sigiloso a serviço de um sindicato de contrabandistas.",
+    "Contratada por uma guilda mercante para proteção de comboios valiosos.",
+    "A serviço de uma casa nobre local para impor respeito nas terras.",
+    "Acampada sem contrato, desesperada por trabalho e comida fresca."
+  ],
+  "especializacoes": [
+    "Rompimento de cercos e contra-ataque a arietes.",
+    "Defesa obstinada de redutos, fortes e passagens estreitas.",
+    "Assalto frontal pesado contra linhas defensivas inimigas.",
+    "Infiltração silenciosa e abertura clandestina de portões.",
+    "Escaramuças rápidas nos flancos e guerra de atrito.",
+    "Emboscadas implacáveis em gargantas e florestas densas.",
+    "Patrulha implacável de fronteiras e reconhecimento de terreno.",
+    "Manobras envolventes de flanqueamento e quebra de moral.",
+    "Táticas de guerrilha noturna e desgaste psicológico.",
+    "Incursões devastadoras, saques a celeiros e terra arrasada."
+  ],
+  "fama_sombria": [
+    "Jamais aceitar rendições ou poupar prisioneiros de guerra.",
+    "Deixar os corpos dos caídos apodrecerem como banquete para as feras.",
+    "Marcar os prisioneiros sobreviventes com ferro em brasa ou tatuagens vis.",
+    "Escalpar ou esfolar vivos os soldados capturados.",
+    "Passar fogo em aldeias inteiras e queimar campos de cultivo.",
+    "Histórico infame de trair contratantes quando o inimigo paga o dobro.",
+    "Bravatas constantes e cantigas escatológicas em marchas noturnas.",
+    "Bebedeiras descontroladas que terminam em pancadarias nas vilas."
+  ],
+  "estilo_combate": [
+    "Golpes velozes de bater e correr sem fixar linha estável.",
+    "Investida direta implacável em formação cerrada.",
+    "Jogo de pernas refinado e fintas coordenadas em duelistas.",
+    "Avanços espasmódicos e imprevisíveis que confundem formações.",
+    "Manobras militares impecáveis de manual de veteranos.",
+    "Fúria impiedosa sem dar trégua para retirada do adversário.",
+    "Chuva constante de insultos, provocações e deboches durante a peleja.",
+    "Táticas desleais: areia nos olhos, rasteiras e lâminas ocultas na bota."
+  ],
+  "armaduras": [
+    "Trajes acolchoados e mantos exóticos sobre cotas leves.",
+    "Armaduras de couro curtido batido.",
+    "Armaduras de couro batido reforçadas com cravos de aço.",
+    "Peles grossas de animais e carapaças rústicas.",
+    "Cotas de anéis de ferro sobregibão acolchoado.",
+    "Cotas de malha clássicas e gorjais de aço.",
+    "Armaduras de escamas sobrepostas.",
+    "Placas completas de aço polido com brasão gravado."
+  ],
+  "armamentos": [
+    "Espadas longas balanceadas.",
+    "Espadas longas e escudos pesados.",
+    "Espadas curtas empunhadas com lanças de estocada.",
+    "Espadas curtas emparelhadas com broquéis de aço.",
+    "Espadas bastardas combinadas com bestas pesadas na retaguarda.",
+    "Espadões de duas mãos (montantes) para choque de infantaria.",
+    "Lanças longas de combate emparelhadas com escudos redondos.",
+    "Machados de batalha pesados de gume único.",
+    "Machados de batalha combinados com escudos de infantaria.",
+    "Martelos de guerra pesados capazes de amassar couraças.",
+    "Cimitarras curvas e afiadas.",
+    "Cimitarras ágeis empunhadas com escudos leves."
+  ]
+}
