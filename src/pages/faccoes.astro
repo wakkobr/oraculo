@@ -15,6 +15,8 @@ import MilitaryCompanyCard from '../components/MilitaryCompanyCard';
 import NobleHouseCard from '../components/NobleHouseCard';
 import OutlawBandCard from '../components/OutlawBandCard';
 import PirateCrewCard from '../components/PirateCrewCard';
+import SavageHordeCard from '../components/SavageHordeCard';
+
 import SessionLog from '../components/SessionLog';
 ---
 
@@ -22,14 +24,13 @@ import SessionLog from '../components/SessionLog';
   <Header />
   <Navbar />
 
-  <!-- Cabeçalho da Rota de Facções -->
   <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl bg-[#0a0d1d] border border-[#1e2444]">
     <div>
       <h2 class="text-lg font-bold text-slate-100 font-['Cinzel'] tracking-wide flex items-center gap-2">
         <span>🏛️</span> Compêndio de Facções, Guildas & Sociedades
       </h2>
       <p class="text-xs text-slate-400 mt-0.5">
-        10 geradores completos de poder, ordens secretas, corporações e bandos armados para o cenário.
+        Geradores completos de poder, ordens secretas, clãs bárbaros, corporações e forças armadas.
       </p>
     </div>
     <div class="text-[11px] text-oracle-gold font-mono bg-[#141830] px-3 py-1.5 rounded-md border border-oracle-gold/30 self-start md:self-auto">
@@ -37,8 +38,8 @@ import SessionLog from '../components/SessionLog';
     </div>
   </div>
 
-  <!-- Grid com todas as 10 Facções -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div><SavageHordeCard client:load /></div>
     <div><NobleHouseCard client:load /></div>
     <div><MilitaryCompanyCard client:load /></div>
     <div><MercenaryCard client:load /></div>

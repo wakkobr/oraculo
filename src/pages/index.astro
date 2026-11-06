@@ -24,6 +24,7 @@ import MerchantGuildCard from '../components/MerchantGuildCard';
 import CraftingGuildCard from '../components/CraftingGuildCard';
 import MilitaryCompanyCard from '../components/MilitaryCompanyCard';
 import TroupeCard from '../components/TroupeCard';
+import SavageHordeCard from '../components/SavageHordeCard';
 
 import SessionLog from '../components/SessionLog';
 ---
@@ -84,6 +85,9 @@ import SessionLog from '../components/SessionLog';
     </div>
     <div class="deck-card hidden" data-card-id="nobres">
       <NobleHouseCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="hordas">
+      <SavageHordeCard client:load />
     </div>
     <div class="deck-card hidden" data-card-id="militares">
       <MilitaryCompanyCard client:load />

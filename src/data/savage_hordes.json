@@ -1,0 +1,92 @@
+{
+  "origem": [
+    "Uma tribo de nômades caçadores que segue manadas pelas estepes.",
+    "Uma tribo que adotou o saque após ser expulsa à força de suas terras ancestrais.",
+    "Um clã guerreiro banido de seus vales nativos por quebra de juramento sagrado.",
+    "Um clã juramentado a serviço militar temporário de um soberano regional.",
+    "Uma vasta confederação tribal reunindo dezenas de linhagens e chefados aliados.",
+    "Os sobreviventes degenerados e embrutecidos dos restos de um exército destroçado."
+  ],
+  "deslocamento": [
+    "A pé, marchando incansavelmente por léguas sem pausas.",
+    "A pé, puxando carroças manuais leves feitas de ossos e couro.",
+    "A pé na vanguarda, precedidos por batedores ligeiros montados.",
+    "Montados em corcéis selvagens, bisões de carga ou montarias de combate.",
+    "Montados, escoltando pesados comboios de carroções de pele e madeira.",
+    "Em pirogas rústicas e botes fluviais rasos talhados em troncos inteiros."
+  ],
+  "virtudes": [
+    "Bravura obstinada diante da morte iminente.",
+    "Força física bruta e dominância no combate individual.",
+    "Sabedoria xamânica e comunhão com os espíritos.",
+    "Vigor, fertilidade e preservação da linhagem guerreira.",
+    "Honra inviolável aos deuses da guerra e da tormenta.",
+    "Devoção incondicional à memória dos ancestrais do clã.",
+    "Cicatrizes de guerra expostas como medalhas na pele nua.",
+    "Contagem individual de crânios e baixas infligidas ao inimigo."
+  ],
+  "iconografia": [
+    "Símbolos de Morte & Ruína (crânios entalhados, ossadas polidas, corvos ou chamas)",
+    "Símbolos Celestiais & Clima (sol flamejante, lua de sangue, raios da tempestade ou nuvens)",
+    "Símbolos de Força Marcial (machados duplos, pontas de lança ensanguentadas, punhos ou espadas)",
+    "Feras Totêmicas Ancestrais (ursos pardos, javalis espinhosos, lobos uivantes ou águias reais)"
+  ],
+  "lideres": [
+    "Um chefe venerado e respeitado por sua retidão e punho firme.",
+    "Um senhor da guerra carismático que galvaniza a fúria das tribos.",
+    "Um profeta xamânico enigmático guiado por visões de fogo e sangue.",
+    "O herdeiro legítimo do sangue de um herói fundador lendário.",
+    "Um carrasco frio e implacável que decapita oponentes sem hesitar.",
+    "Um brutamontes colossal e truculento que lidera pela intimidação.",
+    "Um jovem guerreiro impaciente, ávido por provar seu valor nas armas.",
+    "Um ancião de barba branca e olhar austero calejado por cem batalhas.",
+    "Um campeão condecorado que ostenta os estandartes dos inimigos tombados.",
+    "Um guerreiro galanteador e viril que desposou dezenas de consortes."
+  ],
+  "tabus_medos": [
+    "Estrangeiros vestindo mantos ou librés de cor específica (carmesim, dourado ou negro).",
+    "Forasteiros inteiramente cobertos por couraças e armaduras de placas de aço.",
+    "Homens civilizados de barbas compridas ou bigodes ornamentados.",
+    "Mulheres forasteiras armadas (vistas como presságio de ruína espiritual).",
+    "Qualquer tipo de estrangeiro civilizado vindo das cidades muradas.",
+    "Povos específicos da região (anões das montanhas, elfos ou trogloditas).",
+    "Cataclismos cósmicos (nevascas súbitas, erupções vulcânicas ou relâmpagos).",
+    "Conjuradores arcanos, magos de manto e usuários de feitiçaria profana.",
+    "A fúria de seus próprios deuses ancestrais quando profanados.",
+    "A sombra colossal e os rugidos de dragões voando nos céus."
+  ],
+  "reputacao_sombria": [
+    "Jamais poupar guerreiros rendidos ou deixar sobreviventes.",
+    "Entregar os cativos vivos como banquete para feras selvagens.",
+    "Marcar os prisioneiros na carne viva com ferro em brasa e tinturas.",
+    "Escalpar os combatentes inimigos caídos para pendurar na sela.",
+    "Esfolar os guerreiros capturados e esticar o couro em estandartes.",
+    "Incendiar celeiros, aldeias e plantações inteiras até as cinzas.",
+    "Saquear com crueldade sistemática caravanas mercantes de luxo.",
+    "Canibalismo ritual: devorar o coração dos guerreiros mais valentes.",
+    "Reduzir todos os cativos à condição de escravos de trabalho forçado.",
+    "Tomar à força os prisioneiros como concubinas e criados pessoais."
+  ],
+  "costumes_ritos": [
+    "Berros de guerra histéricos, urros guturais e batidas de escudos no combate.",
+    "Sessões de transe para consultar e canalizar espectros e ancestrais caídos.",
+    "Sacrifícios cerimoniais frequentes de bodes, cavalos e touros negros.",
+    "Sacrifícios humanos solenes no altar de pedra sob o luar minguante.",
+    "Sangria ritualística nos pulsos e lâminas antes de cada marcha.",
+    "Ritos orgíacos coletivos de fertilidade ao redor da grande fogueira.",
+    "Consumo exclusivo de carne crua ou vísceras frescas de caça.",
+    "Bebedeiras homéricas de hidromel azedo e aguardente fermentada de raízes.",
+    "Nunca cortar ou aparar os cabelos, mantendo tranças endurecidas com gordura.",
+    "Raspar inteiramente a cabeça e o corpo, untando a pele com cinzas minerais.",
+    "Jamais lavar o corpo, preservando o odor da terra, fumaça e animais.",
+    "Banhos rituais minuciosos em fontes termais, ungindo-se com ervas aromáticas."
+  ],
+  "temperamento": [
+    "Barulhento, festivo e movido a tambores de guerra e cantigas roucas.",
+    "Jubiloso, entusiasta e sempre sedento pela emoção da próxima briga.",
+    "Relaxado, indiferente e descansando despreocupadamente sob o sol.",
+    "Amedrontado, arisco e desconfiado de qualquer sombra estranha.",
+    "Hostil, tenso e com as mãos travadas nos cabos dos machados.",
+    "Altamente agressivo, vingativo e pronto para desembainhar armas ao menor olhar."
+  ]
+}
