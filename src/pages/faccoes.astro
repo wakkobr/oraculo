@@ -16,6 +16,7 @@ import NobleHouseCard from '../components/NobleHouseCard';
 import OutlawBandCard from '../components/OutlawBandCard';
 import PirateCrewCard from '../components/PirateCrewCard';
 import SavageHordeCard from '../components/SavageHordeCard';
+import SecretSocietyCard from '../components/SecretSocietyCard';
 
 import SessionLog from '../components/SessionLog';
 ---
@@ -30,7 +31,7 @@ import SessionLog from '../components/SessionLog';
         <span>🏛️</span> Compêndio de Facções, Guildas & Sociedades
       </h2>
       <p class="text-xs text-slate-400 mt-0.5">
-        Geradores completos de poder, ordens secretas, clãs bárbaros, corporações e forças armadas.
+        Geradores completos de poder, ordens secretas, clãs bárbaros, corporações e conspirações da comarca.
       </p>
     </div>
     <div class="text-[11px] text-oracle-gold font-mono bg-[#141830] px-3 py-1.5 rounded-md border border-oracle-gold/30 self-start md:self-auto">
@@ -39,6 +40,7 @@ import SessionLog from '../components/SessionLog';
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div><SecretSocietyCard client:load /></div>
     <div><SavageHordeCard client:load /></div>
     <div><NobleHouseCard client:load /></div>
     <div><MilitaryCompanyCard client:load /></div>
