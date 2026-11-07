@@ -21,19 +21,39 @@ import UrbanGangCard from '../components/UrbanGangCard';
 import WatchmenCard from '../components/WatchmenCard';
 
 import SessionLog from '../components/SessionLog';
+
+const faccoesList = [
+  { id: 'f-guardas', label: 'Guardas Urbanos', icon: '🛡️' },
+  { id: 'f-gangues', label: 'Gangues Urbanas', icon: '🗡️' },
+  { id: 'f-sociedades', label: 'Sociedades Secretas', icon: '👁️' },
+  { id: 'f-hordas', label: 'Hordas Selvagens', icon: '🪓' },
+  { id: 'f-nobres', label: 'Casas Nobres', icon: '👑' },
+  { id: 'f-militares', label: 'Companhias Militares', icon: '⚔️' },
+  { id: 'f-mercenarios', label: 'Mercenários', icon: '🛡️' },
+  { id: 'f-assassinos', label: 'Assassinos', icon: '🗡️' },
+  { id: 'f-foras-da-lei', label: 'Foras-da-Lei', icon: '🏹' },
+  { id: 'f-piratas', label: 'Piratas', icon: '🏴‍☠️' },
+  { id: 'f-goblins', label: 'Bandos Goblins', icon: '👺' },
+  { id: 'f-cultos', label: 'Cultos & Seitas', icon: '🕯️' },
+  { id: 'f-druidas', label: 'Círculos Druídicos', icon: '🍃' },
+  { id: 'f-mercadores', label: 'Guildas Mercantes', icon: '⚖️' },
+  { id: 'f-artesaos', label: 'Guildas de Ofício', icon: '⚒️' },
+  { id: 'f-trupes', label: 'Trupes Teatrais', icon: '🎭' }
+];
 ---
 
 <Layout>
   <Header />
   <Navbar />
 
-  <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl bg-[#0a0d1d] border border-[#1e2444]">
+  <!-- Cabeçalho da Rota de Facções -->
+  <div class="mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl bg-[#0a0d1d] border border-[#1e2444]">
     <div>
       <h2 class="text-lg font-bold text-slate-100 font-['Cinzel'] tracking-wide flex items-center gap-2">
         <span>🏛️</span> Compêndio de Facções, Guildas & Sociedades
       </h2>
       <p class="text-xs text-slate-400 mt-0.5">
-        Geradores completos de poder, ordens secretas, guardas municipais, clãs bárbaros, corporações e conspirações da comarca.
+        16 geradores de ordens, governos, forças marciais, conspirações e bandos da região.
       </p>
     </div>
     <div class="text-[11px] text-oracle-gold font-mono bg-[#141830] px-3 py-1.5 rounded-md border border-oracle-gold/30 self-start md:self-auto">
@@ -41,23 +61,57 @@ import SessionLog from '../components/SessionLog';
     </div>
   </div>
 
+  <!-- Índice Rápido de Âncoras -->
+  <div class="mb-8 p-3.5 rounded-xl bg-[#070a17]/90 border border-[#1b213d] shadow-sm">
+    <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-[#161c36]">
+      <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+        <span>📑</span> Índice Rápido da Página
+      </span>
+      <span class="text-[10px] text-slate-500 font-mono">16 facções ativas</span>
+    </div>
+
+    <div class="flex flex-wrap gap-1.5">
+      {faccoesList.map((item) => (
+        <a
+          href={`#${item.id}`}
+          class="px-2.5 py-1 rounded-md bg-[#0e1224] hover:bg-[#181f3d] border border-[#1f2648] hover:border-oracle-gold/40 text-[11px] text-slate-300 hover:text-oracle-gold transition-all flex items-center gap-1.5"
+        >
+          <span>{item.icon}</span>
+          <span>{item.label}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Grid com todas as 16 Facções ancoradas -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div><WatchmenCard client:load /></div>
-    <div><UrbanGangCard client:load /></div>
-    <div><SecretSocietyCard client:load /></div>
-    <div><SavageHordeCard client:load /></div>
-    <div><NobleHouseCard client:load /></div>
-    <div><MilitaryCompanyCard client:load /></div>
-    <div><MercenaryCard client:load /></div>
-    <div><AssassinGuildCard client:load /></div>
-    <div><OutlawBandCard client:load /></div>
-    <div><PirateCrewCard client:load /></div>
-    <div><GoblinGangCard client:load /></div>
-    <div><CultCard client:load /></div>
-    <div><DruidCircleCard client:load /></div>
-    <div><MerchantGuildCard client:load /></div>
-    <div><CraftingGuildCard client:load /></div>
-    <div><TroupeCard client:load /></div>
+    <div id="f-guardas" class="scroll-mt-6"><WatchmenCard client:load /></div>
+    <div id="f-gangues" class="scroll-mt-6"><UrbanGangCard client:load /></div>
+    <div id="f-sociedades" class="scroll-mt-6"><SecretSocietyCard client:load /></div>
+    <div id="f-hordas" class="scroll-mt-6"><SavageHordeCard client:load /></div>
+    <div id="f-nobres" class="scroll-mt-6"><NobleHouseCard client:load /></div>
+    <div id="f-militares" class="scroll-mt-6"><MilitaryCompanyCard client:load /></div>
+    <div id="f-mercenarios" class="scroll-mt-6"><MercenaryCard client:load /></div>
+    <div id="f-assassinos" class="scroll-mt-6"><AssassinGuildCard client:load /></div>
+    <div id="f-foras-da-lei" class="scroll-mt-6"><OutlawBandCard client:load /></div>
+    <div id="f-piratas" class="scroll-mt-6"><PirateCrewCard client:load /></div>
+    <div id="f-goblins" class="scroll-mt-6"><GoblinGangCard client:load /></div>
+    <div id="f-cultos" class="scroll-mt-6"><CultCard client:load /></div>
+    <div id="f-druidas" class="scroll-mt-6"><DruidCircleCard client:load /></div>
+    <div id="f-mercadores" class="scroll-mt-6"><MerchantGuildCard client:load /></div>
+    <div id="f-artesaos" class="scroll-mt-6"><CraftingGuildCard client:load /></div>
+    <div id="f-trupes" class="scroll-mt-6"><TroupeCard client:load /></div>
+  </div>
+
+  <!-- Botão Flutuante para Voltar ao Topo -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <button
+      id="btn-back-top"
+      title="Voltar ao índice"
+      class="w-10 h-10 rounded-full bg-[#121630] border border-oracle-gold/40 text-oracle-gold shadow-lg flex items-center justify-center text-sm hover:brightness-125 transition-all opacity-80 hover:opacity-100"
+    >
+      ↑
+    </button>
   </div>
 
   <SessionLog client:load />
@@ -66,3 +120,29 @@ import SessionLog from '../components/SessionLog';
     O Oráculo &bull; Facções & Poder &bull; beyond-obvious.net
   </footer>
 </Layout>
+
+<script>
+  const btnTop = document.getElementById('btn-back-top');
+  btnTop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Rolagem suave e realce visual rápido no card de destino
+  const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#f-"]');
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href')?.slice(1);
+      if (!targetId) return;
+
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+        targetEl.classList.add('ring-2', 'ring-oracle-gold/60', 'rounded-xl');
+        setTimeout(() => {
+          targetEl.classList.remove('ring-2', 'ring-oracle-gold/60', 'rounded-xl');
+        }, 1400);
+      }
+    });
+  });
+</script>
