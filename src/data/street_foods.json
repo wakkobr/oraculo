@@ -1,0 +1,124 @@
+{
+  "stalls": [
+    {
+      "type": "Carrinho Ambulante de Mão",
+      "capacity": "Prato único ligeiro, sem bebidas",
+      "cost": "1 a 4 moedas de cobre"
+    },
+    {
+      "type": "Quiosque Fixo de Madeira",
+      "capacity": "1 a 2 pratos compostos e 1 bebida típica",
+      "cost": "Pratos 4 a 8 moedas, bebida 1 a 4 moedas"
+    },
+    {
+      "type": "Carroça Culinária / Toldo Gourmet",
+      "capacity": "Até 3 pratos substanciais e bebidas variadas",
+      "cost": "Pratos 1 a 8 moedas, bebidas 1 a 4 moedas"
+    }
+  ],
+  "presentations": [
+    "No espeto rústico de bambu tostado",
+    "Enrolado em pão folha fino (Pita)",
+    "Servido dentro de uma tigela de pão crocante",
+    "Sobre uma cama fumegante de arroz vaporizado",
+    "Embrulhado em folha verde de bananeira untada",
+    "Massa folhada ou pastel frito estaladiço",
+    "Fatiado no miolo de uma baguete de fermentação natural",
+    "Servido sobre concha marinha limpa e tostada"
+  ],
+  "flavors": [
+    "Doce e envolvente com calda de melaço",
+    "Picante com infusão potente de pimenta-fantasma",
+    "Ácido e refrescante com iogurte azedo e limão",
+    "Umami profundo com óleo tostado de sésamo e alho",
+    "Defumado e aromático com pimenta-do-reino e louro",
+    "Agridoce com redução de vinagre de maçã e mel",
+    "Pungente com queijo curado de cabra ralado"
+  ],
+  "meats": [
+    "Cortes desfiados de porco com melaço",
+    "Tiras finas de peito de frango marinadas",
+    "Cubos tenros de vaca salteados com cebola",
+    "Pedaços suculentos de lebre ou coelho",
+    "Embutido artesanal de caça picante",
+    "Pato desfiado com pele crocante",
+    "Carne de borrego salteada com hortelã",
+    "Carne de vaca maturada grelhada no carvão",
+    "Pedaços de vitela macia com alho",
+    "Fatias de queijo coalho tostadas na chapa"
+  ],
+  "seafood": [
+    "Mexilhões cozidos no vapor com vinho e louro",
+    "Camarões graúdos salteados em azeite e alho",
+    "Lascas de robalo grelhado com flor de sal",
+    "Anéis tenros de polvo e lula na brasa",
+    "Lombos de truta de rio ligeiramente selados",
+    "Ostras frescas abertas com sumo de limão",
+    "Caranguejo desfiado com ervas costeiras",
+    "Bacalhau seco dessalgado frito com cebolinho",
+    "Cavala defumada com sal grosso",
+    "Fatias finas de marlim grelhado no espeto"
+  ],
+  "drinks": [
+    "Cidra fresca e doce de maçã prensada",
+    "Cerveja de gengibre borbulhante e aromática",
+    "Chá preto encorpado com especiarias da praça",
+    "Hidromel leve servido em jarro de barro",
+    "Rum escuro misturado com garapa fresca de cana",
+    "Sumo fresco de frutos vermelhos espremidos",
+    "Vinho de mesa ligeiramente avinagrado",
+    "Café fervido e passado na brasa com canela"
+  ],
+  "botany": {
+    "growth": [
+      "Minúsculo, cresce aos cachos em arbusto espinhoso",
+      "Pende de lianas e cipós suspensos nas árvores",
+      "Brota diretamente na casca grossa do tronco",
+      "Desenvolve-se enterrado nas raízes profundas",
+      "Rasteiro, espalhado por trepadeiras no solo húmido",
+      "Aquático, submerso em riachos de águas límpidas",
+      "Cavernoso, brotando nas fendas de rochas escuras",
+      "Vulcânico, crescendo em solo de cinzas quentes"
+    ],
+    "shapes": [
+      "Esférico perfeito com superfície lisa",
+      "Piriforme alongado com curvas sinuosas",
+      "Estrelado em pontas bem definidas",
+      "Retorcido em espiral como um chifre",
+      "Composto por dezenas de pequenas esferas coladas",
+      "Cilíndrico longo e carnudo",
+      "Formato bojudinho como uma pequena ânfora",
+      "Achatado em disco com bordas recortadas"
+    ],
+    "skins": [
+      "Lisa, acetinada e brilhante",
+      "Aveludada com pelos finos e curtos",
+      "Espessa e áspera como casca de árvore antiga",
+      "Espinhosa e rígida, necessitando de faca pesada",
+      "Translúcida e cristalina como vidro polido",
+      "Pegajosa ao toque, vertendo seiva doce",
+      "Macia, esponjosa e flexível",
+      "Rachada com padrões vivos que parecem veios"
+    ],
+    "pulps": [
+      "Suculenta, aquosa e muito refrescante",
+      "Gelatinosa, translúcida e suave",
+      "Macia e amanteigada, desmanchando-se na boca",
+      "Fibrosa e densa, exigindo mastigação firme",
+      "Crocante e cristalizada como açúcar puro",
+      "Farinhenta e altamente nutritiva",
+      "Borbulhante e ligeiramente efervescente",
+      "Líquida sob pressão, jorrando ao primeiro corte"
+    ],
+    "properties": [
+      "Emite uma suave luminescência azulada no escuro",
+      "Provoca uma dormência passageira e agradável na boca",
+      "A seiva funciona como potente acelerador alquímico de fogo",
+      "Purifica a água e neutraliza venenos digestivos menores",
+      "Induz um sono profundo e reparador em poucos minutos",
+      "Ajuda na cicatrização rápida de pequenos ferimentos",
+      "Mantém-se fresco e estaladiço durante meses sem estragar",
+      "Altera temporariamente a coloração dos olhos de quem o come"
+    ]
+  }
+}

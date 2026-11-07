@@ -25,6 +25,10 @@ const ALL_CARDS = [
   { id: 'mercadores', nome: 'Guildas Mercantes', categoria: 'Facções' },
   { id: 'artesaos', nome: 'Guildas de Ofício', categoria: 'Facções' },
   { id: 'trupes', nome: 'Trupes Teatrais', categoria: 'Facções' },
+  { id: 'tavern-menu', nome: 'Mesa da Estalagem', categoria: 'Gastronomia' },
+  { id: 'cultural-feast', nome: 'Banquete Cultural', categoria: 'Gastronomia' },
+  { id: 'street-food', nome: 'Feira & Ambulantes', categoria: 'Gastronomia' },
+  { id: 'trail-ration', nome: 'Logística de Trilha & Adega', categoria: 'Gastronomia' },
 ];
 
 export default function ManageDeckModal() {

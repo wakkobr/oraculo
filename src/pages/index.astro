@@ -29,6 +29,12 @@ import SecretSocietyCard from '../components/SecretSocietyCard';
 import UrbanGangCard from '../components/UrbanGangCard';
 import WatchmenCard from '../components/WatchmenCard';
 
+// Módulo Gastronômico
+import TavernMenuCard from '../components/TavernMenuCard';
+import CulturalFeastCard from '../components/CulturalFeastCard';
+import StreetFoodCard from '../components/StreetFoodCard';
+import TrailRationCard from '../components/TrailRationCard';
+
 import SessionLog from '../components/SessionLog';
 ---
 
@@ -133,6 +139,20 @@ import SessionLog from '../components/SessionLog';
     </div>
     <div class="deck-card hidden" data-card-id="trupes">
       <TroupeCard client:load />
+    </div>
+
+    {/* Módulo Gastronômico */}
+    <div class="deck-card hidden" data-card-id="tavern-menu">
+      <TavernMenuCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="cultural-feast">
+      <CulturalFeastCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="street-food">
+      <StreetFoodCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="trail-ration">
+      <TrailRationCard client:load />
     </div>
   </div>
 

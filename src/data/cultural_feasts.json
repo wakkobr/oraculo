@@ -1,0 +1,364 @@
+{
+  "cultures": [
+    {
+      "id": "anoes",
+      "name": "Cidadelas de Pedra",
+      "origin": "Anões da Montanha",
+      "preparations": [
+        "Assado em forno de pedra selado",
+        "Braseado lentamente em panela de ferro fundido",
+        "Defumado com lascas de carvalho subterrâneo",
+        "Grelhado sobre carvão mineral incandescente",
+        "Ensopado fervente com gordura de boi",
+        "Selado em pedra quente com pimenta moída"
+      ],
+      "main_dishes": [
+        "Costela grossa de javali com melaço de cevada",
+        "Naco bovino curado (steak) em crosta de cinzas",
+        "Boi de corte gordo marinado em cerveja preta",
+        "Carneiro de encosta assado com alho silvestre",
+        "Pernil de cabrito montês com tutano",
+        "Truta gorda de lago subterrâneo"
+      ],
+      "side_dishes": [
+        "Batatas douradas assadas nas cinzas da forja",
+        "Purê espesso de nabo amarelo com alho",
+        "Repolho estufado na gordura de toucinho",
+        "Cenouras e pastinagas assadas na casca",
+        "Feijão-preto amanteigado bem denso",
+        "Bolinhos cozidos de massa de batata"
+      ],
+      "specialties": [
+        "Pão de sementes de papoula com linguiça curada de cervo",
+        "Fatias finas de trufas negras recolhidas na rocha húmida",
+        "Broa pesada de centeio (Pumpernickel) com manteiga salgada",
+        "Bolo maciço de aveia, nozes e mel silvestre",
+        "Fatias de queijo duro e picante envelhecido em caverna",
+        "Biscoito de ferro de batedor (Hardtack) tostado"
+      ],
+      "drinks": [
+        "Stout mastigável de cevada torrada com café",
+        "Porter escura turfada de alta graduação",
+        "Cerveja preta envelhecida em barril de carvalho",
+        "Hidromel encorpado e alcoólico de montanha",
+        "Ale avermelhada muito amarga",
+        "Uísque turfado destilado no fundo da mina"
+      ]
+    },
+    {
+      "id": "elfos",
+      "name": "Refúgios Feéricos",
+      "origin": "Altos Elfos & Silvestres",
+      "preparations": [
+        "Braseado suave em infusão de folhas de faia",
+        "Marinado com néctar e folhas maceradas",
+        "Defumado suavemente em ramos de freixo",
+        "Cozido no vapor de água de nascente com flores",
+        "Selado suavemente com manteiga de sálvia",
+        "Consumido fresco e cru, fatiado com precisão"
+      ],
+      "main_dishes": [
+        "Faisão do bosque com redução de néctar",
+        "Lúcio prateado de riacho com ervas finas",
+        "Ganso silvestre estufado com ameixas",
+        "Coelho das colinas envolto em folhas aromáticas",
+        "Truta de água límpida com flores comestíveis",
+        "Seleção nobre de castanhas e feijão-branco da floresta"
+      ],
+      "side_dishes": [
+        "Rúcula brava, ruibarbo e folhas jovens",
+        "Ervilhas-tortas doces e flores de sabugueiro",
+        "Cogumelos nobres salteados com orvalho",
+        "Pastinagas assadas e brotos tenros da mata",
+        "Arroz selvagem perfumado com sementes",
+        "Aspargos frescos colhidos ao amanhecer"
+      ],
+      "specialties": [
+        "Pão folha estaladiço de bolota de carvalho",
+        "Torta fina de amoras e framboesas silvestres",
+        "Pão leve de flor de cerejeira com mel",
+        "Compota morna de peras pochadas em vinho",
+        "Fatias finas de queijo de ovelha curado em linho",
+        "Pétalas de rosa açucaradas com especiarias raras"
+      ],
+      "drinks": [
+        "Vinho secular de safras ancestrais preservadas",
+        "Vinho aromático perfumado com rosas silvestres",
+        "Vinho branco translúcido e floral",
+        "Chá delicado de pétalas de sabugueiro",
+        "Vinho doce de ameixas silvestres",
+        "Água pura de nascente encantada"
+      ]
+    },
+    {
+      "id": "deserto",
+      "name": "Caravanas do Deserto",
+      "origin": "Nômades das Areias",
+      "preparations": [
+        "No espeto giratório sobre brasas abertas",
+        "Ensopado em pote de barro vedado com cinzas",
+        "Seco ao sol inclemente e salteado com gordura",
+        "Grelhado com pó de pimentas secas",
+        "Desfiado finamente e apimentado na chapa",
+        "Assado sob a areia quente do deserto"
+      ],
+      "main_dishes": [
+        "Cordeiro fatiado com especiarias aromáticas",
+        "Carneiro braseado lentamente com cebolas",
+        "Charque fino de camelo salteado com alho",
+        "Frango marinado em iogurte com cominho",
+        "Cabrito tenro ao molho espesso de tomate seco",
+        "Perdiz das areias recheada com trigo e passas"
+      ],
+      "side_dishes": [
+        "Grão-de-bico estufado com cominho e folhas",
+        "Lentilhas caldosas com cebola crocante",
+        "Cuscuz aromático com lascas de amêndoa e açafrão",
+        "Arroz dourado perfumado com cardamomo",
+        "Feijão-branco temperado com azeite rústico",
+        "Trigo partido temperado com hortelã fresca"
+      ],
+      "specialties": [
+        "Pão achatado cozido sobre pedras quentes",
+        "Tâmaras frescas e figos secos polvilhados",
+        "Pasta densa de gergelim com mel e azeite",
+        "Pedaços de queijo curado em salmoura forte",
+        "Pistaches tostados com flor de sal",
+        "Romãs abertas com calda de água de rosas"
+      ],
+      "drinks": [
+        "Chá preto fervente servido com hortelã fresca",
+        "Leite fermentado de cabra ligeiramente efervescente",
+        "Vinho espesso e muito doce de tâmaras",
+        "Água fresca de oásis perfumada com essência floral",
+        "Chá verde amargo com sementes de anis",
+        "Aguardente seca destilada de seiva"
+      ]
+    },
+    {
+      "id": "ilhas",
+      "name": "Aldeias dos Recifes",
+      "origin": "Ilhéus & Pescadores Costeiros",
+      "preparations": [
+        "Grelhado sobre folhas largas na fogueira",
+        "Caldeirada espessa em panela de barro",
+        "Marinado a frio em sumo cítrico e sal",
+        "Assado no buraco de terra com pedras vulcânicas",
+        "Frito em óleo de coco fervente",
+        "Ensopado de conchas com pimentas doces"
+      ],
+      "main_dishes": [
+        "Robalo inteiro temperado com sal marinho",
+        "Postas grossas de marlim ou garoupa",
+        "Fatias frescas de atum ou peixe-agulha marinado",
+        "Porco selvagem assado inteiro sob a terra",
+        "Camarões graúdos e lulas crocantes",
+        "Caranguejos e mexilhões da maré baixa"
+      ],
+      "side_dishes": [
+        "Arroz aromático cozido em leite de coco",
+        "Mandioca cozida servida na folha",
+        "Inhame roxo cozido e amanteigado",
+        "Batata-doce assada na cinza vulcânica",
+        "Arroz selvagem colhido no manguezal",
+        "Farofa grossa de mandioca torrada"
+      ],
+      "specialties": [
+        "Banana-da-terra frita e caramelizada",
+        "Pedaços de manga fresca e carambola fatiada",
+        "Salada de folhas costeiras com algas marinhas",
+        "Abacaxi grelhado na brasa com especiarias",
+        "Pão fofo de banana cozido no vapor",
+        "Mamão maduro temperado com raspas de limão"
+      ],
+      "drinks": [
+        "Água de coco fresca bebida diretamente no fruto",
+        "Ponche cítrico de frutas com rum escuro",
+        "Rum envelhecido aromatizado com especiarias marinhas",
+        "Cerveja clara artesanal com toque de limão",
+        "Chá de hibisco gelado ao sol",
+        "Vinho branco leve produzido em encostas litorâneas"
+      ]
+    },
+    {
+      "id": "selva",
+      "name": "Coração da Mata",
+      "origin": "Povos da Selva & Pântanos",
+      "preparations": [
+        "Defumado lentamente em moquém rústico de taquara",
+        "Frito em banha pesada com pimentas bravas",
+        "Ensopado caldoso em tacho de barro",
+        "No espeto de galho verde sobre labaredas",
+        "Caldo fervente engrossado com farinha rústica",
+        "Braseado envolvido em folha de taioba"
+      ],
+      "main_dishes": [
+        "Carne firme de jacaré ou crocodilo dos canais",
+        "Peixe-gato ou bagre gordo do fundo lodoso",
+        "Rã gigante de várzea e lagostins de água doce",
+        "Serpente esfolada ou caça de lagarto teiú",
+        "Pato selvagem das lagoas ou carpa de rio",
+        "Javali da mata fechada braseado com raízes"
+      ],
+      "side_dishes": [
+        "Mandioca-brava bem cozida com gordura",
+        "Cará e inhame fibroso salteados",
+        "Feijão-vermelho caldoso com ervas do pântano",
+        "Papa de milho grosso temperada com alho da mata",
+        "Banana-da-terra cozida na casca",
+        "Batatas pequenas de várzea estufadas"
+      ],
+      "specialties": [
+        "Castanhas nativas tostadas na fogueira",
+        "Larvas de palmeira estaladiças com flor de sal",
+        "Folhas amargas e brotos cozidos na banha",
+        "Pimentas-de-fogo maceradas com sal marinho",
+        "Caracóis fluviais cozidos no próprio casco",
+        "Besouros comestíveis salgados e crocantes"
+      ],
+      "drinks": [
+        "Cacau puro fermentado, espesso e amargo",
+        "Cerveja azeda caseira fermentada de milho",
+        "Aguardente artesanal destilada de cana da várzea",
+        "Chá forte de raízes e cascas medicinais",
+        "Leite de cabra da floresta fervido com ervas",
+        "Vinho azedo fermentado de bagas da selva"
+      ]
+    },
+    {
+      "id": "leste",
+      "name": "Impérios do Sol",
+      "origin": "Reinos Orientais",
+      "preparations": [
+        "Salteado rápido em chapa com óleo de sésamo",
+        "Cozido lentamente em caldo rico de ossos e tutano",
+        "No vapor em cestos redondos de bambu",
+        "Braseado em calda escura agridoce",
+        "Grelhado em espetos finos de madeira com molho",
+        "Tostado na brasa até formar crosta estaladiça"
+      ],
+      "main_dishes": [
+        "Tiras finas de vaca com alho e gengibre",
+        "Pato laqueado fatiado com pele estaladiça",
+        "Guiozas recheadas com carne de porco e cebolinho",
+        "Entrecosto de porco dourado e caramelizado",
+        "Pedaços de frango e miúdos marinados no espeto",
+        "Enguia de água doce laqueada com molho brilhante"
+      ],
+      "side_dishes": [
+        "Massa caseira de ovos frita com vegetais",
+        "Massa longa e fina de arroz em caldo transparente",
+        "Arroz glutinoso (sticky rice) cozido no vapor",
+        "Arroz jasmim aromático e soltinho",
+        "Arroz frito na wok com ovo e cebola verde",
+        "Caldo claro com algas e cogumelos orelha-de-pau"
+      ],
+      "specialties": [
+        "Molho fermentado de soja (shoyu) e rebentos frescos",
+        "Acelga fermentada picante e estaladiça (kimchi)",
+        "Nabo branco em conserva agridoce",
+        "Cebolinho fresco picado com pimentas em tiras",
+        "Molho denso de gengibre com açúcar mascavado",
+        "Bolo fino de arroz prensado no vapor"
+      ],
+      "drinks": [
+        "Vinho de arroz servido fumegante em copo de porcelana",
+        "Chá verde tostado com grãos de arroz estaladiços",
+        "Chá branco delicado de folhas jovens",
+        "Aguardente destilada potente e ardente (Baijiu)",
+        "Chá perfumado com flores frescas de jasmim",
+        "Cerveja de arroz límpida, leve e frisante"
+      ]
+    },
+    {
+      "id": "arcano",
+      "name": "Refeitório das Torres",
+      "origin": "Academias de Magia",
+      "preparations": [
+        "Assado sob chamas alquímicas que não soltam fumo",
+        "Envolvido em crosta dourada e folhada",
+        "Marinado com infusão de ervas colhidas sob a lua cheia",
+        "Frito em banha límpida clarificada por magia",
+        "Ensopado em vapor aromático constante",
+        "Selado na pedra com especiarias raras do além-mar"
+      ],
+      "main_dishes": [
+        "Faisão nobre glaceado em calda de maçã",
+        "Empadão alto recheado com cortes de carne e ervas",
+        "Ganso gordo braseado com calda de ameixas e vinho",
+        "Truta pura capturada em fonte encantada",
+        "Aves de capoeira estufadas com castanhas nobres",
+        "Ostras frescas abertas servidas sobre cristais de gelo"
+      ],
+      "side_dishes": [
+        "Purê aveludado de abóbora com manteiga de noz",
+        "Cebolas caramelizadas em redução de vinho tinto",
+        "Cogumelos luminosos de estufa salteados",
+        "Batatas finamente laminadas com alecrim",
+        "Aspargos frescos cozidos no ponto exato",
+        "Pudim salgado perfumado com ervas arcanas"
+      ],
+      "specialties": [
+        "Sapos de chocolate encantados que tentam saltar",
+        "Torta alta de abóbora fumegante com canela",
+        "Pão doce com nozes-pecã e cobertura de açúcar",
+        "Bolinhos embebidos em licor aromático",
+        "Tartes individuais de mirtilos frescos",
+        "Fatias delicadas de pão élfico confeitado"
+      ],
+      "drinks": [
+        "Cerveja amanteigada e doce com espuma densa",
+        "Sumo encorpado de abóbora servido muito fresco",
+        "Sidra efervescente de maçã e pera silvestre",
+        "Cerveja de gengibre aromática e picante",
+        "Cacau cremoso batido com canela e favas doces",
+        "Vinho licoroso guardado nas caves das torres"
+      ]
+    },
+    {
+      "id": "trevas",
+      "name": "Covis & Criptas",
+      "origin": "Orcs, Goblins, Bruxas e Mortos-Vivos",
+      "preparations": [
+        "Carbonizado por fora e cru com sangue por dentro",
+        "Assado em ponta de lança enferrujada sobre brasa fétida",
+        "Caldalhada fervente em tacho de ferro seboso",
+        "Frio e ressecado como a terra de uma sepultura",
+        "Servido cru e a pingar sobre tábuas encardidas",
+        "Ensopado borbulhante em caldeirão com fumo esverdeado"
+      ],
+      "main_dishes": [
+        "Cortes duros de cavalo de guerra abatido",
+        "Carne de lobo cinzento ou urso caçado na serra",
+        "Despojos e carne de prisioneiros capturados",
+        "Restos putrefactos e secos de caça abandonada",
+        "Morcegos cavernosos e ratos gordos sem pelo",
+        "Mistura de salamandras, cobras aquáticas e sapos venenosos"
+      ],
+      "side_dishes": [
+        "Papa rala de milho azedo com cheiro a mofo",
+        "Repolho murcho e rançoso colhido na lama",
+        "Batatas velhas greladas com polpa escura",
+        "Nabos apodrecidos que se desfazem ao toque",
+        "Folhas amargas arrancadas de pântanos negros",
+        "Raízes amargas com fortes propriedades alucinogénias"
+      ],
+      "specialties": [
+        "Ratos inteiros grelhados na brasa com pelo",
+        "Rabos de rato secos ao sol como tira-gosto",
+        "Dedos humanos decepados com unhas roídas",
+        "Minhocas gordas e sanguessugas que se retorcem",
+        "Pão verde completamente tomado por bolor",
+        "Tentáculos viscosos ainda com reflexos de movimento"
+      ],
+      "drinks": [
+        "Sangue fresco e espesso recolhido de animais abatidos",
+        "Cerveja preta azeda, turva e fétida de saque",
+        "Uísque forte e ardente roubado de caravanas",
+        "Vinho de sangue envelhecido em ânforas de catacumbas",
+        "Água estagnada recolhida de poços de cemitério",
+        "Líquido negro viscoso servido num crânio humano polido"
+      ]
+    }
+  ]
+}

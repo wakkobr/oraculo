@@ -1,0 +1,128 @@
+{
+  "ration_archetypes": [
+    {
+      "name": "Fardo do Batedor dos Bosques",
+      "description": "Composição ligeira e calórica, optimizada para marcha rápida sob copas fechadas.",
+      "meat": "Charque bovino seco com sal grosso",
+      "bread": "Broa estaladiça de milho com banha",
+      "pickle": "Cenouras tenras em conserva aromática",
+      "nuts": "Mix de avelãs e pinhões silvestres",
+      "fruit": "Maçãs e amoras desidratadas em rodelas",
+      "pot_boil": "Feijão-preto miúdo para caldeirão de marcha"
+    },
+    {
+      "name": "Mochila do Marinheiro de Alto-Mar",
+      "description": "Mantimentos altamente salgados e ressecados para resistir à humidade e maresia das vagas.",
+      "meat": "Lombo de bacalhau seco salgado ou arenque curado",
+      "bread": "Biscoito duro de batedor náutico (Hardtack)",
+      "pickle": "Azeitonas pretas e alcaparras na salmoura forte",
+      "nuts": "Sementes de abóbora tostadas na cinza",
+      "fruit": "Figos secos prensados e passas doces",
+      "pot_boil": "Batatas laminadas desidratadas para fervura rápida"
+    },
+    {
+      "name": "Provisão de Altitude do Forjador",
+      "description": "Rações pesadas e gordurosas para combater o frio cortante de gargantas e desfiladeiros.",
+      "meat": "Toucinho salgado de porco curado (Salt pork)",
+      "bread": "Broa densa de centeio fermentado (Pumpernickel)",
+      "pickle": "Repolho roxo fermentado com zimbro (Sauerkraut)",
+      "nuts": "Amêndoas torradas e amendoins com flor de sal",
+      "fruit": "Ameixas pretas e bagas ácidas desidratadas",
+      "pot_boil": "Lentilhas castanhas e ervilhas partidas para tacho"
+    },
+    {
+      "name": "Fardo da Caravana das Areias",
+      "description": "Secagem ao sol e especiarias de preservação para atravessar ermos e desertos áridos.",
+      "meat": "Cecina fina de carneiro curada no vento seco",
+      "bread": "Pão folha esticado, prensado e desidratado",
+      "pickle": "Pimentos inteiros curtidos em vinagre de palma",
+      "nuts": "Pistaches do deserto e amêndoas sem pele",
+      "fruit": "Tâmaras carnudas e damascos dourados secos",
+      "pot_boil": "Grão-de-bico rijo e favas para cozedura no fogo de chão"
+    },
+    {
+      "name": "Alforge Nobre de Peregrinação",
+      "description": "Seleção refinada de enchidos e especiarias para cavaleiros e cortesãos em viagem.",
+      "meat": "Linguiça de pato curada com vinho e ervas",
+      "bread": "Pão fermentado com cerveja preta e malte",
+      "pickle": "Pontas tenras de espargos em vinagre suave",
+      "nuts": "Castanhas nobres fatiadas e nozes-pecã",
+      "fruit": "Cerejas e peras doces desidratadas",
+      "pot_boil": "Arroz selvagem aromático para guisado"
+    },
+    {
+      "name": "Ração de Marcha Forçada",
+      "description": "Provisões de emergência militar, rudes e de mastigação demorada.",
+      "meat": "Cecina rija de cervo sem gordura",
+      "bread": "Pão de batata denso e seco",
+      "pickle": "Rabanetes curtidos em salmoura amarga",
+      "nuts": "Amendoins crus e pevides de girassol",
+      "fruit": "Mirtilos secos e arandos azedos",
+      "pot_boil": "Cubos de nabo desidratados para amolecer em água fervente"
+    }
+  ],
+  "wines": {
+    "terroirs": [
+      "Encostas marítimas batidas pelo vento e maresia",
+      "Vales de montanha abrigados sob névoas matinais",
+      "Mosteiros reclusos em colinas de terra calcária",
+      "Ilhas vulcânicas isoladas além-mar",
+      "Porões húmidos de estalagens rurais centenárias",
+      "Caves nobres de solares e palácios reais",
+      "Terras estrangeiras onde se vindima há milénios",
+      "Adegas ancestrais e secretas de lordes élficos"
+    ],
+    "bodies": [
+      "Branco pálido, translúcido e mineral",
+      "Branco dourado frisante com borbulha fina",
+      "Rosé delicado, fresco e perfumado",
+      "Rosé encorpado de cor rubi translúcida",
+      "Tinto brilhante e ligeiro com taninos suaves",
+      "Tinto profundo, viscoso e aveludado",
+      "Tinto robusto, escuro e muito encorpado",
+      "Púrpura denso quase impenetrável à luz"
+    ],
+    "aromas": [
+      "Flores de laranjeira, relva cortada e brisa de primavera",
+      "Pétalas de rosa fresca e orvalho da madrugada",
+      "Cerejeiras em flor com apontamentos cítricos",
+      "Frutos silvestres maduros colhidos no bosque",
+      "Lilases húmidos misturados com raspas de limão",
+      "Néctar de mel de urze e maçãs maduras",
+      "Casca de pinho resinoso e musgo húmido",
+      "Flores noturnas raras com incenso e mirra"
+    ],
+    "flavor_notes": [
+      "Maçã verde crocante, limão-siciliano e toque mineral",
+      "Pêssego em calda, manteiga fresca e flor de sabugueiro",
+      "Morangos silvestres, pimenta-rosa e raspas de laranja",
+      "Framboesas maduras com especiarias doces",
+      "Carvalho tostado, fumo suave e groselhas negras",
+      "Cereja-preta madura, chocolate amargo e café",
+      "Ameixa seca, cravinho e gengibre picante",
+      "Amoras pretas silvestres, terra húmida e canela"
+    ],
+    "vessels_and_service": [
+      "Servido estalando de frio num cálice fino de vidro soprado",
+      "Fresco da adega numa taça de cristal lapidado",
+      "À temperatura do bosque num copo simples de vidro transparente",
+      "Arejado num jarro de barro e servido em cálice de latão",
+      "À temperatura ambiente numa caneca rústica de estanho batido",
+      "Decantado por várias horas e servido numa taça dourada de banquete",
+      "Ligeiramente aquecido com mel numa caneca de ferro forjado",
+      "Fervido com especiarias fortes e servido em taça de prata cinzelada"
+    ],
+    "legends": [
+      "Vindimado originalmente por uma raça ancestral já extinta.",
+      "Oferecido aos mortais como dádiva sagrada de uma deusa da fertilidade.",
+      "Bebido no lendário banquete nupcial que selou a paz entre reinos inimigos.",
+      "O brinde fúnebre solene prestado à sepultura de um rei venerado.",
+      "Sorvido até à última gota por um guerreiro antes de abater o dragão do pico.",
+      "A última libação consumida por um profeta antes de entrar em transe sagrado.",
+      "O cálice de despedida esvaziado por um arquimago antes do seu misterioso sumiço.",
+      "Tragado por um mestre ladrão instantes antes de furtar a joia da coroa.",
+      "Partilhado por cavaleiros valorosos antes de uma carga desesperada rumo à glória.",
+      "A derradeira taça envenenada dividida por amantes trágicos antes da morte."
+    ]
+  }
+}

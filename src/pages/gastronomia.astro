@@ -1,0 +1,55 @@
+---
+import Header from '../components/Header.astro';
+import Navbar from '../components/Navbar.astro';
+import TavernMenuCard from '../components/TavernMenuCard';
+import CulturalFeastCard from '../components/CulturalFeastCard';
+import StreetFoodCard from '../components/StreetFoodCard';
+import TrailRationCard from '../components/TrailRationCard';
+import ManageDeckModal from '../components/ManageDeckModal';
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oráculo Gastronômico | Behind the Tables</title>
+  </head>
+  <body class="min-h-screen bg-[#0d0f1a] text-slate-100 font-sans antialiased selection:bg-amber-900 selection:text-amber-100">
+    <Header />
+    <Navbar />
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+      {/* Cabeçalho da Rota */}
+      <section class="border-b border-[#2e3766]/50 pb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs uppercase tracking-widest text-amber-400 font-mono font-bold">
+              Grimório Culinário
+            </span>
+            <span class="text-slate-600">•</span>
+            <span class="text-xs text-slate-400 font-mono">4 Módulos Ativos</span>
+          </div>
+          <h1 class="text-3xl md:text-4xl font-serif font-black text-slate-100 tracking-tight mt-1">
+            Oráculo Gastronômico
+          </h1>
+          <p class="text-sm text-slate-400 mt-1 max-w-2xl">
+            Gerador procedural de cardápios de estalagem, banquetes étnicos de culturas e ermos, comida rápida de rua e provisões de marcha.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <ManageDeckModal client:load />
+        </div>
+      </section>
+
+      {/* Grade de Cards React */}
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <TavernMenuCard client:load />
+        <CulturalFeastCard client:load />
+        <StreetFoodCard client:load />
+        <TrailRationCard client:load />
+      </section>
+    </main>
+  </body>
+</html>
