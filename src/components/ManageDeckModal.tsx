@@ -9,6 +9,7 @@ const ALL_CARDS = [
   { id: 'grimorio', nome: 'Grimório Arcano', categoria: 'Arcano' },
   { id: 'tomos', nome: 'Livros & Manuscritos', categoria: 'Arcano' },
   { id: 'alquimia-cogumelos', nome: 'Fungos & Alquimia', categoria: 'Alquimia' },
+  { id: 'guardas-urbanos', nome: 'Guardas Urbanos & Patrulha', categoria: 'Facções' },
   { id: 'gangues-urbanas', nome: 'Gangues Urbanas & Larápios', categoria: 'Facções' },
   { id: 'sociedades-secretas', nome: 'Sociedades Secretas', categoria: 'Facções' },
   { id: 'hordas', nome: 'Hordas Selvagens & Clãs', categoria: 'Facções' },

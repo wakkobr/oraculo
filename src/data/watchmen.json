@@ -1,0 +1,180 @@
+{
+  "cores": [
+    "Preto sólido",
+    "Vermelho-escarlate",
+    "Dourado brilhante",
+    "Verde-floresta",
+    "Azul-real",
+    "Prata / Cinza-claro",
+    "Castanho / Castor",
+    "Branco-neve",
+    "Bordô / Grená",
+    "Azul-celeste",
+    "Azul-marinho profundo",
+    "Marrom-chocolate escuro"
+  ],
+  "simbolos": [
+    "Uma labareda de fogo purificador.",
+    "Uma manopla de ferro espalmada em sinal de ordem.",
+    "Um escudo chanfrado de guarnição.",
+    "Uma espada reta apontada para cima.",
+    "Um sol dourado radiante de justiça.",
+    "Um olho aberto que vigia as ruas.",
+    "Uma águia imperial com asas estendidas.",
+    "Uma coruja sábia que enxerga na escuridão.",
+    "Um dragão heráldico de fauces armadas.",
+    "Um leão coroado de garras erguidas.",
+    "Um corvo das muralhas atento às esquinas.",
+    "Um cão ou lobo farejador em vigília."
+  ],
+  "capitaes": [
+    "Um fanático religioso que enxerga a lei como dogma sagrado.",
+    "Um herdeiro mimado de família patrícia colocado no cargo por influência.",
+    "Um nobre renegado que encontrou na disciplina marcial seu propósito.",
+    "Um espadachim arrojado e duelista que lidera patrulhas a cavalo.",
+    "Um brutamontes truculento que comanda as celas na base da pancadaria.",
+    "Um herói militar condecorado que retornou das guerras imperiais.",
+    "Um cavaleiro consagrado que segue o código de honra e cavalaria à risca.",
+    "Um soldado de carreira austero que subiu de praça a capitão com disciplina.",
+    "Um veterano encardido e cínico que já viu de tudo nas ruas da cidade.",
+    "Um investigador astuto com faro apurado para conspirações palacianas.",
+    "Um erudito metódico que trata o crime como um enigma lógico a decifrar.",
+    "Um magistrado e servidor público dedicado à segurança dos cidadãos."
+  ],
+  "moral_tropa": [
+    "Amigável, leal e orgulhosa de servir sob o comando do capitão.",
+    "Respeitosa, profissional e atenta às ordens do regulamento.",
+    "Completamente indiferente, cumprindo a ronda no piloto automático.",
+    "Cautelosa, insegura e receosa das ordens estúpidas da capitania.",
+    "Aterrorizada, calada e submissa sob disciplina implacável.",
+    "Decepcionada, cínica e respondona perante a corrupção do comando."
+  ],
+  "reputacao": [
+    "Retidão moral inabalável e recusa categórica a propinas.",
+    "Eficiência cirúrgica no combate a gangues e arruaceiros.",
+    "Confiabilidade constante: chegam antes do segundo grito de socorro.",
+    "Brutalidade desmedida contra plebeus e espancamentos nos becos.",
+    "Corrupção aberta: soltam qualquer suspeito por algumas moedas de prata.",
+    "Extorsão rotineira cobrando 'taxas de vigília' de mercadores e artesãos.",
+    "Frequência assídua e bebedeiras nos bordéis da zona portuária.",
+    "Covardia notória: fogem ou fingem não ver quando o perigo é real.",
+    "Incompetência gritante, prendendo inocentes e perdendo pistas óbvias.",
+    "Embriaguez crônica durante o turno da noite nas guaritas."
+  ],
+  "fardamentos": [
+    "Mantos de lã áspera tingida sobre roupas civis puídas.",
+    "Armaduras improvisadas catadas de restos de feira e couro rachado.",
+    "Armaduras de couro curtido gravadas com o brasão da guarnição.",
+    "Armaduras de couro reforçado exibindo o sinete do senhor feudal ou da cidade.",
+    "Elmos cônicos polidos e peitorais de aço com o brasão oficial da metrópole.",
+    "Cotas de malha bem oleadas e camisas acolchoadas em perfeito estado."
+  ],
+  "armamentos": [
+    "Espadas longas de combate e arcos curtos de vigília.",
+    "Espadas longas balanceadas e bestas pesadas de torre.",
+    "Espadas longas de infantaria e escudos de madeira reforçada.",
+    "Espadas curtas afiadas emparelhadas com broquéis de ferro.",
+    "Maças de ferro pesadas e bestas de mão no cinto.",
+    "Maças de abas cravadas combinadas com escudos circulares.",
+    "Maças de ferro e adagas de misericórdia na bota.",
+    "Piques de três metros para barreiras e espadas curtas de reserva.",
+    "Alabardas imponentes para controle de multidão e adagas afiadas.",
+    "Alabardas pesadas combinadas com bestas para apoio de muralha."
+  ],
+  "investigador": {
+    "perfil": [
+      "Um monge analítico ou clérigo de olhar inquiridor.",
+      "Um monge estoico que fala apenas quando indispensável.",
+      "Um veterano do exército transferido para as patrulhas de choque.",
+      "Um estrangeiro enigmático com métodos de dedução desconhecidos.",
+      "Um funcionário pomposo que discursa em termos jurídicos difíceis.",
+      "Um acadêmico erudito formado nas grandes bibliotecas reais.",
+      "Um ébrio violento que só raciocina sob o efeito de aguardente.",
+      "Um antigo lacaio do submundo contratado por conhecer os becos.",
+      "O frequentador mais popular e festeiro das tavernas do bairro.",
+      "Um investigador charmoso, de presença rústica e porte elegante."
+    ],
+    "motivacao": [
+      "Pelo soldo pontual garantido para manter o aluguel da guarita.",
+      "Pela busca inflexível de levar criminosos à forca e à justiça.",
+      "Por moedas para quitar dívidas de jogo com agiotas perigosos.",
+      "Para financiar vícios pessoais (jogo clandestino, bebidas, cortesãs ou fumo).",
+      "Pelo puro fascínio mental de desatar nós e solucionar enigmas criminais.",
+      "Por uma oportunidade pessoal de vingar o assassinato de um ente querido."
+    ],
+    "rosto": [
+      "Uma cicatriz esbranquiçada de queimadura de óleo ou ácido.",
+      "Uma cicatriz irregular de estilete que cruza a bochecha.",
+      "Mandíbula travada e semblante frio de poucos sorrisos.",
+      "Um sorriso simpático e cativante que desarma testemunhas.",
+      "Um olhar distante e pensativo, como se estivesse em outra cena.",
+      "Cenho franzido em permanente estado de suspeita.",
+      "Olhos atentos, penetrantes e clínicos que reparam em milímetros.",
+      "Nariz quebrado e torto, marcado por brigas de ruela.",
+      "Sobrancelhas grossas e unidas que pesam sobre os olhos.",
+      "Barba rala por fazer e olheiras fundas de noites em claro.",
+      "Cavanhaque fino e bem delineado à moda cortesã.",
+      "Um bigode farto e intimidante que cobre o lábio superior."
+    ],
+    "item": [
+      "Uma lente de aumento de cristal polido em armação de bronze.",
+      "Uma lâmina curta com empunhadura entalhada em osso ou ébano nobre.",
+      "Uma adaga de guarda lavrada com feras esculpidas em aço.",
+      "Uma adaga de aço enegrecido fosco sem reflexo de luz.",
+      "Um chapéu incomum de formato peculiar comprado de forasteiros.",
+      "Uma pista embrulhada em veludo referente a um crime sem solução.",
+      "Um medalhão com o retrato ou mecha de cabelo de um amor perdido.",
+      "Um estojo portátil com cosméticos e postiços para disfarces rápidos.",
+      "Um compêndio de bolso com referências a venenos e reagentes alquímicos.",
+      "Um almanaque de bolso com horários das marés e rotas da cidade."
+    ]
+  },
+  "guarda": {
+    "perfil": [
+      "Um rapaz simples do campo deslumbrado com a vida urbana.",
+      "O filho de um carvoeiro ou pescador das docas.",
+      "Um veterano endurecido que sobreviveu a batalhas de fronteira.",
+      "Um forasteiro que aceitou o soldo da milícia por falta de ofício.",
+      "O filho de um mendigo que encontrou dignidade na libré militar.",
+      "O beberrão incorrigível do destacamento que dorme nas guaritas.",
+      "Um larápio reformado que conhece os esconderijos dos ladrões.",
+      "Um brutamontes truculento que adora espancar arruaceiros.",
+      "Um aprendiz de ferreiro que faliu e alistou-se na infantaria.",
+      "O conquistador galante que passa o turno flertando nas janelas."
+    ],
+    "motivacao": [
+      "Pelo soldo regular e tigela de ensopado quente garantida.",
+      "Pelo prazer sádico de exercer autoridade e punir os fracos.",
+      "Para pagar dívidas acumuladas em tavernas e rinhas de galo.",
+      "Para enviar moedas para o sustento da mãe e irmãos na aldeia.",
+      "Para escapar de uma condenação judicial trocando pena por alistamento.",
+      "Por orgulho patriótico cego e respeito à coroa municipal."
+    ],
+    "rosto": [
+      "Uma verruga saliente no queixo.",
+      "Uma cicatriz feia de corte superficial no nariz.",
+      "Expressão obstinada e queixo erguido de soldado vigilante.",
+      "Um sorriso simplório e ingênuo que inspira pouca autoridade.",
+      "Olhar vago, sonolento e desinteressado.",
+      "Expressão confusa, demorando para entender ordens diretas.",
+      "Um nariz bulboso e avermelhado pelo frio e pelo vinho barato.",
+      "Sobrancelhas espessas e rebeldes que cobrem a fronte.",
+      "Costeletas fartas e desalinhadas pelas laterais do elmo.",
+      "Barba rebelde cheia de farelos de ração e poeira.",
+      "Bigode bem aparado e alinhado com cera.",
+      "Bigode pontiagudo generosamente encerado para cima."
+    ],
+    "item": [
+      "Uma espada com borlas de couro trançado pendendo do pomo.",
+      "Uma adaga funcional com oração de proteção gravada na lâmina.",
+      "Uma espada brilhante e obsessivamente polida com pedra-pomes.",
+      "Uma fita de seda perfumada dada por uma cortesã do porto.",
+      "Um anel de latão retirado do corpo de um salteador de beco.",
+      "Uma fita bordada recebida de uma dama nobre em dia de cortejo.",
+      "Um lenço de seda fino usado para limpar a fuligem do elmo.",
+      "Um cantil de couro cheio de vinho tinto barato escondido sob o manto.",
+      "Um amuleto da sorte (pata de coelho, moeda furada ou trevo seco).",
+      "Um pedaço de carvão com uma lista de compras amassada."
+    ]
+  }
+}

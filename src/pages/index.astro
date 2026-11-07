@@ -27,6 +27,7 @@ import TroupeCard from '../components/TroupeCard';
 import SavageHordeCard from '../components/SavageHordeCard';
 import SecretSocietyCard from '../components/SecretSocietyCard';
 import UrbanGangCard from '../components/UrbanGangCard';
+import WatchmenCard from '../components/WatchmenCard';
 
 import SessionLog from '../components/SessionLog';
 ---
@@ -123,6 +124,9 @@ import SessionLog from '../components/SessionLog';
     </div>
     <div class="deck-card hidden" data-card-id="mercadores">
       <MerchantGuildCard client:load />
+    </div>
+    <div class="deck-card hidden" data-card-id="guardas-urbanos">
+      <WatchmenCard client:load />
     </div>
     <div class="deck-card hidden" data-card-id="artesaos">
       <CraftingGuildCard client:load />
