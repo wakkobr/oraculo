@@ -1,55 +1,112 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Navbar from '../components/Navbar.astro';
+
 import TavernMenuCard from '../components/TavernMenuCard';
 import CulturalFeastCard from '../components/CulturalFeastCard';
 import StreetFoodCard from '../components/StreetFoodCard';
 import TrailRationCard from '../components/TrailRationCard';
-import ManageDeckModal from '../components/ManageDeckModal';
+
+import SessionLog from '../components/SessionLog';
+
+const gastronomiaList = [
+  { id: 'g-taverna', label: 'Mesa da Estalagem', icon: '🍺' },
+  { id: 'g-banquete', label: 'Banquete Cultural', icon: '🏹' },
+  { id: 'g-rua', label: 'Feira & Ambulantes', icon: '🍢' },
+  { id: 'g-trilha', label: 'Logística de Trilha & Adega', icon: '🎒' }
+];
 ---
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oráculo Gastronômico | Behind the Tables</title>
-  </head>
-  <body class="min-h-screen bg-[#0d0f1a] text-slate-100 font-sans antialiased selection:bg-amber-900 selection:text-amber-100">
-    <Header />
-    <Navbar />
+<Layout>
+  <Header />
+  <Navbar />
 
-    <main class="max-w-7xl mx-auto px-4 py-8 space-y-8">
-      {/* Cabeçalho da Rota */}
-      <section class="border-b border-[#2e3766]/50 pb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="text-xs uppercase tracking-widest text-amber-400 font-mono font-bold">
-              Grimório Culinário
-            </span>
-            <span class="text-slate-600">•</span>
-            <span class="text-xs text-slate-400 font-mono">4 Módulos Ativos</span>
-          </div>
-          <h1 class="text-3xl md:text-4xl font-serif font-black text-slate-100 tracking-tight mt-1">
-            Oráculo Gastronômico
-          </h1>
-          <p class="text-sm text-slate-400 mt-1 max-w-2xl">
-            Gerador procedural de cardápios de estalagem, banquetes étnicos de culturas e ermos, comida rápida de rua e provisões de marcha.
-          </p>
-        </div>
+  <!-- Cabeçalho da Rota de Gastronomia -->
+  <div class="mb-4 flex flex-col md:flex-row md:items-center justify-between gap-4 p-4 rounded-xl bg-[#0a0d1d] border border-[#1e2444]">
+    <div>
+      <h2 class="text-lg font-bold text-slate-100 font-['Cinzel'] tracking-wide flex items-center gap-2">
+        <span>🍖</span> Compêndio de Gastronomia, Festins & Provisões
+      </h2>
+      <p class="text-xs text-slate-400 mt-0.5">
+        4 geradores de menus de estalagem, culinária étnica dos ermos, comida rápida de rua e rações de marcha.
+      </p>
+    </div>
+    <div class="text-[11px] text-oracle-gold font-mono bg-[#141830] px-3 py-1.5 rounded-md border border-oracle-gold/30 self-start md:self-auto">
+      ✦ Use 📌 em qualquer card para fixá-lo na Mesa Principal
+    </div>
+  </div>
 
-        <div class="flex items-center gap-3">
-          <ManageDeckModal client:load />
-        </div>
-      </section>
+  <!-- Índice Rápido de Âncoras -->
+  <div class="mb-8 p-3.5 rounded-xl bg-[#070a17]/90 border border-[#1b213d] shadow-sm">
+    <div class="flex items-center justify-between mb-2 pb-1.5 border-b border-[#161c36]">
+      <span class="text-[11px] font-mono text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+        <span>📑</span> Índice Rápido da Página
+      </span>
+      <span class="text-[10px] text-slate-500 font-mono">4 módulos culinários</span>
+    </div>
 
-      {/* Grade de Cards React */}
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <TavernMenuCard client:load />
-        <CulturalFeastCard client:load />
-        <StreetFoodCard client:load />
-        <TrailRationCard client:load />
-      </section>
-    </main>
-  </body>
-</html>
+    <div class="flex flex-wrap gap-1.5">
+      {gastronomiaList.map((item) => (
+        <a
+          href={`#${item.id}`}
+          class="px-2.5 py-1 rounded-md bg-[#0e1224] hover:bg-[#181f3d] border border-[#1f2648] hover:border-oracle-gold/40 text-[11px] text-slate-300 hover:text-oracle-gold transition-all flex items-center gap-1.5"
+        >
+          <span>{item.icon}</span>
+          <span>{item.label}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Grid com os Cards Gastronômicos Ancorados -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div id="g-taverna" class="scroll-mt-6"><TavernMenuCard client:load /></div>
+    <div id="g-banquete" class="scroll-mt-6"><CulturalFeastCard client:load /></div>
+    <div id="g-rua" class="scroll-mt-6"><StreetFoodCard client:load /></div>
+    <div id="g-trilha" class="scroll-mt-6"><TrailRationCard client:load /></div>
+  </div>
+
+  <!-- Botão Flutuante para Voltar ao Topo -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <button
+      id="btn-back-top"
+      title="Voltar ao índice"
+      class="w-10 h-10 rounded-full bg-[#121630] border border-oracle-gold/40 text-oracle-gold shadow-lg flex items-center justify-center text-sm hover:brightness-125 transition-all opacity-80 hover:opacity-100"
+    >
+      ↑
+    </button>
+  </div>
+
+  <SessionLog client:load />
+
+  <footer class="mt-14 text-center text-xs text-slate-500 border-t border-[#1a1f38] pt-6 font-mono">
+    O Oráculo &bull; Gastronomia & Festim &bull; beyond-obvious.net
+  </footer>
+</Layout>
+
+<script>
+  const btnTop = document.getElementById('btn-back-top');
+  btnTop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Rolagem suave e realce visual rápido no card de destino
+  const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#g-"]');
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href')?.slice(1);
+      if (!targetId) return;
+
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+        targetEl.classList.add('ring-2', 'ring-oracle-gold/60', 'rounded-xl');
+        setTimeout(() => {
+          targetEl.classList.remove('ring-2', 'ring-oracle-gold/60', 'rounded-xl');
+        }, 1400);
+      }
+    });
+  });
+</script>
